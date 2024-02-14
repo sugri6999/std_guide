@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-inner">
+				<div class="g-content-header">
+					<h1 class="g-h1">Navigation</h1>
+					<p class="g-explain-h1">Navigations Naming</p>
+				</div>
+				<div class="g-content-body">
+					<!-- 공통규칙 -->
+					<section id="gNavCom" class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">공통사항</h2>
+						</div>
+						<div class="g-section-body">
+							<h3 class="g-h3">메뉴 예약어</h3>
+							<ul class="g-desc">
+								<li>top, left, side 등 위치를 나타내는 의미를 사용하지 않는다.</li>
+								<li>전체메뉴의 약어는 All을 적용한다. (full은 영역의 의미이며, footer의 약자와 중복된다.)</li>
+							</ul>
+							<div class="g-tbl-type1">
+								<table>
+									<caption></caption>
+									<colgroup>
+										<col style="width:20%">
+										<col style="width:25%">
+										<col>
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">요소</th>
+										<th scope="col">규칙</th>
+										<th scope="col">정의</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td rowspan="8">nav</td>
+										<td>.lnb</td>
+										<td>Local Navigation Bar</td>
+									</tr>
+									<tr>
+										<td>.snb</td>
+										<td>Sub Navigation Bar</td>
+									</tr>
+									<tr>
+										<td>.mnb</td>
+										<td>Mobile Navigation Bar</td>
+									</tr>
+									<tr>
+										<td>.anb</td>
+										<td>All Navigation Bar</td>
+									</tr>
+									<tr>
+										<td>.gnb</td>
+										<td>Global Navigation Bar</td>
+									</tr>
+									<tr>
+										<td>.unb</td>
+										<td>Util Navigation Bar</td>
+									</tr>
+									<tr>
+										<td>.fnb</td>
+										<td>footer Navigation Bar</td>
+									</tr>
+									<tr>
+										<td>.qnb</td>
+										<td>Quick Navigation Bar</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<h3 class="g-h3">단계 예약어</h3>
+							<ul class="g-desc">
+								<li>lnb, anb, mnb, snb의 메뉴구조는 클래스의 통일성을 갖춘다. (메뉴구조 복붙 고려)
+								<li>fnb, gnb, unb, qnb의 메뉴구조는 클래스를 생략 할 수 있다.</li>
+							</ul>
+							<div class="g-tbl-type1">
+								<table>
+									<caption></caption>
+									<colgroup>
+										<col style="width:20%">
+										<col style="width:25%">
+										<col>
+									</colgroup>
+									<thead>
+									<tr>
+										<th scope="col">요소</th>
+										<th scope="col">규칙</th>
+										<th scope="col">정의</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>div</td>
+										<td>.node[n]-wrap</td>
+										<td>[n]단계 가지 전체 (클래스 사용권장)</td>
+									</tr>
+									<tr>
+										<td>ul</td>
+										<td>.node[n]-lists</td>
+										<td>[n]단계 가지 목록</td>
+									</tr>
+									<tr>
+										<td>li</td>
+										<td>.node[n]-item</td>
+										<td>[n]단계 가지 항목</td>
+									</tr>
+									<tr>
+										<td>a</td>
+										<td>.node[n]-link</td>
+										<td>[n]단계 가지 링크 (클래스 사용권장)</td>
+									</tr>
+									<tr>
+										<td>strong</td>
+										<td>.node[n]-text</td>
+										<td>[n]단계 가지 텍스트</td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</section>
+					<!-- //공통규칙 -->
+
+					<!-- Navigations -->
+					<section id="gNavLNB" class="g-section g-in-sec">
+						<div class="g-section-header">
+							<h2 class="g-h2">Navigations</h2>
+						</div>
+						<div class="g-section-body">
+							<!-- lnb -->
+							<h3 class="g-h3">Local Navigation Bar</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+										<a href="#tabContentCode1-1" class="g-example-btn">HTML</a>
+									</div>
+								</div>
+								<div id="tabContentCode1-1" class="g-example-footer">
+									<pre class="brush:html">
+										&lt;nav class="lnb">
+											&lt;div class="node1-wrap">
+												&lt;ul>
+													&lt;li>
+														&lt;a href="page.html" class="node1-link">&lt;/a>
+														&lt;div class="node2-wrap">
+															&lt;ul>
+																&lt;li>
+																	&lt;a href="page.html" class="node2-link">&lt;/a>
+																	&lt;div class="node3-wrap">
+																		&lt;ul>
+																			&lt;li>
+																				&lt;a href="page.html" class="node3-link">&lt;/a>
+																			&lt;/li>
+																		&lt;/ul>
+																	&lt;/div>
+																&lt;/li>
+															&lt;/ul>
+														&lt;/div>
+													&lt;/li>
+												&lt;/ul>
+											&lt;/div>
+										&lt;/nav>
+									</pre>
+								</div>
+							</div>
+							<!-- //lnb -->
+
+							<!-- snb -->
+							<h3 class="g-h3">Sub Navigation Bar</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+										<a href="#tabContentCode2-1" class="g-example-btn">HTML</a>
+									</div>
+								</div>
+								<div id="tabContentCode2-1" class="g-example-footer">
+									<pre class="brush:html">
+										&lt;nav class="snb">
+											&lt;div class="node2-wrap">
+												&lt;ul>
+													&lt;li>
+														&lt;a href="page.html" class="node2-link">&lt;/a>
+														&lt;div class="node3-wrap">
+															&lt;ul>
+																&lt;li>
+																	&lt;a href="page.html" class="node3-link">&lt;/a>
+																&lt;/li>
+															&lt;/ul>
+														&lt;/div>
+													&lt;/li>
+												&lt;/ul>
+											&lt;/div>
+										&lt;/nav>
+									</pre>
+								</div>
+							</div>
+							<!-- //snb -->
+
+							<!-- mnb -->
+							<h3 class="g-h3">Mobile Navigation Bar</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+										<a href="#tabContentCode3-1" class="g-example-btn">HTML</a>
+									</div>
+								</div>
+								<div id="tabContentCode3-1" class="g-example-footer">
+									<pre class="brush:html">
+										&lt;nav class="mnb">
+											&lt;div class="node1-wrap">
+												&lt;ul>
+													&lt;li>
+														&lt;a href="page.html" class="node1-link">&lt;/a>
+														&lt;div class="node2-wrap">
+															&lt;ul>
+																&lt;li>
+																	&lt;a href="page.html" class="node2-link">&lt;/a>
+																&lt;/li>
+															&lt;/ul>
+														&lt;/div>
+													&lt;/li>
+												&lt;/ul>
+											&lt;/div>
+										&lt;/nav>
+									</pre>
+								</div>
+							</div>
+							<!-- //mnb -->
+
+							<!-- anb -->
+							<h3 class="g-h3">All Navigation Bar</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+										<a href="#tabContentCode4-1" class="g-example-btn">HTML</a>
+									</div>
+								</div>
+								<div id="tabContentCode4-1" class="g-example-footer">
+									<pre class="brush:html">
+										&lt;nav class="anb">
+											&lt;div class="node1-wrap">
+												&lt;ul>
+													&lt;li>
+														&lt;a href="page.html" class="node1-link">&lt;/a>
+														&lt;div class="node2-wrap">
+															&lt;ul>
+																&lt;li>
+																	&lt;a href="page.html" class="node2-link">&lt;/a>
+																	&lt;div class="node3-wrap">
+																		&lt;ul>
+																			&lt;li>
+																				&lt;a href="page.html" class="node3-link">&lt;/a>
+																			&lt;/li>
+																		&lt;/ul>
+																	&lt;/div>
+																&lt;/li>
+															&lt;/ul>
+														&lt;/div>
+													&lt;/li>
+												&lt;/ul>
+											&lt;/div>
+										&lt;/nav>
+									</pre>
+								</div>
+							</div>
+							<!-- //anb -->
+
+							<!-- gnb -->
+							<h3 class="g-h3">Global Navigation Bar</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+										<a href="#tabContentCode5-1" class="g-example-btn">HTML</a>
+									</div>
+								</div>
+								<div id="tabContentCode5-1" class="g-example-footer">
+									<pre class="brush:html">
+										&lt;nav class="gnb">
+											&lt;ul>
+												&lt;li>&lt;a href="page.html">&lt;/a>&lt;/li>
+											&lt;/ul>
+										&lt;/nav>
+									</pre>
+								</div>
+							</div>
+							<!-- //gnb -->
+
+							<!-- unb -->
+							<h3 class="g-h3">Utility Navigation Bar</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+										<a href="#tabContentCode6-1" class="g-example-btn">HTML</a>
+									</div>
+								</div>
+								<div id="tabContentCode6-1" class="g-example-footer">
+									<pre class="brush:html">
+										&lt;nav class="unb">
+											&lt;ul>
+												&lt;li>&lt;a href="page.html">&lt;/a>&lt;/li>
+											&lt;/ul>
+										&lt;/nav>
+									</pre>
+								</div>
+							</div>
+							<!-- //unb -->
+
+							<!-- fnb -->
+							<h3 class="g-h3">Footer Navigation Bar</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+										<a href="#tabContentCode7-1" class="g-example-btn">HTML</a>
+									</div>
+								</div>
+								<div id="tabContentCode7-1" class="g-example-footer">
+									<pre class="brush:html">
+										&lt;nav class="fnb">
+											&lt;ul>
+												&lt;li>&lt;a href="page.html">&lt;/a>&lt;/li>
+											&lt;/ul>
+										&lt;/nav>
+									</pre>
+								</div>
+							</div>
+							<!-- //fnb -->
+
+							<!-- qnb -->
+							<h3 class="g-h3">Quick Navigation Bar</h3>
+							<div class="g-example-wrap">
+								<div class="g-example-header">
+									<strong class="g-example-tit"></strong>
+									<div class="g-example-nav">
+										<span class="g-example-txt"></span>
+										<a href="#tabContentCode8-1" class="g-example-btn">HTML</a>
+									</div>
+								</div>
+								<div id="tabContentCode8-1" class="g-example-footer">
+									<pre class="brush:html">
+										&lt;nav class="qnb">
+											&lt;ul>
+												&lt;li>&lt;a href="page.html">&lt;/a>&lt;/li>
+											&lt;/ul>
+										&lt;/nav>
+									</pre>
+								</div>
+							</div>
+							<!-- //qnb -->
+						</div>
+					</section>
+					<!-- //Navigations -->
+				</div>
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

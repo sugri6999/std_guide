@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper" class="g-convention-wrap">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content" class="">
+			<div class="g-content-header">
+				<div class="g-in-sec">
+					<h1 class="g-h1">코드규칙</h1>
+					<small class="g-explain-h1">Publishing Conventions</small>
+				</div>
+			</div>
+			<div class="g-content-body">
+				<!-- section3 -->
+				<section id="section3" class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">기본규칙</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">코드 들여쓰기</h3>
+						<ul class="g-desc">
+							<li>1탭 들여쓰기 하며, 1탭의 크기는 공백 4칸으로 설정한다.</li>
+						</ul>
+
+						<h4 class="g-h4">들여쓰기를 하지 않는 경우</h4>
+						<div class="g-code">
+							<pre class="brush:html">
+								&lt;!doctype html&gt;
+								&lt;html lang="ko"&gt;
+								&lt;head&gt;
+								&lt;/head&gt;
+								&lt;body&gt;
+								&lt;div id="wrapper"&gt;
+								&lt;/div&gt;
+								&lt;/body&gt;
+								&lt;/html&gt;
+							</pre>
+						</div>
+
+						<h3 class="g-h3">주석 / 빈줄</h3>
+						<ul class="g-desc">
+							<li>가독성을 고려하여 빈 줄을 추가한다. 단, 1줄을 초과하지 않는다.</li>
+						</ul>
+						<div class="g-code">
+							<pre class="brush:html">
+								&lt;header id="header"&gt;
+								&lt;/header&gt; &lt;!-- //Header --&gt;
+
+								&lt;div id="container"&gt;
+								&lt;/div&gt; &lt;!-- //Container --&gt;
+
+								&lt;footer id="footer"&gt;
+								&lt;/footer&gt; &lt;!-- //Footer --&gt;
+							</pre>
+						</div>
+
+						<h3 class="g-h3">수정/추가/삭제</h3>
+						<ul class="g-desc">
+							<li>조치사항 진행 결과의 주석을 남긴다. (예 : [날짜][조치내용][이슈])</li>
+							<li>잦은 수정사항을 고려하여 다중구조인 경우만 닫기주석으로 범위를 표시한다.</li>
+						</ul>
+						<h4 class="g-h4">인라인 수정</h4>
+						<div class="g-code">
+							<pre class="brush:html">
+								&lt;div&gt;
+									(내용생략) &lt;!-- 181130 금리변경건 수정 --&gt;
+								&lt;/div&gt;
+							</pre>
+						</div>
+						<h4 class="g-h4">단순구조 수정</h4>
+						<div class="g-code">
+							<pre class="brush:html">
+								&lt;div&gt;
+									(내용생략)
+								&lt;/div&gt; &lt;!-- //181130 금리변경건 수정 --&gt;
+							</pre>
+						</div>
+						<h4 class="g-h4">다중구조 수정</h4>
+						<div class="g-code">
+							<pre class="brush:html">
+								&lt;!-- 181130 금리변경건 수정 --&gt;
+								&lt;div&gt;
+									(내용생략)
+								&lt;/div&gt;
+								&lt;div&gt;
+									(내용생략)
+								&lt;/div&gt;
+								&lt;!-- //181130 금리변경건 수정 --&gt;
+							</pre>
+						</div>
+						<h4 class="g-h4">이슈단위 표시</h4>
+						<ul class="g-desc">
+							<li>조치사항 이슈가 많은경우 이슈단위로 주석을 남긴다. (예 : [제목][조치내용][이슈])</li>
+						</ul>
+						<div class="g-code">
+							<pre class="brush:html">
+								&lt;!-- 접근성ver1 제목문구 수정 --&gt;
+								&lt;div title="제목"&gt;
+									(내용생략)
+								&lt;/div&gt;
+							</pre>
+						</div>
+
+						<h3 class="g-h3">Attribute 지정 순서</h3>
+						<p class="g-desc">기능 &gt; 이름 &gt; 정보  &gt; 선택속성 &gt; 클래스 &gt; 상태 순서로 적용한다.</p>
+						<h4 class="g-h4">A 엘리먼트</h4>
+						<div class="g-code">
+							<pre class="brush:html">&lt;a href="#none" title="새창열기" target="" class=""&gt;인쇄하기&lt;/a&gt;</pre>
+						</div>
+						<h4 class="g-h4">Iframe 엘리먼트</h4>
+						<div class="g-code">
+							<pre class="brush:html">&lt;iframe src="about:blank" title="빈프레임"&gt;&lt;/iframe&gt;</pre>
+						</div>
+						<h4 class="g-h4">Img 엘리먼트</h4>
+						<div class="g-code">
+							<pre class="brush:html">&lt;img src="img.gif" alt="대체텍스트" /&gt;</pre>
+						</div>
+						<h4 class="g-h4">Input 엘리먼트</h4>
+						<div class="g-code">
+							<pre class="brush:html">&lt;input type="text" name="" id="" value="" title="" class="" style="" disabled /&gt;</pre>
+						</div>
+
+						<h3 class="g-h3">CSS 기본 규칙</h3>
+						<h4 class="g-h4">작업정보</h4>
+						<div class="g-code">
+							<pre class="brush:css">
+							@charset "utf-8";
+							/*-------------------------------------------------------------------
+								파일정의 : 파일명 또는 파일설명
+								작성날짜 : 2019-01-01 홍길동
+								주의사항 : 주석표기는 페이지 접근방법을 알수 있도록 표시
+								분류순서 : 분류1 > 분류2 > 분류3
+								속성순서 : 표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+							-------------------------------------------------------------------*/
+							</pre>
+						</div>
+						<ul class="g-desc-guide">
+							<li>* 파일에 따라서 불필요한 항목은 삭제 할 수 있다. (예 : animate.css)</li>
+						</ul>
+
+						<h4 class="g-h4">작은 따옴표('') 사용 범위</h4>
+						<p class="g-desc">폰트의 선언, filter, content에 작은 따옴표('')를 사용한다.</p>
+						<div class="g-code">
+							<pre class="brush:css">
+								.class-name {font-family:'dotum'}
+								.filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img.png', sizingMethod='scale'}
+								.class-name:after{content:'.'}
+								.class-name {background:url('img.gif') no-repeat}
+							</pre>
+						</div>
+
+						<h4 class="g-h4">세미콜론(;)</h4>
+						<p class="g-desc">마지막 선언된 속성에는 세미콜론(;)을 사용하지 아니한다.</p>
+						<div class="g-code">
+							<pre class="brush:css">
+								.class-name {margin-left:0; padding-left:10px}
+							</pre>
+						</div>
+
+						<h4 class="g-h4">공백의 사용</h4>
+						<p class="g-desc">선택자 간, 중괄호간 한칸의 공백을 사용한다, 중괄호 안쪽 좌우에는 공백은 사용하지 않는다.</p>
+						<div class="g-code">
+							<pre class="brush:css">
+								.class-name,
+								.class-name .child-class {background:url('../img/img.gif') no-repeat}
+								.class-name {padding:0; margin:0}
+								.class-name {padding:0; margin:0}
+							</pre>
+						</div>
+
+						<h3 class="g-h3">들여쓰기/줄 바꿈</h3>
+						<ul class="g-desc">
+							<li>CSS 코드 작성시 들여쓰기는 허용하지 않는다.</li>
+							<li>공통으로 사용되는 속성의 선택자간의 줄 바꿈은 허용하며 이 외의 줄바꿈은 허용하지 않는다.</li>
+							<li>하나의 속성이 끝나고 다음속성은 한칸 띄우고 선언한다.</li>
+						</ul>
+						<div class="g-code">
+							<pre class="brush:css">
+								h4.class-name {font-size:1.25em; letter-spacing:-1px; margin:0.5em 0 0 0;}
+
+								.class-name,
+								.class-name .child-class {background:url(../img/img.gif) no-repeat;}
+							</pre>
+						</div>
+
+						<h3 class="g-h3">주석 / 빈줄</h3>
+						<ul class="g-desc">
+							<li>종료 주석은 작성하지 않는다.</li>
+							<li>코드 그룹 간 1줄의 빈 줄을 허용한다. 단, 1줄을 초과하지 않는다.</li>
+						</ul>
+						<div class="g-code">
+							<pre class="brush:css">
+								/* title */
+								.title-type1 {margin:30px 0 10px 0}
+
+								/* description */
+								.desc1 {padding:2px 0 0 15px; font-size:0.917em}
+							</pre>
+						</div>
+
+						<h3 class="g-h3">선택자</h3>
+						<h4 class="g-h4">공통 선택자</h4>
+						<p class="g-desc">'*' 공통 선택자는 웹 페이지의 성능을 저하를 가져오기 때문에 가급적 사용하지 않는다.</p>
+						<div class="g-code">
+							<pre class="brush:css">
+								/* 잘못된 예 */
+								* {margin:0; padding:0}
+							</pre>
+						</div>
+
+						<h3 class="g-h3">속성의 선언 순서</h3>
+						<div class="g-tbl-type1">
+							<table>
+								<caption>CSS 속성선언순서</caption>
+								<colgroup>
+									<col style="width:20%;">
+									<col style="width:20%;">
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>구분</th>
+										<th>속성</th>
+										<th>속성 값</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="2">1. 표시</td>
+										<td>display</td>
+										<td>none, block, inline, inline-block, inline-table, list-item, table, table-caption, table-cell, table-column, table-column-group, table-footer-group, table-header-group, table-row, table-row-group</td>
+									</tr>
+									<tr>
+										<td>visibility</td>
+										<td>visible, hidden, collapse</td>
+									</tr>
+									<tr>
+										<td rowspan="3">2. 위치</td>
+										<td>position</td>
+										<td>absolute, fixed, relative, static</td>
+									</tr>
+									<tr>
+										<td>top, right, bottom, left</td>
+										<td>length(px), %</td>
+									</tr>
+									<tr>
+										<td>z-index</td>
+										<td>number</td>
+									</tr>
+									<tr>
+										<td rowspan="2">3. 넘침/흐름</td>
+										<td>overflow</td>
+										<td>visible, hidden, scroll, auto</td>
+									</tr>
+									<tr>
+										<td>float</td>
+										<td>left, right, none</td>
+									</tr>
+									<tr>
+										<td rowspan="4">4. 크기/간격</td>
+										<td>width, max-width, min-width</td>
+										<td>auto, length(px), %</td>
+									</tr>
+									<tr>
+										<td>height, max-height, min-height</td>
+										<td>auto, length(px), %</td>
+									</tr>
+									<tr>
+										<td>margin</td>
+										<td>auto, length(px, em), %</td>
+									</tr>
+									<tr>
+										<td>padding</td>
+										<td>auto, length(px, em), %</td>
+									</tr>
+									<tr>
+										<td rowspan="2">5. 박스모양</td>
+										<td>border</td>
+										<td>border-width, border-style, border-color</td>
+									</tr>
+									<tr>
+										<td>background</td>
+										<td>background-color, background-image, background-repeat, background-attachment, background-position</td>
+									</tr>
+									<tr>
+										<td rowspan="4">6. 폰트/정렬</td>
+										<td>font</td>
+										<td>font-style, font-variant, font-weigth, font-size/line-height, font-family</td>
+									</tr>
+									<tr>
+										<td>color</td>
+										<td>hex_number, hex_number</td>
+									</tr>
+									<tr>
+										<td>text-align</td>
+										<td>left, right, center, justify</td>
+									</tr>
+									<tr>
+										<td>vertical-align</td>
+										<td>top, middle, bottom, baseline</td>
+									</tr>
+									<tr>
+										<td>7. 기타</td>
+										<td></td>
+										<td>언급되지 않은 속성들은 후순위로 적용한다.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<!-- //section3 -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

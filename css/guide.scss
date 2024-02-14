@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+    파일정의 :Guide
+	작성날짜 :2023-11-29 지성만
+	참고사항 :기본값을 정의해서 의미에 적용하고, 의미를 스타일에 활용하여 가이드화 한다.
+    분류순서 :기본정책 > 유틸리티 > 사용자정의(컬러, 폰트, 보더, 간격 등)
+    속성순서 :표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+-------------------------------------------------------------------*/
+
+/* 라이브러리 */
+// Color
+.coler_set {
+    display:flex; align-items:flex-start; flex-wrap:wrap;
+    > div {display:flex; padding:20px; flex-direction:column; align-items:center; gap:80px; min-width:114px}
+}
+
+.color_black {background-color:#020202; border:1px solid #020202}
+.color_white {background-color:#fff; border:1px solid #EDEDED}
+.color_gray10 {background-color:#191919}
+.color_gray09 {background-color:#333}
+.color_gray08 {background-color:#555}
+.color_gray07 {background-color:#777}
+.color_gray06 {background-color:#999}
+.color_gray05 {background-color:#CDCDCD}
+.color_gray04 {background-color:#DBDBDB}
+.color_gray03 {background-color:#EAEAEA}
+.color_gray02 {background-color:#EDEDED}
+.color_gray01 {background-color:#FDFDFD}
+.color_orange08 {background-color:#EB6000}
+.color_orange07 {background-color:#EC6C00}
+.color_orange06 {background-color:#EE7700}
+.color_orange05 {background-color:#F18D00}
+.color_orange04 {background-color:#F3981C}
+.color_orange03 {background-color:#F4A22C}
+.color_orange02 {background-color:#F6AC3B}
+.color_orange01 {background-color:#F9C158}
+.color_navy08 {background-color:#001B5A}
+.color_navy07 {background-color:#001F63}
+.color_navy06 {background-color:#002668}
+.color_navy05 {background-color:#003070}
+.color_navy04 {background-color:#233C7E}
+.color_navy03 {background-color:#3A4C8E}
+.color_navy02 {background-color:#5163A2}
+.color_navy01 {background-color:#6477B6}
+.orange_opacity01 {background:var(--Warm-Gray-Scale-O-T-02, linear-gradient(0deg, rgba(241, 141, 0, 0.10) 0%, rgba(241, 141, 0, 0.10) 100%), #FFF)}
+.orange_opacity004 {background:var(--Warm-Gray-Scale-O-T-01, linear-gradient(0deg, rgba(241, 141, 0, 0.04) 0%, rgba(241, 141, 0, 0.04) 100%), #FFF)}
+.bg_01 {background-color:#F9F7F4}
+.bg_02 {background-color:#F4EEE5}
+.color_red {background-color:#D11B19}
+
+.color_black *,
+.color_gray06 *,
+.color_gray07 *,
+.color_gray08 *,
+.color_gray09 *,
+.color_gray10 *,
+.color_red *,
+.font_white * {color:#fff}
+.font_black * {color:#000}
+
+// Typography
+.typo_lst {
+    display:flex; padding:20px; flex-direction:column; align-items:flex-start; gap:16px;
+    > div {width:100%}
+    ul {
+        display:flex; justify-content:center; align-items:center;
+        li {width:20%}
+    }
+    .card_header {
+        ul {
+            li {color:#8B8B8B}
+        }
+    }
+    .card_body {
+        ul {
+            border-top:1px solid rgba(176, 179, 188, .70);
+            li {padding:10px 0; color:#020202}
+        }
+    }
+}
+
+.tit_h3 * {font:400 30px/42px 'HMR'; letter-spacing:-.6px}
+.tit_h4 * {font:400 24px/36px 'HMR'; letter-spacing:-.48px}
+.tit_h5 * {font:400 21px/32px 'HMR'; letter-spacing:-.42px}
+.tit_h6 * {font:400 18px/28px 'HMR'}
+.tit_h7 * {font:400 16px/24px 'HMR'}
+.tit_h8 * {font:400 14px/20px 'HMR'}
+.text_m2 * {font:500 16px/24px 'HMR'; letter-spacing:-.32px}
+.text_l2 * {font:400 16px/24px 'HML'; letter-spacing:-.32px}
+.text_b1 * {font:600 16px/20px 'HMR'}
+.text_m1 * {font:500 14px/20px 'HMR'}
+.text_l1 * {font:400 14px/20px 'HML'}
+.caption_b1 * {font:600 12px/18px 'HMR'}
+.caption_m1 * {font:500 12px/18px 'HMR'}
+.caption_l1 * {font:400 12px/18px 'HML'}
+
+// App Bar
+.app_bar {
+    .card_body {
+        display:flex; align-items:flex-start; flex-wrap:wrap; gap:16px;
+        > div {width:375px;}
+        #wrapper.main_wrap {height:auto}
+        #wrapper.comm_wrap #header {position:relative; padding:0}
+
+        .step_box {
+            display:flex; justify-content:space-between; align-items:center; height:36px; padding:0 16px; background-color:#020202; border-radius:18px;
+            p {color:#fff; font:400 14px/20px 'HML'; letter-spacing:-.5px}
+            ul {
+                display:flex; align-items:center;
+                li {
+                    margin-left: 6px;
+                    .pointer {
+                        width:6px; height:6px; background:#ccc; border-radius:50%; font-size:0; text-indent:-9999px; display:inline-block; vertical-align:middle;
+                        &.is-active {width:20px;height:20px;background:#F18D00;border-radius:50%;font-size:14px;text-align:center;text-indent:0;line-height:20px;color:#fff;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 
+.text_field {
+    .card_body {
+        display:flex; align-items:flex-start; flex-wrap:wrap; gap:20px;
+        > div {width:300px;}
+        .form_wrap .btn_clear {position:absolute; right:-10px; top:0; width:40px; height:40px}
+
+        .col2 {
+            .form_wrap {
+                display:flex;
+                .num_select {
+                    position:relative; width:30%;                                
+                    .btn_select {width:100%; right:0}
+                    .text_label {display:block}
+                }
+                .type_t {
+                    width:70%;
+                    &.hypen {
+                        position:relative;
+                        &::before {content:''; position:absolute; top:20px; right:12px; width:6px; height:1px; background-color:#333}
+                    } 
+                } 
+            }
+        }
+
+        .form_item.is-didabled {
+            .form-input,
+            .form_label label {color:#777}
+        }
+    }
+}

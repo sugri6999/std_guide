@@ -1,0 +1,10 @@
+document.write('<link href="'+gBaseURL.guide+'css/lib/shCoreDefaultWhite.css" rel="stylesheet" />');
+document.write('<script src="'+gBaseURL.guide+'js/lib/jquery.mCustomScrollbar.min.js"></script>');
+document.write('<script src="'+gBaseURL.guide+'js/lib/jquery.clipboard.min.js"></script>');
+document.write('<script src="'+gBaseURL.guide+'js/guide.js"></script>');
+document.write('<script src="'+gBaseURL.guide+'js/lib/shCore.js?cb=undefined"></script>');
+document.write('<script src="'+gBaseURL.guide+'js/lib/shAutoLoader.js?cb=undefined"></script>');
+document.write('<script src="'+gBaseURL.guide+'js/lib/shBrushjScript.js?cb=undefined"></script>');
+document.write('<script src="'+gBaseURL.guide+'js/lib/shBrushXml.js?cb=undefined"></script>');
+document.write('<script src="'+gBaseURL.guide+'js/lib/shBrushCss.js?cb=undefined"></script>');
+document.write('<script>SyntaxHighlighter.all();</script>');
