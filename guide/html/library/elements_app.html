@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body id="elements">
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">App Bar</h1>
+				<p class="g-explain-h1">마크업뷰중심 + 일부컨텐츠 </p>
+			</div>
+			<div class="g-content-body">
+                
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Wrapper</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">SCSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="card card_basic app_bar">
+                                    <div class="card_body">
+                                        <div id="wrapper" class="main_wrap">
+                                            <p style="line-height:150px; text-align:center;">main_wrap</p>
+                                        </div>
+                                        <div id="wrapper" class="comm_wrap">
+                                            <p style="line-height:150px; text-align:center;">comm_wrap</p>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+                        
+                            <div class="g-example-footer">
+                                <pre class="brush:html">
+                                    &lt;div id="wrapper" class="main_wrap">
+                                        생략
+                                    &lt;/div>
+                                
+                                    &lt;div id="wrapper" class="comm_wrap">
+                                        생략
+                                    &lt;/div>
+                                </pre>
+                            </div>
+                            
+                            <div class="g-example-footer">
+                                <pre class="brush:css">
+                                    #wrapper {
+                                        height:100vh; padding:0 24px;
+                                        &.main_wrap {display:flex; flex-direction:column; justify-content:space-between; gap:20px 0; height:100vh; background: var(--warm-gray-scale-ot-02, linear-gradient(0deg, rgba(241, 141, 0, 0.10) 0%, rgba(241, 141, 0, 0.10) 100%), #FFF)}
+                                        &.comm_wrap {background: var(--background-bg-01, #F9F7F4)}
+                                    }
+                                </pre>
+                            </div>
+                        </div>
+
+					</div>
+				</section><!-- //Section -->
+
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Top Bar</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">SCSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="card card_basic app_bar">
+                                    <div class="card_body">
+                                        <div id="wrapper" class="main_wrap">
+                                            <header id="header">
+                                                <h1><img src="/images/g62.svg" class="ico_logo" alt="H"> <span><img src="/images/text_logo.svg" class="txt_logo" alt="현대해상"></span></h1>
+                                            </header>
+                                        </div>
+                                        <div id="wrapper" class="comm_wrap">
+                                            <header id="header">
+                                                <h1><img src="/images/g62.svg" class="ico_logo" alt="H"></h1>
+                                                <h2>타이틀명</h2>
+                                                <p><img src="/images/ico_chat.svg" alt=""></p>
+                                            </header>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+                        
+                            <div class="g-example-footer">
+                                <pre class="brush:html">
+                                    &lt;header id="header">
+                                        &lt;h1>&lt;img src="/images/g62.svg" class="ico_logo" alt="H"> &lt;span>&lt;img src="/images/text_logo.svg" class="txt_logo" alt="현대해상">&lt;/span>&lt;/h1>
+                                    &lt;/header>
+
+                                    &lt;header id="header">
+                                        &lt;h1>&lt;img src="/images/g62.svg" class="ico_logo" alt="H">&lt;/h1>
+                                        &lt;h2>타이틀명&lt;/h2>
+                                        &lt;p>&lt;img src="/images/ico_chat.svg" alt="">&lt;/p>
+                                    &lt;/header>
+                                </pre>
+                            </div>
+                            
+                            <div class="g-example-footer">
+                                <pre class="brush:css">
+                                    #wrapper {
+                                        #header {
+                                            display:flex; justify-content:space-between; align-items:center; height:62px;
+                                            h1 {width:16px}                                            
+                                            h2 {font:300 18px "HMR"}
+                                        }
+                                        &.main_wrap {
+                                            #header {
+                                                h1 {
+                                                    display:inline-block; width:auto;
+                                                    .ico_logo {width:25px; vertical-align:bottom}
+                                                    span {display:inline-block; width:85px; margin-left:4px}
+                                                }
+                                            }
+                                        }
+                                        &.comm_wrap {
+                                            background:var(--background-bg-01, #F9F7F4);
+                                            #header {
+                                                position:fixed; left:0; right:0; padding:0 24px; background-color:#F9F7F4; z-index:99;
+                                            }
+                                        }
+                                    }
+                                </pre>
+                            </div>
+                        </div>
+
+					</div>
+				</section><!-- //Section -->
+                
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Progress Bar</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">SCSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="card card_basic app_bar">
+                                    <div class="card_body">
+                                        <div class="step_box">
+                                            <p>계약정보를 확인해주세요.</p>
+                                            <ul>
+                                                <li><span class="pointer is-active">1</span></li>
+                                                <li><span class="pointer">2</span></li>
+                                                <li><span class="pointer">3</span></li>
+                                                <li><span class="pointer">4</span></li>
+                                                <li><span class="pointer">5</span></li>
+                                                <li><span class="pointer">6</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="step_box">
+                                            <p>계약정보를 확인해주세요.</p>
+                                            <ul>
+                                                <li><span class="pointer">1</span></li>
+                                                <li><span class="pointer is-active">2</span></li>
+                                                <li><span class="pointer">3</span></li>
+                                                <li><span class="pointer">4</span></li>
+                                                <li><span class="pointer">5</span></li>
+                                                <li><span class="pointer">6</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="step_box">
+                                            <p>계약정보를 확인해주세요.</p>
+                                            <ul>
+                                                <li><span class="pointer">1</span></li>
+                                                <li><span class="pointer">2</span></li>
+                                                <li><span class="pointer is-active">3</span></li>
+                                                <li><span class="pointer">4</span></li>
+                                                <li><span class="pointer">5</span></li>
+                                                <li><span class="pointer">6</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="step_box">
+                                            <p>계약정보를 확인해주세요.</p>
+                                            <ul>
+                                                <li><span class="pointer">1</span></li>
+                                                <li><span class="pointer">2</span></li>
+                                                <li><span class="pointer">3</span></li>
+                                                <li><span class="pointer is-active">4</span></li>
+                                                <li><span class="pointer">5</span></li>
+                                                <li><span class="pointer">6</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="step_box">
+                                            <p>계약정보를 확인해주세요.</p>
+                                            <ul>
+                                                <li><span class="pointer">1</span></li>
+                                                <li><span class="pointer">2</span></li>
+                                                <li><span class="pointer">3</span></li>
+                                                <li><span class="pointer">4</span></li>
+                                                <li><span class="pointer is-active">5</span></li>
+                                                <li><span class="pointer">6</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="step_box">
+                                            <p>계약정보를 확인해주세요.</p>
+                                            <ul>
+                                                <li><span class="pointer">1</span></li>
+                                                <li><span class="pointer">2</span></li>
+                                                <li><span class="pointer">3</span></li>
+                                                <li><span class="pointer">4</span></li>
+                                                <li><span class="pointer">5</span></li>
+                                                <li><span class="pointer is-active">6</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+                        
+                            <div class="g-example-footer">
+                                <pre class="brush:html">
+                                    &lt;div class="step_box">
+                                        &lt;p>계약정보를 확인해주세요.&lt;/p>
+                                        &lt;ul>
+                                            &lt;li>&lt;span class="pointer is-active">1&lt;/span>&lt;/li>
+                                            &lt;li>&lt;span class="pointer">2&lt;/span>&lt;/li>
+                                            &lt;li>&lt;span class="pointer">3&lt;/span>&lt;/li>
+                                            &lt;li>&lt;span class="pointer">4&lt;/span>&lt;/li>
+                                            &lt;li>&lt;span class="pointer">5&lt;/span>&lt;/li>
+                                            &lt;li>&lt;span class="pointer">6&lt;/span>&lt;/li>
+                                        &lt;/ul>
+                                    &lt;/div>
+                                </pre>
+                            </div>
+                            
+                            <div class="g-example-footer">
+                                <pre class="brush:css">
+                                    .step_box {
+                                        display:flex; justify-content:space-between; align-items:center; height:36px; padding:0 16px; background-color:#020202; border-radius:18px;
+                                        p {color:#fff; font:400 14px/20px 'HML'; letter-spacing:-.5px}
+                                        ul {
+                                            display:flex; align-items:center;
+                                            li {
+                                                margin-left: 6px;
+                                                .pointer {
+                                                    width:6px; height:6px; background:#ccc; border-radius:50%; font-size:0; text-indent:-9999px; display:inline-block; vertical-align:middle;
+                                                    &.is-active {width:20px;height:20px;background:#F18D00;border-radius:50%;font-size:14px;text-align:center;text-indent:0;line-height:20px;color:#fff}
+                                                }
+                                            }
+                                        }
+                                    }
+                                </pre>
+                            </div>
+                        </div>
+
+					</div>
+				</section><!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

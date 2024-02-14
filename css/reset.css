@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+    파일정의 :초기화 스타일
+	작성날짜 :2019-02-21 지성만
+    분류순서 :Base > Fonts
+    속성순서 :표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+    ## Base
+-------------------------------------------------------------------*/
+
+@charset "utf_8";
+
+/***********************************************
+* 롯데시네마 2018 RESET_CSS *
+***********************************************/
+
+/*========================================== FONT ==========================================*/
+@font-face {
+	font-family:"HGL";
+	font-style:normal;
+	src:url("../font/HIGothicL.ttf");
+	src:local("※"), url("../font/HIGothicL.ttf") format("woff"), url("../font/HIGothicL.woff2") format("woff"), url("../font/HIGothicL.woff") format("woff")
+}
+@font-face {
+	font-family:"HGM";
+	font-weight:300;
+	font-style:normal;
+	src:url("../font/HIGothicM.ttf");
+	src:local("※"), url("../font/HIGothicM.ttf") format("woff"), url("../font/HIGothicM.woff2") format("woff"), url("../font/HIGothicM.woff") format("woff")
+}
+@font-face {
+	font-family:"HGB";
+	font-style:normal;
+	src:url("../font/HIGothicB.ttf");
+	src:local("※"), url("../font/HIGothicB.ttf") format("woff"), url("../font/HIGothicB.woff2") format("woff"), url("../font/HIGothicB.woff") format("woff")
+}
+@font-face {
+	font-family:"HGEB";
+	font-style:normal;
+	src:url("../font/HIGothicEB.ttf");
+	src:local("※"), url("../font/HIGothicEB.ttf") format("woff"), url("../font/HIGothicEB.woff2") format("woff"), url("../font/HIGothicEB.woff") format("woff")
+}
+
+@font-face {
+	font-family:"HML";
+	font-style:normal;
+	src:url("../font/HIMaumL.ttf");
+	src:local("※"), url("../font/HIMaumL.ttf") format("woff"), url("../font/HIMaumL.woff2") format("woff"), url("../font/HIMaumL.woff") format("woff")
+}
+@font-face {
+	font-family:"HMR";
+	font-style:normal;
+	src:url("../font/HIMaumR.ttf");
+	src:local("※"), url("../font/HIMaumR.ttf") format("woff"), url("../font/HIMaumR.woff2") format("woff"), url("../font/HIMaumR.woff") format("woff")
+}
+
+/*========================================== DIVICE ==========================================*/
+/* @media all and (min-width:768px) {
+	html {font-size:100%}
+}
+@media all and (min-width:641px) and (max-width:767px) {
+	html {font-size:75%}
+}
+
+@media all and (max-width:640px) {
+	html {font-size:56.5%}
+} */
+
+/* reset */
+/* * {-webkit-text-size-adjust:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box}
+html {overflow-y:scroll; width:100%; height:100%}
+body {min-width:320px; font-size:14px; font-size:1.4rem}
+body, pre {font-family:'HML', '돋움', dotum, Arial, Verdana, Helvertica, sans-serif; color:#222; letter-spacing:-.065rem}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, th, td, input, select, textarea, button {margin:0; padding:0}
+h1, h2, h3, h4, h5, h6 {font-weight:800}
+table {border-spacing:0; border-collapse:collapse}
+pre {white-space:pre-wrap}
+dt {font-weight:bold}
+button {padding:0; margin:0; border:0; cursor:pointer}
+input, select, textarea, button, label {font-size:100%; vertical-align:middle}
+fieldset, img, iframe {border:0 none}
+img {max-width:100%; width:100%; vertical-align:middle; border:0}
+textarea {resize:none}
+th, td {text-align:left}
+a, u, ins {text-decoration:none}
+a {display:block}
+a:hover,a:active,a:focus {text-decoration:none}
+button {padding:0; margin:0; border:0; cursor:pointer; vertical-align:middle; background:none}
+caption {width:0; height:0; font-size:0; line-height:0; overflow:hidden; visibility:hidden}
+hr {}
+i, em, address {font-style:normal}
+label {cursor:pointer}
+table {border-spacing:0; border-collapse:collapse;}
+th, td {padding:0; vertical-align:top; text-align:left; font-weight:normal}
+dd, dl, ol, ul, form {margin:0; padding:0}
+li {list-style-type:none}
+form {margin:0; padding:0}
+fieldset {margin:0; padding:0; border:none}
+legend {position:absolute; top:-50px; left:-50px; width:0; height:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0; padding:0}
+input, select {font-size:1.4rem; line-height:1; vertical-align:top; padding:0; margin:0; color:#666; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0}
+textarea {font-size:1.4rem; vertical-align:top; padding:.875rem; margin:0; color:#666}
+label, button {cursor:pointer}
+button {overflow:visible; margin:0; padding:0;border:none; background:none; cursor:pointer}
+button::-moz-focus-inner {border:0; padding:0} */
+
+
+/*-------------------------------------------------------------------
+    ## Base
+-------------------------------------------------------------------*/
+* {-webkit-text-size-adjust:none; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box}
+html {overflow-y:scroll; width:100%; height:100%}
+body {min-width:320px; font-size:14px}
+html, body, 
+div, ul, ol, dl, li, dd, p,
+h1, h2, h3, h4, h5, h6,
+table, th, td, caption, 
+article, aside, canvas, details, figure, figcaption,
+footer, header, menu, nav, section,
+button, select, textarea, input,
+fieldset, legend, a, span, strong, em, 
+address, dfn, small, i, b {box-sizing:border-box; margin:0; padding:0; border:0; list-style:none; font-family:"HMR", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", "Lato", "Helvetica Neue", "Verdana", sans-serif; font-style:normal; font-weight:normal; font-size:100%; color:#191919}
+:before,
+:after {box-sizing:border-box}
+article,
+aside,
+canvas,
+details,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+section {display:block}
+hidden,
+.hidden {display:none !important}
+img {max-width:100%; width:100%; vertical-align:middle; border:0}
+a {text-decoration:none}
+button {background-color:transparent; cursor:pointer}
+fieldset,
+iframe {width:100%}
+img,
+a,
+frame,
+iframe,
+fieldset {border:0}
+.dv-android [tabindex='0']:focus,
+.dv-android a:focus,
+.dv-android button:focus,
+.dv-android input:focus,
+.dv-android textarea:focus,
+.dv-android select:focus,
+.dv-ios [tabindex='0']:focus,
+.dv-ios a:focus,
+.dv-ios button:focus,
+.dv-ios input:focus,
+.dv-ios textarea:focus,
+.dv-ios select:focus,
+a:focus:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {outline:0}
+.dv-ios [tabindex='0'],
+.dv-ios a,
+.dv-ios button,
+.dv-ios input,
+.dv-ios textarea,
+.dv-ios select {-webkit-tap-highlight-color:transparent}
+table {width:100%; border-spacing:0; border-collapse:collapse}
+caption {visibility:hidden; height:0; line-height:0; font-size:0}
+legend {position:absolute; left:-9999em; top:-9999em}
+input:focus {outline:0}
+textarea {background:transparent}

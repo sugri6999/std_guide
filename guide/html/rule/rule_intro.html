@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body>
+<div id="g-wrapper" class="g-convention-wrap">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<article id="g-content" class="">
+			<div class="g-content-header">
+				<div class="g-in-sec">
+					<h1 class="g-h1">기본정책</h1>
+					<small class="g-explain-h1">Publishing Conventions</small>
+				</div>
+			</div>
+			<div class="g-content-body">
+				<section id="section1" class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">환경정의</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-tbl-type1">
+							<table>
+								<caption>환경정의</caption>
+								<colgroup>
+									<col style="width:20%">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" class="align-l">문서 및 버전</th>
+										<td>HTML5, CSS3</td>
+									</tr>
+									<tr>
+										<th scope="row" class="align-l">인코딩</th>
+										<td>UTF-8</td>
+									</tr>
+									<tr>
+										<th scope="row" class="align-l">웹 유형</th>
+										<td>PC Web, Mobile Web, Responcive Web</td>
+										<!-- PC Web | Mobile Web | Responsive Web | Mobile Hybrid Web -->
+									</tr>
+									<tr>
+										<th scope="row" class="align-l">PC 웹 호환성</th>
+										<td>
+											<div class="g-browser-icons">
+												<img src="../../images/ico_ie9.png" alt="">
+												<img src="../../images/ico_crom.png" alt="">
+												<img src="../../images/ico_firefox.png" alt="">
+												<img src="../../images/ico_sapari.jpg" alt="">
+												<img src="../../images/ico_opera.png" alt="">
+												(IE9 이상)
+											</div>
+											<style type="text/css">
+												.g-browser-icons img {width:30px; height:30px;}
+											</style>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="align-l">Mobile 웹 호환성</th>
+										<td>
+											<div class="g-browser-icons">
+												안드로이드 4.x 이상, IOS 9.x 이상, 사파리, 크롬
+											</div>
+											<style type="text/css">
+												.g-browser-icons img {width:30px; height:30px;}
+											</style>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row" class="align-l">웹 접근성</th>
+										<td>기본 준수</td>
+									</tr>
+									<tr>
+										<th scope="row" class="align-l">디자인 해상도</th>
+										<td>1200px</td>
+									</tr>
+									<tr>
+										<th scope="row" class="align-l">화면방향</th>
+										<td>가로(landscape), 세로(portrait) 모두 허용</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section><!-- //section1 -->
+
+				<section id="section2" class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">파일/폴더 규칙</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">파일구조</h3>
+						<div class="g-tbl-type1">
+							<table>
+								<caption>파일구조</caption>
+								<colgroup>
+									<col style="width:20%">
+									<col style="width:20%">
+									<col style="width:30%">
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>분류 폴더</th>
+										<th>구분 폴더</th>
+										<th>파일 이름</th>
+										<th>파일 설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>html</td>
+										<td>카테고리별 디렉토리</td>
+										<td>***.html</td>
+										<td>
+											마크업 - 페이지별
+										</td>
+									</tr>
+									<tr>
+										<td>images</td>
+										<td>카테고리별 디렉토리</td>
+										<td>***.html</td>
+										<td>
+											마크업 - 페이지별
+										</td>
+									</tr>
+									<tr>
+										<td>css</td>
+										<td></td>
+										<td>
+											import.css<br>
+											reset.css<br>
+											common.css<br>
+											layout.css<br>
+											ui.css<br>
+											content.css<br>
+											main.css<br>
+											animate.css
+										</td>
+										<td>
+											스타일 - CSS 가져오기<br>
+											스타일 - 초기화<br>
+											스타일 - 전체영역<br>
+											스타일 - 레이아웃<br>
+											스타일 - 공통형태<br>
+											스타일 - 서브화면<br>
+											스타일 - 메인화면<br>
+											스타일 - 에니메이트
+										</td>
+									</tr>
+									<tr>
+										<td rowspan="3">js</td>
+										<td>lib<br>(라이브러리)</td>
+										<td>
+											jquery.min.js<br>
+											html5shiv-printshiv.js<br>
+											EasePack.js<br>
+											TweenMax.js
+										</td>
+										<td>
+											스크립트 - Jquery Core(버젼)<br>
+											스크립트 - HTML5 호환성<br>
+											스크립트 - 모션효과<br>
+											스크립트 - 모션방법
+										</td>
+									</tr>
+									<tr>
+										<td>(퍼블모듈)</td>
+										<td>
+											import.js<br>
+											variable.js<br>
+											device.js<br>
+											utility.js<br>
+											common.js<br>
+											custom_ui.js<br>
+											content.js<br>
+											init.js
+										</td>
+										<td>
+											스크립트 - JS 가져오기<br>
+											스크립트 - 전역변수<br>
+											스크립트 - 기기체크<br>
+											스크립트 - 유틸리티<br>
+											스크립트 - 공통영역<br>
+											스크립트 - 공통 UI<br>
+											스크립트 - 컨텐츠별<br>
+											스크립트 - 초기실행
+										</td>
+									</tr>
+									<!--
+									<tr>
+										<td></td>
+										<td>ui<br>(공통모듈)</td>
+										<td>
+											ui_accordion.js<br>
+											ui_dropdown.js<br>
+											ui_modal.js<br>
+											ui_popup.js<br>
+											ui_sidebar.js<br>
+											ui_tab.js<br>
+											ui_tweenmax.js<br>
+											ui_animate.js<br>
+											ui_video.js<br>
+										</td>
+										<td>
+											스크립트 - 아코디언<br>
+											스크립트 - 드롭다운<br>
+											스크립트 - 모달<br>
+											스크립트 - 팝업<br>
+											스크립트 - 슬라이드바<br>
+											스크립트 - 탭<br>
+											스크립트 - 트윈맥스<br>
+											스크립트 - 에니메이트<br>
+											스크립트 - 비디오<br>
+										</td>
+									</tr>
+									-->
+									<tr>
+										<td>plugin<br>(추가기능)</td>
+										<td>
+											jquery.bxslider.min.js<br>
+											jquery.mCustomScrollbar.min.js<br>
+										</td>
+										<td>
+											플러그인 - BxSlider<br>
+											플러그인 - Custom Scroller
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<h3 class="g-h3">폴더구조</h3>
+						<div class="g-tbl-type1">
+							<table>
+								<caption>폴더구조</caption>
+								<colgroup>
+									<col span="4" style="width:20%">
+									<col>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>기기 폴더</th>
+										<th>언어 폴더</th>
+										<th>분류 폴더</th>
+										<th>구분 폴더</th>
+										<th>설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="6">mobile<br>web</td>
+										<td rowspan="6">ko<br>en</td>
+										<td>common</td>
+										<td>css</td>
+										<td>스타일</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>fonts</td>
+										<td>웹폰트</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>js</td>
+										<td>스크립트</td>
+									</tr>
+									<tr>
+										<td>img</td>
+										<td>common<br>main<br>[카테고리별]</td>
+										<td>이미지</td>
+									</tr>
+									<tr>
+										<td>html</td>
+										<td>카테고리별</td>
+										<td>페이지</td>
+									</tr>
+									<tr>
+										<td>upload</td>
+										<td></td>
+										<td>관리자 등록파일</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<!-- //section2 -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script type="text/javascript" src="../../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="../../js/d_jquery.js"></script>
+<script type="text/javascript" src="../../js/menuList.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="../../css/ia_guide.css" /> -->
+
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+
+<body id="elements">
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">메뉴리스트</h1>
+				<p class="g-explain-h1">마크업뷰중심 + 일부컨텐츠 </p>
+			</div>
+			<div class="g-content-body">
+
+				<section class="g-section g-in-sec">
+					<div class="g-section-body">
+						<div class="dscBox type01 ">
+							<ul class="bul bul-dot">
+								<li><strong class="pointBk">구분</strong> : <strong class="pointGy02">ⓣ</strong> - TAB |
+									<strong class="pointGy02">ⓟ</strong> - POPUP | <strong class="pointGy02">ⓛ</strong>
+									- LAYER
+								</li>
+								<li><strong class="pointBk">CHECK</strong> : <strong class="pointGy02">ⓥ</strong> -
+									validate | <strong class="pointGy02">ⓒ</strong> - cross browing | <strong class="pointGy02">ⓦ</strong> - WAH
+								</li>
+								<li><strong class="pointBk">완료여부</strong> : 미완료 N | 완료 N. (* 완료된 값을 통해 자동으로 공정률 계산)</li>
+								<li><strong class="pointBk">진행표시</strong> : <span class="txt_ing">초록-작업중</span> | <span
+										class="txt_ok">빨강-완료일/검수일</span> | <span class="txt_mod">파랑-수정일/검수일</span></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">1. 작업공정률 <strong class="pointGn02 totalNum">[0%]</strong></h2>
+					</div>
+					<div class="g-section-body">
+						<!-- D: 작업공정률 테이블은 자동 반영되므로 수정금지  -->
+						<table class="guideTbl01 green rowtbl">
+							<colgroup>
+								<col style="width:180px;" />
+								<col style="width:auto;" />
+								<col style="width:180px;" />
+								<col style="width:auto;" />
+								<col style="width:180px;" />
+								<col style="width:auto;" />
+							</colgroup>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</section>
+
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">
+							2. PROJECT NAME / CATEGORY NAME
+							<fieldset class="muSort">
+								<legend>메뉴리스트 정렬선택</legend>
+								<input type="radio" name="muSort" id="muSort1" checked><label for="muSort1">전체</label>
+								<input type="radio" name="muSort" id="muSort2"><label for="muSort2">완료목록</label>
+								<input type="radio" name="muSort" id="muSort3"><label for="muSort3">미완료목록</label>
+							</fieldset>
+						</h2>
+					</div>
+					<div class="g-section-body">
+						<table id="focus" class="guideTbl01 blue">
+							<colgroup>
+								<col width="3%" />
+								<col width="10%" />
+								<col width="10%" />
+								<col width="7%" />
+								<col width="7%" />
+								<col width="5%" />
+								<col width="5%" />
+								<col width="7%" />
+								<col width="6%" />
+								<col width="6%" />
+								<col width="7%" />
+								<col width="*%" />
+								<col width="5%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">NUM</th>
+									<th scope="col">1Depth</th>
+									<th scope="col">2Depth</th>
+									<th scope="col">3Depth</th>
+									<th scope="col">4Depth</th>
+									<th scope="col">5Depth</th>
+									<th scope="col">구분</th>
+									<th scope="col">CHECK</th>
+									<th scope="col">완료여부</th>
+									<th scope="col">완료일자</th>
+									<th scope="col">수정일자</th>
+									<th scope="col">비고</th>
+									<th scope="col">LINK</th>
+								</tr>
+							</thead>
+							<!--  1depth 구분은 tbody로 함 -->
+							<!--  1depth가 1SET 임 -->
+							<tbody>
+								<tr>
+									<th scope="row">&nbsp;</th>
+									<td class="itemtit02">1depth 메뉴명-1</td>
+									<td class="itemtit03">2depth 메뉴명-1</td>
+									<td>3depth 메뉴명-1</td>
+									<td></td>
+									<td></td>
+									<td class="alC"></td>
+									<td class="alC">ⓥⓒⓦ</td>
+									<td class="alC">Y</td>
+									<td class="alC txt_ok">완료일자/작업자이니셜</td>
+									<td class="alC txt_mod">수정일자/작업자이니셜</td>
+									<td>&nbsp;</td>
+									<td class="alC"><a href="#" target="_blank" data-role="link">페이지이동</a></td>
+								</tr>
+								<tr>
+									<th scope="row">&nbsp;</th>
+									<td class="itemtit02"></td>
+									<td class="itemtit03">&nbsp;</td>
+									<td>3depth 메뉴명-2</td>
+									<td></td>
+									<td></td>
+									<td class="alC">ⓣ</td>
+									<td class="alC">ⓥⓒⓦ</td>
+									<td class="alC">Y</td>
+									<td class="alC txt_ok">완료일자/작업자이니셜</td>
+									<td class="alC txt_mod">수정일자/작업자이니셜</td>
+									<td>&nbsp;</td>
+									<td class="alC"><a href="#" target="_blank" data-role="link">페이지이동</a></td>
+								</tr>
+								<tr>
+									<th scope="row">&nbsp;</th>
+									<td class="itemtit02">1depth 메뉴명-1</td>
+									<td class="itemtit03">&nbsp;</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="alC">ⓟ</td>
+									<td class="alC">ⓥⓒⓦ</td>
+									<td class="alC">N</td>
+									<td class="alC txt_ok">완료일자/작업자이니셜</td>
+									<td class="alC txt_mod">수정일자/작업자이니셜</td>
+									<td>&nbsp;</td>
+									<td class="alC"><a href="#" target="_blank" data-role="link">페이지이동</a></td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<th scope="row">&nbsp;</th>
+									<td class="itemtit02 fst">1depth 메뉴명-2</td>
+									<td class="itemtit03">&nbsp;</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="alC">ⓛ</td>
+									<td class="alC">ⓥⓒⓦ</td>
+									<td class="alC">N</td>
+									<td class="alC txt_ok">완료일자/작업자이니셜</td>
+									<td class="alC txt_mod">수정일자/작업자이니셜</td>
+									<td>&nbsp;</td>
+									<td class="alC"><a href="#" target="_blank" data-role="link">페이지이동</a></td>
+								</tr>
+								<tr>
+									<th scope="row">&nbsp;</th>
+									<td class="itemtit02">1depth 메뉴명-2</td>
+									<td class="itemtit03">&nbsp;</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="alC">ⓛ</td>
+									<td class="alC">ⓥⓒⓦ</td>
+									<td class="alC">N</td>
+									<td class="alC txt_ok">완료일자/작업자이니셜</td>
+									<td class="alC txt_mod">수정일자/작업자이니셜</td>
+									<td>&nbsp;</td>
+									<td class="alC"><a href="#" target="_blank" data-role="link">페이지이동</a></td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<th scope="row">&nbsp;</th>
+									<td class="itemtit02 fst">1depth 메뉴명-3</td>
+									<td class="itemtit03">&nbsp;</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="alC">ⓛ</td>
+									<td class="alC">ⓥⓒⓦ</td>
+									<td class="alC">N</td>
+									<td class="alC txt_ok">완료일자/작업자이니셜</td>
+									<td class="alC txt_mod">수정일자/작업자이니셜</td>
+									<td>&nbsp;</td>
+									<td class="alC"><a href="#" target="_blank" data-role="link">페이지이동</a></td>
+								</tr>
+								<tr>
+									<th scope="row">&nbsp;</th>
+									<td class="itemtit02">1depth 메뉴명-3</td>
+									<td class="itemtit03">&nbsp;</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="alC">ⓛ</td>
+									<td class="alC">ⓥⓒⓦ</td>
+									<td class="alC">N</td>
+									<td class="alC txt_ok">완료일자/작업자이니셜</td>
+									<td class="alC txt_mod">수정일자/작업자이니셜</td>
+									<td>&nbsp;</td>
+									<td class="alC"><a href="#" target="_blank" data-role="link">페이지이동</a></td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<th scope="row">&nbsp;</th>
+									<td class="itemtit02 fst">1depth 메뉴명-4</td>
+									<td class="itemtit03">&nbsp;</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="alC">ⓛ</td>
+									<td class="alC">ⓥⓒⓦ</td>
+									<td class="alC">N</td>
+									<td class="alC txt_ok">완료일자/작업자이니셜</td>
+									<td class="alC txt_mod">수정일자/작업자이니셜</td>
+									<td>&nbsp;</td>
+									<td class="alC"><a href="#" target="_blank" data-role="link">페이지이동</a></td>
+								</tr>
+								<tr>
+									<th scope="row">&nbsp;</th>
+									<td class="itemtit02">1depth 메뉴명-4</td>
+									<td class="itemtit03">&nbsp;</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="alC">ⓛ</td>
+									<td class="alC">ⓥⓒⓦ</td>
+									<td class="alC">N</td>
+									<td class="alC txt_ok">완료일자/작업자이니셜</td>
+									<td class="alC txt_mod">수정일자/작업자이니셜</td>
+									<td>&nbsp;</td>
+									<td class="alC"><a href="#" target="_blank" data-role="link">페이지이동</a></td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<th scope="row">&nbsp;</th>
+									<td class="itemtit02 fst">1depth 메뉴명-5</td>
+									<td class="itemtit03">&nbsp;</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="alC">ⓛ</td>
+									<td class="alC">ⓥⓒⓦ</td>
+									<td class="alC">N</td>
+									<td class="alC txt_ok">완료일자/작업자이니셜</td>
+									<td class="alC txt_mod">수정일자/작업자이니셜</td>
+									<td>&nbsp;</td>
+									<td class="alC"><a href="#" target="_blank" data-role="link">페이지이동</a></td>
+								</tr>
+								<tr>
+									<th scope="row">&nbsp;</th>
+									<td class="itemtit02">1depth 메뉴명-5</td>
+									<td class="itemtit03">&nbsp;</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td class="alC">ⓛ</td>
+									<td class="alC">ⓥⓒⓦ</td>
+									<td class="alC">N</td>
+									<td class="alC txt_ok">완료일자/작업자이니셜</td>
+									<td class="alC txt_mod">수정일자/작업자이니셜</td>
+									<td>&nbsp;</td>
+									<td class="alC"><a href="#" target="_blank" data-role="link">페이지이동</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<script type="text/javascript">$(document).ready(function () { $('#focus').tableHover(); });</script>
+						<script type="text/javascript">
+							function toggleed(trEle) {
+								//alert(trEle.parentElement.rows)
+								var rows = trEle.parentElement.rows;
+								for (i = 0; i < rows.length; i++) {
+									if (rows[i] == trEle) {
+										trEle.style.backgroundColor = "#ffebeb"
+									} else {
+										rows[i].style.backgroundColor = ""
+									}
+								}
+							}
+						</script>
+						<script type="text/javascript">
+							var st1 = new SortableTable(document.getElementById("focus"), ["Number", "String", "String", "String", "String", "String"]);
+							$(function () {
+								var tds = $("#focus tbody  th:first-child");
+								for (var i = 0; i < tds.length; i++) {
+									$(tds[i]).html(i + 1);
+								}
+							});
+							$('#focus thead th').click(function () {
+								//alert("a");
+								var tds = $("#focus tbody  th:first-child");
+								for (var i = 0; i < tds.length; i++) {
+									//alert(tds[i].firstChild.nodeValue);
+									$(tds[i]).html(i + 1);
+								}
+							});
+						</script>
+					</div>
+				</section>
+			</div>
+
+		</article>
+		<!-- //Content -->
+			
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+
+</html>
