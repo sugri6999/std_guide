@@ -166,7 +166,7 @@
 .g-section {
     .g-section-header {
         .g-h2 {
-            .form-check {position:absolute; right:0}
+            > .form-check {position:absolute; right:0}
             .muSort {position:absolute; right:0; top:0; width:auto}
         }
     }

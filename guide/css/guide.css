@@ -400,7 +400,7 @@
   background: #FAFAE6;
 }
 
-.g-section .g-section-header .g-h2 .form-check {
+.g-section .g-section-header .g-h2 > .form-check {
   position: absolute;
   right: 0;
 }

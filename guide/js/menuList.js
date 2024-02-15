@@ -58,17 +58,13 @@ $(function () {
 	// 인풋 클릭시 전체/완료목록/미완료목록
 
 	$(document).on('click', 'input', function (event) {
-
-
-
 		if ($(this).attr('type') == "radio") {
 			switch ($(this).attr('id')) {
 				case ('muSort1'):
 					$('.guideTbl01.blue tbody tr').css('display', '')
-					break;
+				break;
 				case ('muSort2'):
 					for (i = 0; i < listNum; i++) {
-
 						listNum2 = $('.guideTbl01.blue tbody').eq(i).children('tr').length;
 						for (j = 0; j < listNum2; j++) {
 							if ($('.guideTbl01.blue tbody').eq(i).children('tr').eq(j).children('td').eq(7).text() == "Y") {
@@ -78,12 +74,10 @@ $(function () {
 								$('.guideTbl01.blue tbody').eq(i).children('tr').eq(j).css({ 'display': 'none' })
 							}
 						}
-
 					}
-					break;
+				break;
 				case ('muSort3'):
 					for (i = 0; i < listNum; i++) {
-
 						listNum2 = $('.guideTbl01.blue tbody').eq(i).children('tr').length;
 						for (j = 0; j < listNum2; j++) {
 							if ($('.guideTbl01.blue tbody').eq(i).children('tr').eq(j).children('td').eq(7).text() == "N") {
@@ -93,48 +87,28 @@ $(function () {
 								$('.guideTbl01.blue tbody').eq(i).children('tr').eq(j).css({ 'display': 'none' })
 							}
 						}
-
 					}
-					break;
+				break;
 			}
 		} else if ($(this).attr('type') == "checkbox") {
-
 			if ($(this).attr('id') == "allCheck") {
-
 				if ($(this).prop("checked") == true) {
 					$('.guideTbl01.blue tbody').css({ 'display': '' })
 					$('input[name="input_check"]').prop('checked', 'check');
 				} else {
 					$('.guideTbl01.blue tbody').css({ 'display': 'none' })
 					$('input[name=input_check]').prop('checked', '');
-
 				}
-
 			} else {
 				$('input:checkbox').each(function (index, value) {
-
 					if ($(this).prop("checked") == true) {
 						$('.guideTbl01.blue tbody').eq(index - 1).css({ 'display': '' })
 					} else {
-
 						$('.guideTbl01.blue tbody').eq(index - 1).css({ 'display': 'none' })
 						$('input[id="allCheck"]').prop('checked', '');
 					}
-
-
-
 				});
-
-
 			}
-
-
-
-
-
 		}
-
 	});
-
-
 });
