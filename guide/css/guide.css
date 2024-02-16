@@ -399,6 +399,14 @@
 .dscBox.type02 {
   background: #FAFAE6;
 }
+.dscBox ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.dscBox li {
+  font-size: 12px;
+}
 
 .g-section .g-section-header .g-h2 > .form-check {
   position: absolute;

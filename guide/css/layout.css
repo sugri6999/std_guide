@@ -38,27 +38,27 @@
 .g-lnb > ul {display:inline-block;}
 .g-lnb > ul > li {position:relative; display:inline-block;}
 .g-lnb > ul > li > a {display:block; padding:0 20px; border-radius:0; font-size:16px; transition:all 0.3s; -webkit-transition:all 0.3s;}
-.g-lnb > ul > li.is-current > a {font-family:'Noto Sans KR';}
+.g-lnb > ul > li.is-current > a {font-family:'NSB';}
 
 /* SNB */
 .g-snb {padding-top:0px;}
 .g-snb .g-depth1 {display:none; padding:30px 0}
-.g-snb .g-depth1 .g-node1 {/*padding:30px 0;*/ font-family:'Noto Sans KR';}
+.g-snb .g-depth1 .g-node1 {/*padding:30px 0;*/ font-family:'NSB';}
 .g-snb .g-depth1 .g-node1 + .g-node1 {border-top:1px solid #ddd; }
 .g-snb .g-depth1 .g-node1 > a,
-.g-snb .g-depth1 .g-node1 > span {position:relative; padding:0 30px; font-family:'Noto Sans KR'; font-size:18px; color:#222;}
+.g-snb .g-depth1 .g-node1 > span {position:relative; padding:0 30px; font-family:'NSR'; font-size:18px; color:#222;}
 .g-snb .g-depth2 {margin-top:10px;}
 .g-snb .g-depth2 .g-node2 {padding:0 30px;}
-.g-snb .g-depth2 .g-node2 > a {position:relative; display:block; padding:5px 0; font-size:14px; font-family:'Noto Sans KR'; color:#777; line-height:1.8; transition:all 0.3s;}
+.g-snb .g-depth2 .g-node2 > a {position:relative; display:block; padding:5px 0; font-size:14px; font-family:'NSL'; color:#777; line-height:1.8; transition:all 0.3s;}
 .g-snb .g-depth2 .g-node2.is-current > a,
 .g-snb .g-depth2 .g-node2 > a:focus,
-.g-snb .g-depth2 .g-node2 > a:hover {color:#222; font-family:'Noto Sans KR';}
+.g-snb .g-depth2 .g-node2 > a:hover {color:#222; font-family:'NSR';}
 .g-snb .g-depth2 .g-node2 > a:after {position:absolute; top:50%; right:0; margin-top:-1px; width:6px; height:6px; border:1px solid #777; border-width:1px 1px 0 0; transform:rotate(45deg) translate(0, -50%);}
 .g-snb .g-depth2 .g-node2.is-current > a:after {content:''; border-color: #222}
 .g-snb .g-snbMenu3 .g-depth2 .g-node2 > a {padding-top:0; padding-bottom:0;}
 
 .g-snb .g-depth1 .g-node1 .accordion-basic {overflow:hidden; margin-top:-15px; border:0; border-radius:0}
-.g-snb .g-depth1 .g-node1 .accordion-basic .accordion-title .accordion-label {padding-right:30px; font-family:'Noto Sans KR'; font-size:18px}
+.g-snb .g-depth1 .g-node1 .accordion-basic .accordion-title .accordion-label {padding-right:30px; font-family:'NSR'; font-size:18px}
 .g-snb .g-depth1 .g-node1 .accordion-basic .accordion-title .accordion-toggle {padding:15px 30px}
 .g-snb .accordion-basic .accordion-content .g-depth2 .g-node2 {padding:0 10px}
 

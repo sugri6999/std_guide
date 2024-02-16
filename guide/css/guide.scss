@@ -162,6 +162,8 @@
     margin:10px 0; padding:10px; color:#333;
     &.type01 {background:#EFEFEF; border-radius:5px; behavior:url(../../com/pie/PIE.htc)}
     &.type02 {background:#FAFAE6}
+    ul {display:flex; flex-direction:column; gap:4px}
+    li {font-size:12px}
 }
 .g-section {
     .g-section-header {

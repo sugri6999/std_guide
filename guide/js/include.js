@@ -23,10 +23,9 @@ var include = {
 	head : function(){
 		document.write('<!-- Front -->');
 		document.write('<link href="'+gRootURL.root+'css/import.css" rel="stylesheet" />');
-		document.write('<link href="'+gRootURL.root+'css/style.css" rel="stylesheet" />');
 		document.write('<link href="'+gRootURL.root+'css/lib/font-awesome.min.css" rel="stylesheet" />');
 		document.write('<script src="'+gRootURL.root+'js/lib/jquery-3.3.1.min.js"></script>');
-		document.write('<script src="'+gRootURL.root+'js/import_g.js"></script>');
+		document.write('<script src="'+gRootURL.root+'js/import.js"></script>');
 		document.write('<script src="'+gRootURL.root+'js/lib/prefixfree.min.js"></script>');
 
 		document.write('<!-- Guide -->');
