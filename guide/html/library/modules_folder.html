@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body id="modules">
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Folder</h1>
+				<p class="g-explain-h1">Library Modules</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic Folder</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<!-- 단일요소 폴더링 -->
+									<div class="box box-type1">
+										<div class="box-header">
+											Example <button type="button" class="folder-toggle centered-r" aria-controls="folder1" aria-expanded="false" data-role="fold" data-target="folder1"><span><i class="arw arw-toggle">Example</i></span></button>
+										</div>
+										<div id="folder1" class="box-body folder-content" data-name="folder1" hidden>
+											<div class="blind-area" tabindex="0" role="text" aria-label="Example Folder Panel"></div>
+											folder-target
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;!-- 단일요소 폴더링 -->
+									&lt;div class="box box-type1">
+										&lt;div class="box-header">
+											Example &lt;button type="button" class="folder-toggle centered-r" aria-controls="folder1" aria-expanded="false" data-role="fold" data-target="folder1">&lt;span>&lt;i class="arw arw-toggle">Example&lt;/i>&lt;/span>&lt;/button>
+										&lt;/div>
+										&lt;div id="folder1" class="box-body" data-name="folder1" hidden>
+											&lt;div class="blind-area" tabindex="0" role="text" aria-label="Example Folder Panel">&lt;/div>
+											&lt;span class="folder-focus">folder-target&lt;/span>
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* ------------------------------------------------------------------------------------------
+										## Folder
+									------------------------------------------------------------------------------------------ */
+									.folder-toggle {width:40px; height:40px; right:0; z-index:1;}
+									.folder-toggle .arw-toggle {position:absolute; left:50%; top:50%; transform:translate(-50%, -50%) rotate(0deg); -webkit-transform:translate(-50%, -50%) rotate(0deg); transition:all 0.3s;}
+									.folder-toggle.is-active .arw-toggle {transform:translate(-50%, -50%) rotate(180deg); -webkit-transform:translate(-50%, -50%) rotate(180deg);}
+
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:js">
+									var ui = {
+										init : function(){
+											if ($('[data-role=fold]').length)	{this.folder.init();}			// Folder (접기)
+										},
+
+										/*
+											기능정의 : 폴더토글
+											연결방식 : data-target="" / data-name=""
+											참고메뉴 : 대메뉴 > 중메뉴 > 소메뉴 > 화면명
+											참고경로 : /html/menu1/page.html
+											(공통여부와 관계없이 확인이 가능한 대표화면 적용)
+										*/
+										folder : {
+											eleButton : '.folder-toggle',
+											eleModule : '.folder-content',
+											eleFocus  : '.folder-focus',
+											clsActive : 'is-active',
+											init : function(){
+												this.reset();
+												this.event($(this.eleButton));
+											},
+											reset : function(){
+												var _this = this;
+												$(this.eleButton+'[data-role=fold]').each(function(){
+													var name = $(this).attr('data-target');
+													$('[data-target='+name+']').attr({'data-state':'closed', 'aria-expanded':'false'});
+													$('[data-name='+name+']').attr({'hidden':'hidden'});
+												})
+											},
+											event : function($this){
+												var _this = this;
+												$this.filter('[data-role=fold]').not('.is-clicked').on('click', function(){
+													var target = $(this).attr('data-target');
+													var state = $(this).attr('data-state');
+													if (state == 'closed'){_this.open(target)}
+													else if (state == 'opened'){_this.close(target)}
+													return false;
+												}).addClass('is-clicked');
+											},
+											open : function(name){
+												var _this = this;
+												$('[data-target='+name+']').attr({'data-state':'null', 'aria-expanded':'true'}).addClass(_this.clsActive);
+												$('[data-name='+name+']').addClass(_this.clsActive).slideDown(300, function(){
+													$('[data-name='+name+']').removeAttr('hidden').eq(0).find(_this.eleFocus).attr('tabindex','0').focus();
+													$('[data-target='+name+']').attr('data-state', 'opened');
+												});
+											},
+											close : function(name){
+												var _this = this;
+												$('[data-target='+name+']').attr({'data-state':'null', 'aria-expanded':'false'}).removeClass(_this.clsActive);
+												$('[data-name='+name+']').removeClass(_this.clsActive).slideUp(300, function(){
+													$('[data-name='+name+']').attr('hidden', 'hidden');
+													$('[data-target='+name+']').attr('data-state', 'closed');
+												});
+											}
+										},
+									}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">More Folder</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">Define</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="#none" class="g-example-btn">HTML</a>
+									<a href="#none" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<div class="g-example-preview">
+									<!-- 더보기 폴더링 -->
+									<div class="box box-type1">
+										<div class="box-header">
+											Example
+										</div>
+										<div class="box-body">
+											<div id="folder2" class="folder-content">
+												<div class="folder-inner">
+													<dl>
+														<dt>folder-title</dt>
+														<dd>folder-define</dd>
+														<dt data-name="folder2" hidden><span class="folder-focus">folder-title</span></dt>
+														<dd data-name="folder2" hidden>folder-define</dd>
+														<dt data-name="folder2" hidden>folder-title</dt>
+														<dd data-name="folder2" hidden>folder-define</dd>
+													</dl>
+												</div>
+											</div>
+											<button type="button" class="folder-toggle centered-rb" aria-controls="folder2" aria-expanded="false" data-role="more" data-target="folder2"><span><i class="arw arw-toggle">Example</i></span></button>
+										</div>
+									</div>
+								</div>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;!-- 더보기 폴더링 -->
+									&lt;div class="box box-type1">
+										&lt;div class="box-header">
+											Example
+										&lt;/div>
+										&lt;div class="box-body">
+											&lt;div id="folder2" class="folder-content">
+												&lt;div class="folder-inner">
+													&lt;dl>
+														&lt;dt>folder-title&lt;/dt>
+														&lt;dd>folder-define&lt;/dd>
+														&lt;dt data-name="folder2" hidden>&lt;span class="folder-focus">folder-title&lt;/span>&lt;/dt>
+														&lt;dd data-name="folder2" hidden>folder-define&lt;/dd>
+														&lt;dt data-name="folder2" hidden>folder-title&lt;/dt>
+														&lt;dd data-name="folder2" hidden>folder-define&lt;/dd>
+													&lt;/dl>
+												&lt;/div>
+											&lt;/div>
+											&lt;button type="button" class="folder-toggle centered-rb" aria-controls="folder2" aria-expanded="false" data-role="more" data-target="folder2">&lt;span>&lt;i class="arw arw-toggle">Example&lt;/i>&lt;/span>&lt;/button>
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:js">
+									var ui = {
+										init : function(){
+											if ($('[data-role=more]').length)	{this.folderMore.init();}		// Folder (더보기)
+										},
+
+										/*
+											기능정의 : 더보기 폴더토글
+											연결방식 : data-target="" / data-name=""
+											참고메뉴 : 대메뉴 > 중메뉴 > 소메뉴 > 화면명
+											참고경로 : /html/menu1/page.html
+											(공통여부와 관계없이 확인이 가능한 대표화면 적용)
+										*/
+										folderMore : {
+											eleButton : '.folder-toggle',
+											eleModule : '.folder-content',
+											eleInner  : '.folder-inner',
+											eleFocus  : '.folder-focus',
+											clsActive : 'is-active',
+											init : function(){
+												this.reset();
+												this.event($(this.eleButton));
+											},
+											reset : function(){
+												var _this = this;
+												$(this.eleButton).each(function(){
+													var name = $(this).attr('data-target');
+													$('[data-target='+name+']').attr({'data-state':'closed', 'aria-expanded':'false'});
+													$('[data-name='+name+']').attr({'hidden':'hidden'});
+												})
+											},
+											event : function($this){
+												var _this = this;
+												$this.filter('[data-role=more]').not('.is-clicked').on('click', function(){
+													var target = $(this).attr('data-target');
+													var state = $(this).attr('data-state');
+													if (state == 'closed'){_this.open(target)}
+													else if (state == 'opened'){_this.close(target)}
+													return false;
+												}).addClass('is-clicked');
+											},
+											open : function(name){
+												var _this = this;
+												var $module = $('[data-name='+name+']').closest(_this.eleModule);
+												var $inner = $('[data-name='+name+']').closest(_this.eleInner);
+												$module.css({height:$inner.height(), overflow:'hidden'}).attr('data-height', $inner.height()).addClass(_this.clsActive);
+												$('[data-target='+name+']').addClass(_this.clsActive).attr({'data-state':'null'});
+												$('[data-name='+name+']').removeAttr('hidden');
+												TweenMax.to($module, 0.3, {height:$inner.height(), ease:Power2.easeOut, onComplete:function(){
+													$('[data-name='+name+']').eq(0).find(_this.eleFocus).attr('tabindex','0').focus();
+													$('[data-target='+name+']').attr({'data-state':'opened', 'aria-expanded':'true'});
+												}});
+											},
+											close : function(name){
+												var _this = this;
+												var $module = $('[data-name='+name+']').closest(_this.eleModule);
+												var $inner = $('[data-name='+name+']').closest(_this.eleInner);
+												$module.css({height:$module.height(), overflow:'hidden'}).removeClass(_this.clsActive);
+												$('[data-target='+name+']').attr({'data-state':'null'}).removeClass(_this.clsActive);
+												TweenMax.to($module, 0.3, {height:parseInt($module.attr('data-height')), ease:Power2.easeOut, onComplete:function(){
+													$('[data-name='+name+']').attr('hidden', 'hidden');
+													$('[data-target='+name+']').attr({'data-state':'closed', 'aria-expanded':'false'});
+												}});
+											}
+										},
+									}
+								</pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="g-section-body">
+						<h3 class="g-h3">List Group</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<style type="text/css">
+										.account-item {padding:10px 15px; border:1px solid #ddd; border-radius:5px;}
+										.account-define:after {content:''; display:block; clear:both;}
+										.account-define > p {float:left; width:33.33%;}
+										.dv-android .folder-focus:focus {outline:none;}
+									</style>
+									<div class="account-list-wrap">
+										<div id="folder3" class="folder-content">
+											<ul class="account-list folder-inner">
+												<li class="account-item">
+													<div class="account-define">
+														<p aria-label="이름 : 홍길동">홍길동</p>
+														<p aria-label="계좌이름 : 적금통장">적금통장</p>
+														<p aria-label="계좌잔액 : 1,000,000원">1,000,000원</p>
+													</div>
+												</li>
+												<li class="account-item" style="margin-top:10px">
+													<div class="account-define">
+														<p aria-label="이름 : 한석봉">한석봉</p>
+														<p aria-label="계좌이름 : 예금통장">예금통장</p>
+														<p aria-label="계좌잔액 : 2,000,000원">2,000,000원</p>
+													</div>
+												</li>
+												<li class="account-item"  data-name="folder3" hidden style="margin-top:10px">
+													<div class="account-define">
+														<p aria-label="이름 : 신사임당" class="folder-focus">신사임당</p><!-- 펼친 후 포커스 folder-focus -->
+														<p aria-label="계좌이름 : 예적금통장">예적금통장</p>
+														<p aria-label="계좌잔액 : 3,000,000원">3,000,000원</p>
+													</div>
+												</li>
+												<li class="account-item"  data-name="folder3" hidden style="margin-top:10px">
+													<div class="account-define">
+														<p aria-label="이름 : 허준">허준</p>
+														<p aria-label="계좌이름 : 마이너스통장">마이너스통장</p>
+														<p aria-label="계좌잔액 : -1,000,000원">-1,000,000원</p>
+													</div>
+												</li>
+											</ul>
+											<button type="button" class="folder-toggle bg round centered-rb" aria-controls="folder3" aria-expanded="false" data-role="more" data-target="folder3"><span><i class="arw arw-toggle">Example</i></span></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div id="folder3" class="account-list-wrap folder-content">
+										&lt;ul class="account-list folder-inner">
+											&lt;li class="account-item">
+												&lt;div class="account-define">
+													&lt;p aria-label="이름 : 홍길동">홍길동&lt;/p>
+													&lt;p aria-label="계좌이름 : 적금통장">적금통장&lt;/p>
+													&lt;p aria-label="계좌잔액 : 1,000,000원">1,000,000원&lt;/p>
+												&lt;/div>
+											&lt;/li>
+											&lt;li class="account-item" style="margin-top:10px">
+												&lt;div class="account-define">
+													&lt;p aria-label="이름 : 한석봉">한석봉&lt;/p>
+													&lt;p aria-label="계좌이름 : 예금통장">예금통장&lt;/p>
+													&lt;p aria-label="계좌잔액 : 2,000,000원">2,000,000원&lt;/p>
+												&lt;/div>
+											&lt;/li>
+											&lt;li class="account-item"  data-name="folder3" hidden style="margin-top:10px">
+												&lt;div class="account-define">
+													&lt;p aria-label="이름 : 신사임당" class="folder-focus">신사임당&lt;/p>&lt;!-- 펼친 후 포커스 folder-focus -->
+													&lt;p aria-label="계좌이름 : 예적금통장">예적금통장&lt;/p>
+													&lt;p aria-label="계좌잔액 : 3,000,000원">3,000,000원&lt;/p>
+												&lt;/div>
+											&lt;/li>
+											&lt;li class="account-item"  data-name="folder3" hidden style="margin-top:10px">
+												&lt;div class="account-define">
+													&lt;p aria-label="이름 : 허준">허준&lt;/p>
+													&lt;p aria-label="계좌이름 : 마이너스통장">마이너스통장&lt;/p>
+													&lt;p aria-label="계좌잔액 : -1,000,000원">-1,000,000원&lt;/p>
+												&lt;/div>
+											&lt;/li>
+										&lt;/ul>
+										&lt;button type="button" class="folder-toggle bg round centered-rb" aria-controls="folder3" aria-expanded="false" data-role="more" data-target="folder3">&lt;span>&lt;i class="arw arw-toggle">Example&lt;/i>&lt;/span>&lt;/button>
+									&lt;/div>
+								</pre>
+							</div>
+						</div>
+					</div>
+
+					<div class="g-section-body">
+						<h3 class="g-h3">Table Rows</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div id="folder4" class="folder-content">
+										<div class="folder-inner">
+											<div class="g-tbl-type1 tbl-lefted">
+												<table>
+													<colgroup>
+														<col style="width:150px;">
+														<col style="width:auto;">
+													</colgroup>
+													<tbody>
+														<tr>
+															<th scope="row">이름</th>
+															<td>홍길동</td>
+														</tr>
+														<tr>
+															<th scope="row">국적</th>
+															<td>조선시대</td>
+														</tr>
+														<tr data-name="folder4" hidden>
+															<th scope="row"><span class="folder-focus">생일</span></th><!-- 펼친 후 포커스 folder-focus -->
+															<td>2020-10-32</td>
+														</tr>
+														<tr data-name="folder4" hidden>
+															<th scope="row">혈액형</th>
+															<td>큰형</td>
+														</tr>
+														<tr data-name="folder4" hidden>
+															<th scope="row">취미</th>
+															<td>테니스</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<button type="button" class="folder-toggle bg round centered-rb" aria-controls="folder4" aria-expanded="false" data-role="more" data-target="folder4"><span><i class="arw arw-toggle">Example</i></span></button>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div id="folder4" class="folder-content">
+										&lt;div class="folder-inner">
+											&lt;div class="g-tbl-type1 tbl-lefted">
+												&lt;table>
+													&lt;colgroup>
+														&lt;col style="width:200px;">
+														&lt;col style="width:auto;">
+													&lt;/colgroup>
+													&lt;tbody>
+														&lt;tr>
+															&lt;th scope="row">이름&lt;/th>
+															&lt;td>홍길동&lt;/td>
+														&lt;/tr>
+														&lt;tr>
+															&lt;th scope="row">국적&lt;/th>
+															&lt;td>조선시대&lt;/td>
+														&lt;/tr>
+														&lt;tr data-name="folder4" hidden>
+															&lt;th scope="row">생일&lt;/th>
+															&lt;td>2020-10-32&lt;/td>
+														&lt;/tr>
+														&lt;tr data-name="folder4" hidden>
+															&lt;th scope="row">&lt;span class="folder-focus">혈액형&lt;/span>&lt;/th>&lt;!-- 펼친 후 포커스 folder-focus -->
+															&lt;td>큰형&lt;/td>
+														&lt;/tr>
+														&lt;tr data-name="folder4" hidden>
+															&lt;th scope="row">취미&lt;/th>
+															&lt;td>테니스&lt;/td>
+														&lt;/tr>
+													&lt;/tbody>
+												&lt;/table>
+											&lt;/div>
+										&lt;/div>
+										&lt;button type="button" class="folder-toggle bg round centered-rb" aria-controls="folder4" aria-expanded="false" data-role="more" data-target="folder4">&lt;span>&lt;i class="arw arw-toggle">Example&lt;/i>&lt;/span>&lt;/button>
+									&lt;/div>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

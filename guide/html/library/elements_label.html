@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body id="elements">
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Label</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="label-wrap">
+									<div class="label-group">
+										<span class="label-type1">라벨</span>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<div class="label-group">
+										<span class="label-type1">라벨</span>
+									</div>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Outline</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<span class="label-type1 outline">라벨</span>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;span class="label-type1 outline">Outline&lt;/span>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									.label-type1.outline {padding:0px 4px 1px; background:transparent; border:1px solid #444; color:#444;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Min, Max</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<span class="label-type1">일이</span>
+								<span class="label-type1">일이삼</span>
+								<span class="label-type1">일이삼사</span>
+								<span class="label-type1">일이삼사오육칠팔구십</span>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<span class="label-type1">일이</span>
+									<span class="label-type1">일이삼</span>
+									<span class="label-type1">일이삼사</span>
+									<span class="label-type1">일이삼사오육칠팔구십</span>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									.label-type1 {
+										/* 최소 */ min-width:50px;
+										/* 최대 */ max-width:100px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+									}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Color</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<span class="label-type1 primary">Primary</span>
+								<span class="label-type1 outline primary">Primary</span>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<span class="label-type1">일이</span>
+									<span class="label-type1">일이삼</span>
+									<span class="label-type1">일이삼사</span>
+									<span class="label-type1">일이삼사오육칠팔구십</span>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									.label-type1 {
+										/* 최소 */ min-width:50px;
+										/* 최대 */ max-width:100px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+									}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

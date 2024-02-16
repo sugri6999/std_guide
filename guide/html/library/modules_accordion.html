@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body id="modules">
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Accordion</h1>
+				<p class="g-explain-h1">Library Modules</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="accordion-wrap">
+										<dl role="presentation" class="accordion accordion-basic">
+											<dt class="accordion-title is-active">
+												<a href="#accorContent11" class="accordion-toggle" role="button" aria-controls="accorContent11">
+													<span class="accordion-label">accordion-title1 <i class="arw arw-toggle"></i></span>
+												</a>
+											</dt>
+											<dd id="accorContent11" class="accordion-content is-active" aria-hidden="false">
+												<div class="blind-area" tabindex="0" role="text" aria-label="Accordion Title11 Accordion Panel"></div>
+												<div class="accordion-inner">
+													accordion-content1
+												</div>
+											</dd>
+											<dt class="accordion-title">
+												<a href="#accorContent12" class="accordion-toggle" role="button" aria-controls="accorContent12" disabled>
+													<span class="accordion-label">accordion-title2 Disabled<i class="arw arw-toggle"></i></span>
+												</a>
+											</dt>
+											<dd id="accorContent12" class="accordion-content" aria-hidden="true">
+												<div class="blind-area" tabindex="0" role="text" aria-label="Accordion Title12 Accordion Panel"></div>
+												<div class="accordion-inner">
+													accordion-content2
+												</div>
+											</dd>
+											<dt class="accordion-title">
+												<a href="#accorContent13" class="accordion-toggle" role="button" aria-controls="accorContent13" aria-expanded="false">
+													<span class="accordion-label">accordion-title3 <i class="arw arw-toggle"></i></span>
+												</a>
+											</dt>
+											<dd id="accorContent13" class="accordion-content" aria-hidden="true">
+												<div class="blind-area" tabindex="0" role="text" aria-label="Accordion Title13 Accordion Panel"></div>
+												<div class="accordion-inner">
+													accordion-content3
+												</div>
+											</dd>
+										</dl>
+									</div>
+									<br>
+
+									아코디언 외부호출 :
+									<button type="button" onclick="ui.accordion.action('#accorContent13')"><span>아코디언3</span></button>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="accordion-wrap">
+										&lt;dl role="presentation" class="accordion accordion-basic">
+											&lt;dt class="accordion-title is-active">
+												&lt;a href="#accorContent11" class="accordion-toggle" role="button" aria-controls="accorContent11">
+													&lt;span class="accordion-label">accordion-title1 &lt;i class="arw arw-toggle">&lt;/i>&lt;/span>
+												&lt;/a>
+											&lt;/dt>
+											&lt;dd id="accorContent11" class="accordion-content is-active" aria-hidden="false">
+												&lt;div class="blind-area" tabindex="0" role="text" aria-label="Accordion Title11 Accordion Panel">&lt;/div>
+												&lt;div class="accordion-inner">
+													accordion-content1
+												&lt;/div>
+											&lt;/dd>
+											&lt;dt class="accordion-title">
+												&lt;a href="#accorContent12" class="accordion-toggle" role="button" aria-controls="accorContent12" disabled>
+													&lt;span class="accordion-label">accordion-title2 Disabled&lt;i class="arw arw-toggle">&lt;/i>&lt;/span>
+												&lt;/a>
+											&lt;/dt>
+											&lt;dd id="accorContent12" class="accordion-content" aria-hidden="true">
+												&lt;div class="blind-area" tabindex="0" role="text" aria-label="Accordion Title12 Accordion Panel">&lt;/div>
+												&lt;div class="accordion-inner">
+													accordion-content2
+												&lt;/div>
+											&lt;/dd>
+											&lt;dt class="accordion-title">
+												&lt;a href="#accorContent13" class="accordion-toggle" role="button" aria-controls="accorContent13" aria-expanded="false">
+													&lt;span class="accordion-label">accordion-title3 &lt;i class="arw arw-toggle">&lt;/i>&lt;/span>
+												&lt;/a>
+											&lt;/dt>
+											&lt;dd id="accorContent13" class="accordion-content" aria-hidden="true">
+												&lt;div class="blind-area" tabindex="0" role="text" aria-label="Accordion Title13 Accordion Panel">&lt;/div>
+												&lt;div class="accordion-inner">
+													accordion-content3
+												&lt;/div>
+											&lt;/dd>
+										&lt;/dl>
+									&lt;/div>
+
+									아코디언 외부호출 :
+									&lt;button type="button" onclick="ui.accordion.action('#accorContent13')">&lt;span>아코디언1&lt;/span>&lt;/button>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										## Accordion
+									-------------------------------------------------------------------*/
+									/* Default */
+									.accordion-title .accordion-toggle,
+									.accordion-title .accordion-label {display:block; position:relative;}
+									.accordion-title .accordion-toggle .arw {position:absolute; top:50%; right:0px; transform:translateY(-50%) rotate(0); transition:all 0.3s;}
+									.accordion-title.is-active .accordion-toggle .arw {transform:translateY(-50%) rotate(180deg)}
+									.accordion-content {position:relative; display:none;}
+									.accordion-content.is-active {display:block;}
+									.accordion-content > div {position:relative; z-index:10;}
+
+									/* Design Basic */
+									.accordion-basic {overflow:hidden; border:1px solid #ddd; border-radius:5px;}
+									.accordion-basic .accordion-title .accordion-toggle {display:block; padding:10px 20px; color:#222;}
+									.accordion-basic .accordion-title .accordion-toggle[disabled] {color:#999;}
+									.accordion-basic .accordion-title .accordion-toggle .arw {opacity:0.5;}
+									.accordion-basic .accordion-title .accordion-label {padding-right:20px;}
+									.accordion-basic .accordion-content {padding:10px 20px; background-color:#ffffff;}
+									.accordion-basic .accordion-content + .accordion-title {border-top:1px solid #ddd;}
+									.accordion-basic .is-active.accordion-title {background-color:#f8f8f8;}
+									.accordion-basic .is-active.accordion-title .accordion-toggle {color:#222;}
+									.accordion-basic .is-active.accordion-title .accordion-toggle .arw {opacity:1;}
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:js">
+									var ui = {
+										init : function(){
+											if ($('.accordion').length){this.accordion.init();} // Accordion
+										},
+
+										/*
+											기능정의 : Accordion
+											연결방식 : href="" / id=""
+											참고경로 : modules/modules_accordion.html
+											참고메뉴 : 대메뉴 > 중메뉴 > 소메뉴 > 화면명
+										*/
+										accordion : {
+											eleModule : '.accordion',
+											eleButton : '.accordion-toggle',
+											eleTitle : '.accordion-title',
+											eleContent : '.accordion-content',
+											clsActive : 'is-active',
+											duration : 300,
+											init : function(){
+												this.reset();
+												this.disable();
+												this.event($(this.eleButton));
+											},
+											reset : function(){
+												var _this = this;
+												$('.accordion-basic').each(function(k){
+													$(this).attr({'data-sync':'true', 'data-toggle':'true'});
+												})
+											},
+											event : function($this){
+												var _this = this;
+												$this.not('.is-clicked, [disabled]').on('click', function(){
+													_this.action($(this).attr('href')); return false;
+												}).addClass('is-clicked');
+											},
+											action : function(id){
+												var $toggle = $(this.eleButton+'[href="'+id+'"]'),
+													$title = $toggle.closest(this.eleTitle),
+													$module = $toggle.closest(this.eleModule),
+													$content = $(id),
+													clsActive = this.clsActive;
+
+												// Toggle 접기
+												if ($module.attr('data-toggle') == 'true' && $content.hasClass(clsActive)){
+													$title.removeClass(clsActive);
+													$toggle.attr('aria-expanded','false');
+													$content.stop().slideUp(this.duration, function(){$(this).removeClass(clsActive).attr('aria-hidden', 'true')});
+												}
+												// Syncroize 펼치기
+												else if ($module.attr('data-sync') == 'true' && !$content.hasClass(clsActive)){
+													$title.addClass(clsActive).find(this.eleButton).attr('aria-expanded','true');
+													$title.siblings(this.eleTitle).removeClass(clsActive).find(this.eleButton).attr('aria-expanded','false');
+													$content.stop().slideDown(this.duration, function(){$(this).addClass(clsActive).attr('aria-hidden', 'false')});
+													$content.siblings(this.eleContent).stop().slideUp(this.duration, function(){$(this).removeClass(clsActive).attr('aria-hidden', 'true')});
+												}
+												// Default 펼치기
+												else if ($module.attr('data-sync') == 'false' && !$content.hasClass(clsActive)){
+													$title.addClass(clsActive).find(this.eleButton).attr('aria-expanded','true');
+													$content.stop().slideDown(this.duration, function(){$(this).addClass(clsActive).attr('aria-hidden', 'false')});
+												}
+												// 토글이 아니면 생성된 aria-expanded 속성삭제
+												if ($module.attr('data-toggle') == 'false' && $toggle.attr('aria-expanded') == 'true'){
+													$toggle.removeAttr('aria-expanded');
+												}
+												this.disable();
+											},
+											disable : function(){
+												$(this.eleButton+'[disabled]').each(function(){
+													 $(this).removeAttr('aria-expanded');
+													 $(this).attr('aria-disabled', 'true');
+													 $(this).off('click');
+												})
+											}
+										},
+									}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Not Toggle</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="#none" class="g-example-btn">HTML</a>
+									<a href="#none" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<!-- 마크업뷰영역 -->
+									<div class="accordion-wrap">
+										<dl role="presentation" class="accordion accordion-basic2">
+											<dt class="accordion-title is-active">
+												<a href="#accorContent21" class="accordion-toggle" role="button" aria-controls="accorContent21">
+													<span class="accordion-label">accordion-title1 <i class="arw arw-toggle"></i></span>
+												</a>
+											</dt>
+											<dd id="accorContent21" class="accordion-content is-active" aria-hidden="false">
+												<div class="blind-area" tabindex="0" role="text" aria-label="Accordion Title21 Accordion Panel"></div>
+												<div class="accordion-inner">
+													accordion-content1
+												</div>
+											</dd>
+											<dt class="accordion-title">
+												<a href="#accorContent22" class="accordion-toggle" role="button" aria-controls="accorContent22" disabled>
+													<span class="accordion-label">accordion-title2 Disabled<i class="arw arw-toggle"></i></span>
+												</a>
+											</dt>
+											<dd id="accorContent22" class="accordion-content" aria-hidden="true">
+												<div class="blind-area" tabindex="0" role="text" aria-label="Accordion Title22 Accordion Panel"></div>
+												<div class="accordion-inner">
+													accordion-content2
+												</div>
+											</dd>
+											<dt class="accordion-title">
+												<a href="#accorContent23" class="accordion-toggle" role="button" aria-controls="accorContent23" aria-expanded="false">
+													<span class="accordion-label">accordion-title2 <i class="arw arw-toggle"></i></span>
+												</a>
+											</dt>
+											<dd id="accorContent23" class="accordion-content" aria-hidden="true">
+												<div class="blind-area" tabindex="0" role="text" aria-label="Accordion Title23 Accordion Panel"></div>
+												<div class="accordion-inner">
+													accordion-content3
+												</div>
+											</dd>
+										</dl>
+									</div>
+
+									<!-- //마크업뷰영역 -->
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;dl role="presentation" class="accordion accordion-basic2">
+										(생략)
+									&lt;/dl>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:js">
+									accordion : {
+										init : function(){
+											(생략)
+										},
+										reset : function(){
+											$('.accordion-basic2').each(function(k){
+												$(this).attr({'data-sync':'true', 'data-toggle':'false'});
+											})
+										},
+										event : function($this){
+											(생략)
+										},
+										action : function(id){
+											(생략)
+										},
+									},
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //section -->
+
+				<!-- section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Not Syncroize</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="#none" class="g-example-btn">HTML</a>
+									<a href="#none" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<!-- 마크업뷰영역 -->
+									<div class="accordion-wrap">
+										<dl role="presentation" class="accordion accordion-basic3">
+											<dt class="accordion-title is-active">
+												<a href="#accorContent31" class="accordion-toggle" role="button" aria-controls="accorContent31" aria-expanded="true">
+													<span class="accordion-label">accordion-title1 <i class="arw arw-toggle"></i></span>
+												</a>
+											</dt>
+											<dd id="accorContent31" class="accordion-content is-active" aria-hidden="false">
+												<div class="blind-area" tabindex="0" role="text" aria-label="Accordion Title31 Accordion Panel"></div>
+												<div class="accordion-inner">
+													accordion-content1
+												</div>
+											</dd>
+											<dt class="accordion-title">
+												<a href="#accorContent32" class="accordion-toggle" role="button" aria-controls="accorContent32" disabled>
+													<span class="accordion-label">accordion-title2 Disabled<i class="arw arw-toggle"></i></span>
+												</a>
+											</dt>
+											<dd id="accorContent32" class="accordion-content" aria-hidden="true">
+												<div class="blind-area" tabindex="0" role="text" aria-label="Accordion Title32 Accordion Panel"></div>
+												<div class="accordion-inner">
+													accordion-content2
+												</div>
+											</dd>
+											<dt class="accordion-title">
+												<a href="#accorContent33" class="accordion-toggle" role="button" aria-controls="accorContent33" aria-expanded="false">
+													<span class="accordion-label">accordion-title2 <i class="arw arw-toggle"></i></span>
+												</a>
+											</dt>
+											<dd id="accorContent33" class="accordion-content" aria-hidden="true">
+												<div class="blind-area" role="text" aria-label="Accordion Title33 Accordion Panel"></div>
+												<div class="accordion-inner">
+													accordion-content3
+												</div>
+											</dd>
+										</dl>
+									</div>
+
+									<!-- //마크업뷰영역 -->
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;dl role="presentation" class="accordion accordion-basic4">
+										(생략)
+									&lt;/dl>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:js">
+									accordion : {
+										init : function(){
+											(생략)
+										},
+										reset : function(){
+											$('.accordion-basic3').each(function(k){
+												$(this).attr({'data-sync':'false', 'data-toggle':'true'});
+											})
+										},
+										event : function($this){
+											(생략)
+										},
+										action : function(id){
+											(생략)
+										},
+									},
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

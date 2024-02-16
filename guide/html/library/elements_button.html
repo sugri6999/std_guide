@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body id="elements">
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Button</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="btn-wrap">
+									<button type="button" class="btn btn-type1"><span>Button</span></button>
+									<a href="#" class="btn btn-type1"><span>Anchor</span></a>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:html">
+									<div class="btn-wrap">
+										<button type="button" class="btn btn-type1"><span>Button</span></button>
+										<a href="#" class="btn btn-type1"><span>Button</span></a>
+									</div>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Color</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<button type="button" class="btn btn-type1 btn-primary"><span>Primary</span></button>
+								<button type="button" class="btn btn-type1 btn-secondary"><span>Secondary</span></button>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<button type="button" class="btn btn-type1 btn-primary"><span>Button</span></button>
+									<button type="button" class="btn btn-type1"><span>Button</span></button>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Layout</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<!-- Block -->
+								<button type="button" class="btn btn-type1 btn-block"><span>Block Button</span></button>
+								<br><br>
+
+								<!-- Float -->
+								<div class="btn-wrap">
+									<div class="btn-left">
+										<button type="button" class="btn btn-type1"><span>btn-left</span></button>
+										<button type="button" class="btn btn-type1"><span>btn-left</span></button>
+									</div>
+									<div class="btn-right">
+										<button type="button" class="btn btn-type1"><span>btn-right</span></button>
+										<button type="button" class="btn btn-type1"><span>btn-right</span></button>
+									</div>
+								</div>
+								<br>
+
+								<!-- Flexible Default -->
+								<div class="btn-wrap">
+									<div class="btn-flexible">
+										<span class="item"><button type="button" class="btn btn-type1 btn-block"><span>Flexible Default</span></button></span>
+										<span class="item"><button type="button" class="btn btn-type1 btn-block btn-primary"><span>Flexible Default</span></button></span>
+										<span class="item"><button type="button" class="btn btn-type1 btn-block"><span>Flexible Default</span></button></span>
+									</div>
+								</div>
+								<br>
+
+								<!-- Flexible Gutter -->
+								<div class="btn-wrap">
+									<div class="btn-flexible has-gutter">
+										<span class="item"><button type="button" class="btn btn-type1 btn-block"><span>Flexible Gutter</span></button></span>
+										<span class="item"><button type="button" class="btn btn-type1 btn-block btn-primary"><span>Flexible Gutter</span></button></span>
+										<span class="item"><button type="button" class="btn btn-type1 btn-block"><span>Flexible Gutter</span></button></span>
+									</div>
+								</div>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;!-- Block -->
+									&lt;button type="button" class="btn btn-type1 btn-block">&lt;span>Block Button&lt;/span>&lt;/button>
+
+									&lt;!-- Float -->
+									&lt;div class="btn-wrap">
+										&lt;div class="btn-left">
+											&lt;button type="button" class="btn btn-type1">&lt;span>btn-left&lt;/span>&lt;/button>
+											&lt;button type="button" class="btn btn-type1">&lt;span>btn-left&lt;/span>&lt;/button>
+										&lt;/div>
+										&lt;div class="btn-right">
+											&lt;button type="button" class="btn btn-type1">&lt;span>btn-right&lt;/span>&lt;/button>
+											&lt;button type="button" class="btn btn-type1">&lt;span>btn-right&lt;/span>&lt;/button>
+										&lt;/div>
+									&lt;/div>
+
+									&lt;!-- Flexible Default -->
+									&lt;div class="btn-wrap">
+										&lt;div class="btn-flexible">
+											&lt;span class="item">&lt;button type="button" class="btn btn-type1 btn-block">&lt;span>Flexible Default&lt;/span>&lt;/button>&lt;/span>
+											&lt;span class="item">&lt;button type="button" class="btn btn-type1 btn-block btn-primary">&lt;span>Flexible Default&lt;/span>&lt;/button>&lt;/span>
+											&lt;span class="item">&lt;button type="button" class="btn btn-type1 btn-block">&lt;span>Flexible Default&lt;/span>&lt;/button>&lt;/span>
+										&lt;/div>
+									&lt;/div>
+
+									&lt;!-- Flexible Gutter -->
+									&lt;div class="btn-wrap">
+										&lt;div class="btn-flexible has-gutter">
+											&lt;span class="item">&lt;button type="button" class="btn btn-type1 btn-block">&lt;span>Flexible Gutter&lt;/span>&lt;/button>&lt;/span>
+											&lt;span class="item">&lt;button type="button" class="btn btn-type1 btn-block btn-primary">&lt;span>Flexible Gutter&lt;/span>&lt;/button>&lt;/span>
+											&lt;span class="item">&lt;button type="button" class="btn btn-type1 btn-block">&lt;span>Flexible Gutter&lt;/span>&lt;/button>&lt;/span>
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Common - Layout */
+									.btn-wrap::after {content:""; display:block; clear:both;}
+									.btn-wrap .btn-left {display:inline-block; float:left;}
+									.btn-wrap .btn-right {display:inline-block; float:right;}
+									.btn-block {width:100%;}
+									.btn-flexible {display:table; width:100%;}
+									.btn-flexible .item {display:table-cell; width:auto;}
+									.btn-flexible.has-gutter {width:calc(100% + 10px); margin:0 -5px;}
+									.btn-flexible.has-gutter .item {padding:0 5px;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Size</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<button type="button" class="btn btn-type1 btn-bigger"><span>.btn-bigger</span></button>
+								<button type="button" class="btn btn-type1 btn-xl"><span>.btn-xl</span></button>
+								<button type="button" class="btn btn-type1 btn-lg"><span>.btn-lg</span></button>
+								<button type="button" class="btn btn-type1 btn-md"><span>.btn-md</span></button>
+								<button type="button" class="btn btn-type1 btn-sm"><span>.btn-sm</span></button>
+								<button type="button" class="btn btn-type1 btn-xs"><span>.btn-xl</span></button>
+								<button type="button" class="btn btn-type1 btn-thin"><span>.btn-thin</span></button>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;button type="button" class="btn btn-type1 btn-bigger">&lt;span>.btn-bigger&lt;/span>&lt;/button>
+									&lt;button type="button" class="btn btn-type1 btn-xl">&lt;span>.btn-xl&lt;/span>&lt;/button>
+									&lt;button type="button" class="btn btn-type1 btn-lg">&lt;span>.btn-lg&lt;/span>&lt;/button>
+									&lt;button type="button" class="btn btn-type1 btn-md">&lt;span>.btn-md&lt;/span>&lt;/button>
+									&lt;button type="button" class="btn btn-type1 btn-sm">&lt;span>.btn-sm&lt;/span>&lt;/button>
+									&lt;button type="button" class="btn btn-type1 btn-xs">&lt;span>.btn-xl&lt;/span>&lt;/button>
+									&lt;button type="button" class="btn btn-type1 btn-thin">&lt;span>.btn-thin&lt;/span>&lt;/button>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Common - Size */
+									.btn.btn-bigger {min-height:58px; line-height:58px; padding:0 30px; font-size:24px;}
+									.btn.btn-xl {min-height:44px; line-height:44px; padding:0 20px; font-size:20px;}
+									.btn.btn-lg {min-height:38px; line-height:38px; padding:0 20px; font-size:18px;}
+									.btn.btn-md {min-height:34px; line-height:34px; padding:0 10px; font-size:14px;}
+									.btn.btn-sm {min-height:28px; line-height:28px; padding:0 10px; font-size:13px;}
+									.btn.btn-xs {min-height:22px; line-height:22px; padding:0 10px; font-size:12px;}
+									.btn.btn-thin {min-height:18px; line-height:18px; padding:0 10px; font-size:11px;}
+								</pre>
+							</div>
+							<div class="g-example-guide">
+								<ul class="g-desc">
+									<li>여러줄의 텍스트를 고려하는 경우 min-height, line-height, padding 으로 설계한다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Types</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<button type="button" class="btn btn-type1"><span>Type1</span></button>
+								<button type="button" class="btn btn-type1 btn-primary"><span>Primary</span></button>
+								<button type="button" class="btn btn-type1 btn-secondary"><span>Secondary</span></button>
+								<button type="button" class="btn btn-type1" disabled><span>Disabled</span></button>
+								<br><br>
+								<button type="button" class="btn btn-type2"><span>Type2</span></button>
+								<button type="button" class="btn btn-type2 btn-primary"><span>Primary</span></button>
+								<button type="button" class="btn btn-type2 btn-secondary"><span>Secondary</span></button>
+								<button type="button" class="btn btn-type2" disabled><span>disabled</span></button>
+								<br><br>
+								<button type="button" class="btn btn-type3"><span>Type3</span></button>
+								<br><br>
+								<button type="button" class="btn btn-type4"><span>Type4</span></button>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<button type="button" class="btn btn-type1"><span>Type1</span></button>
+									<button type="button" class="btn btn-type2"><span>Type2</span></button>
+									<button type="button" class="btn btn-type3"><span>Type3</span></button>
+									<button type="button" class="btn btn-type4"><span>Type4</span></button>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Common - Size */
+									.btn.btn-bigger {min-height:58px; line-height:58px; padding:0 30px; font-size:24px;}
+									.btn.btn-xl {min-height:44px; line-height:44px; padding:0 20px; font-size:20px;}
+									.btn.btn-lg {min-height:38px; line-height:38px; padding:0 20px; font-size:18px;}
+									.btn.btn-md {min-height:34px; line-height:34px; padding:0 10px; font-size:14px;}
+									.btn.btn-sm {min-height:28px; line-height:28px; padding:0 10px; font-size:13px;}
+									.btn.btn-xs {min-height:22px; line-height:22px; padding:0 10px; font-size:12px;}
+									.btn.btn-thin {min-height:18px; line-height:18px; padding:0 10px; font-size:11px;}
+								</pre>
+							</div>
+							<div class="g-example-guide">
+								<ul class="g-desc">
+									<li>여러줄의 텍스트를 고려하는 경우 min-height, line-height, padding 으로 설계한다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

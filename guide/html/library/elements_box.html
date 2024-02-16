@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body id="elements">
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Box</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="box-wrap">
+									<div class="box box-type1">
+										<div class="box-header">
+											box-header
+										</div>
+										<div class="box-body">
+											box-body
+										</div>
+										<div class="box-footer">
+											box-footer
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<div class="box-wrap">
+										<div class="box box-type1">
+											<div class="box-header">
+												box-header
+											</div>
+											<div class="box-body">
+												box-body
+											</div>
+											<div class="box-footer">
+												box-footer
+											</div>
+										</div>
+									</div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									.box-type1 {border:1px solid #ddd; border-radius:3px; line-height:20px;}
+									.box-type1 .box-header {padding:10px 20px; border-bottom:1px solid #ddd;}
+									.box-type1 .box-body {padding:10px 20px;}
+									.box-type1 .box-footer {padding:10px 20px; border-top:1px solid #ddd;}
+								</pre>
+							</div>
+							<div class="g-example-guide">
+								<ul class="g-desc">
+									<li>box-wrapper, box-header, box-footer 불필요시 생략한다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Hover</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<div class="box box-type1 box-hover">
+									<div class="box-header">
+										box-header
+									</div>
+									<div class="box-body">
+										box-body
+									</div>
+									<div class="box-footer">
+										box-footer
+									</div>
+									<div class="box-hover-overlay">
+										<div class="box-hover-inner">
+											<div class="box-hover-body">
+												box-hover-overlay
+											</div>
+										</div>
+									</div>
+								</div>
+								<br>
+								<div class="box box-type1 box-hover">
+									<div class="box-header">
+										box-header
+									</div>
+									<div class="box-body">
+										box-body
+									</div>
+									<div class="box-footer">
+										box-footer
+									</div>
+									<div class="box-hover-underlay">
+										<div class="box-hover-inner">
+											<div class="box-hover-body">
+												box-hover-overlay
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<!-- Overlay -->
+									<div class="box box-type1 box-hover">
+										(생략)
+										<div class="box-hover-overlay">
+											<div class="box-hover-inner">
+												<div class="box-hover-body">
+													box-hover-overlay
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Underlay -->
+									<div class="box box-type1 box-hover">
+										(생략)
+										<div class="box-hover-underlay">
+											<div class="box-hover-inner">
+												<div class="box-hover-body">
+													box-hover-overlay
+												</div>
+											</div>
+										</div>
+									</div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Common - Hover */
+									.box-hover {display:block;}
+									.box-hover-overlay {z-index:3;}
+									.box-hover-underlay {z-index:1;}
+									.box-hover-inner {display:table; width:100%; height:100%;}
+									.box-hover-body {display:table-cell; width:100%; height:100%; text-align:center; vertical-align:middle;}
+									.box-hover-overlay,
+									.box-hover-underlay {position:absolute; top:0; right:0; bottom:0; left:0; opacity:0; background-color:#eee;
+										transition:all 0.15s ease-out 0s; -webkit-transition:all 0.15s ease-out 0s; -moz-transition:all 0.15s ease-out 0s; -o-transition:all 0.15s ease-out 0s;}
+									.box-hover:hover .box-hover-overlay,
+									.box-hover:focus .box-hover-overlay,
+									.box-hover:hover .box-hover-underlay,
+									.box-hover:focus .box-hover-underlay {opacity:1;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- section -->
+				<section class="g-section">
+					<div class="g-section-header">
+						<h2 class="g-h2">Explain</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<div class="box-wrap">
+									<div class="box box-type1">
+										<div class="box-inner">
+											<div class="box-header">
+												알려드립니다.
+											</div>
+											<div class="box-body">
+												<div class="para-wrap para-basic">
+													<p class="para">인재를 중시하고 키우는 기업문화, '기업이 곧 사람'이라는 신념을 바탕으로 <br>모든 사람이 각자 고유한 역량과 잠재력을 가진 우수한 인재이며 세상을 움직이는 원동력임을 믿습니다.</p>
+													<p class="para">회사별 채용공고 및 안내를 확인해 보시기 바랍니다.</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="explain-footer">
+										<div class="bul bul-bill">
+											<p>삼성전자 채용안내</p>
+										</div>
+									</div>
+								</div>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<div class="box-wrap">
+										<div class="box box-type1">
+											(생략)
+										</div>
+										<div class="explain-footer">
+											<div class="bul bul-bill">
+												<p>삼성전자 채용안내</p>
+											</div>
+										</div>
+									</div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									.box-type1 + .explain-footer {margin-top:5px;}
+									.explain-header + .box-type1 {margin-top:5px;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

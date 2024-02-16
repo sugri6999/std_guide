@@ -1,0 +1,1323 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body id="elements">
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Form</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Form Controls</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<fieldset>
+									<legend>필드제목</legend>
+									<!-- Form Textfield -->
+									<div class="form-row input-group display-i">
+										<div class="label-area">
+											<label for="sText11" class="form-label">Label</label>
+										</div>
+										<div class="control-area">
+											<input type="text" name="sText1" id="sText11" value="" placeholder="" class="form-text" />
+											<span id="searchClear">X</span>
+										</div>
+									</div>
+									<hr />
+									<div class="form-row input-group">
+										<div class="label-area">
+											<label for="sText12" class="form-label">Label <span class="txt-required" aria-label="필수입력">*</span></label>
+										</div>
+										<div class="control-area">
+											<input type="text" name="sText1" id="sText12" value="" placeholder="" class="form-text" required />
+										</div>
+									</div>
+									<hr />
+									<!-- Form Textfield -->
+									<div class="form-row input-group float-none">
+										<span class="col">
+											<input type="text" name="sText1" id="sText13" value="" placeholder="Basic" title="제목" class="form-text"/>
+										</span>
+										<span class="col">
+											<input type="text" name="sText1" id="sText14" value="" placeholder="Readonly" title="제목" class="form-text" readonly />
+										</span>
+										<span class="col">
+											<input type="text" name="sText1" id="sText15" value="" placeholder="Disabled" title="제목" class="form-text" disabled />
+										</span>
+										<span class="col">
+											<input type="text" name="sText1" id="sText16" value="" placeholder="Required" title="제목" class="form-text" required />
+										</span>
+									</div>
+									<hr />
+									<div class="txt-limit"><strong>0</strong>/2000</div>
+									<textarea id="txtArea" class="form-text" placeholder="Message" style="height:100px;"></textarea>
+									<hr />
+									<!-- Form radio -->
+									<span class="form-check">
+										<input type="radio" name="sRadio22" id="sRadio22" value="" checked />
+										<label for="sRadio22"><span>Label1</span></label>
+									</span>
+									<span class="form-check">
+										<input type="radio" name="sRadio22" id="sRadio23" value="" />
+										<label for="sRadio23"><span>Label2</span></label>
+									</span>
+									<span class="form-check">
+										<input type="radio" name="sRadio24" id="sRadio24" value="" disabled />
+										<label for="sRadio24"><span>disabled</span></label>
+									</span>
+									<span class="form-check">
+										<input type="radio" name="sRadio25" id="sRadio25" value="" checked disabled />
+										<label for="sRadio25"><span>checked disabled</span></label>
+									</span>
+									<hr />
+									<!-- Form checkbox -->
+									<span class="form-check">
+										<input type="checkbox" name="sCheck2" id="sCheck22" value="" checked />
+										<label for="sCheck22"><span>Label1</span></label>
+									</span>
+									<span class="form-check">
+										<input type="checkbox" name="sCheck2" id="sCheck23" value=""/>
+										<label for="sCheck23"><span>Label2</span></label>
+									</span>
+									<span class="form-check">
+										<input type="checkbox" name="sCheck2" id="sCheck24" value="" disabled/>
+										<label for="sCheck24"><span>disabled</span></label>
+									</span>
+									<span class="form-check">
+										<input type="checkbox" name="sCheck2" id="sCheck25" value="" checked disabled/>
+										<label for="sCheck25"><span>checked disabled</span></label>
+									</span>
+									<hr />
+									<!-- Form Switch -->
+									<span class="form-switch">
+										<input type="checkbox" name="sSwitch2" id="sSwitch21" value="" />
+										<label for="sSwitch21"><span></span></label>
+									</span>
+									<span class="form-switch">
+										<input type="checkbox" name="sSwitch2" id="sSwitch22" value="" checked/>
+										<label for="sSwitch22"><span></span></label>
+									</span>
+									<span class="form-switch">
+										<input type="checkbox" name="sSwitch2" id="sSwitch23" value="" disabled/>
+										<label for="sSwitch23"><span></span></label>
+									</span>
+									<span class="form-switch">
+										<input type="checkbox" name="sSwitch2" id="sSwitch24" value="" checked disabled/>
+										<label for="sSwitch24"><span></span></label>
+									</span>
+									<hr />
+									<!-- Form Select -->
+									<span class="form-select">
+										<select name="sSelect1" id="sSelect1">
+											<option value="">콤보상자 목록선택</option>
+										</select>
+									</span>
+									<span class="form-select">
+										<select name="sSelect1" id="sSelect1" disabled>
+											<option value="">Disabled</option>
+										</select>
+									</span>
+									<span class="form-select">
+										<select name="sSelect1" id="sSelect1" readonly>
+											<option value="">Readonly</option>
+										</select>
+									</span>
+									<span class="form-select">
+										<select name="sSelect1" id="sSelect1" required>
+											<option value="">Required</option>
+										</select>
+									</span>
+									<hr />
+									<!-- Form Button -->
+									<button type="button" class="form-button" aria-haspopup="true" aria-expanted="false"><span>버튼타입 팝업선택</span></button>
+									<button type="button" class="form-button" aria-haspopup="true" aria-expanted="false" disabled><span>Disabled</span></button>
+									<button type="button" class="form-button" aria-haspopup="true" aria-expanted="false" readonly><span>Readonly</span></button>
+									<button type="button" class="form-button" aria-haspopup="true" aria-expanted="false" required><span>Required</span></button>
+									<hr />
+									<!-- Form Attach Files -->
+									<!-- span class="form-file">
+										<input type="file" name="sFiles1" id="sFiles1" value="찾아보기" tabindex="-1" aria-hidden="true"/>
+										<input type="text" class="form-text" title="첨부된 파일명" />
+										<button type="button" class="btn btn-type3 btn_file" onclick="fileAttach(this)"><span>파일첨부</span></button>
+									</span -->
+									<span class="form-file">
+										<input class="form-text upload-name" value="파일선택" style="width:auto;" disabled />
+										<label for="fileName">업로드</label>
+										<input type="file" id="fileName" class="form-text upload-hidden" />
+									</span>
+									<hr />
+									<!-- Form Attach Files 이미지 미리보기 -->
+									<div class="form-file preview-image">
+										<input class="form-text upload-name" value="파일선택" style="width:auto;" disabled />
+										<label for="inputFile">업로드</label> 
+										<input type="file" id="inputFile" class="form-text upload-hidden" /> 
+									</div>
+									<!-- //마크업뷰영역 -->
+								</fieldset>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;fieldset>
+										&lt;legend>필드제목&lt;/legend>
+
+										&lt;!-- Form Textfield -->
+										&lt;label for="sText11" class="form-label">Label&lt;/label>
+										&lt;input type="text" name="sText1" id="sText11" value="" placeholder="" class="form-text" />
+										&lt;div class="form-row input-group display-i">
+											&lt;div class="label-area">
+												&lt;label for="sText11" class="form-label">Label&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area">
+												&lt;input type="text" name="sText1" id="sText11" value="" placeholder="" class="form-text" />
+												&lt;span id="searchClear">X&lt;/span>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;label for="sText12" class="form-label">Label &lt;span class="txt-required" aria-label="필수입력">*&lt;/span>&lt;/label>
+										&lt;input type="text" name="sText1" id="sText12" value="" placeholder="" class="form-text" required/>
+
+										&lt;!-- Form Textfield -->
+										&lt;textarea rows="3" cols="50" class="form-text" title="상세내용">&lt;/textarea>
+
+										&lt;!-- Form radio -->
+										&lt;span class="form-check">
+											&lt;input type="radio" name="sRadio22" id="sRadio21" value="" />
+											&lt;label for="sRadio21">&lt;span class="blind">Hidden&lt;/span>&lt;/label>
+										&lt;/span>
+										&lt;span class="form-check">
+											&lt;input type="radio" name="sRadio22" id="sRadio22" value="" />
+											&lt;label for="sRadio22">&lt;span>Label1&lt;/span>&lt;/label>
+										&lt;/span>
+
+										&lt;!-- Form checkbox -->
+										&lt;span class="form-check">
+											&lt;input type="checkbox" name="sCheck2" id="sCheck21" value="" />
+											&lt;label for="sCheck21">&lt;span class="blind">Hidden&lt;/span>&lt;/label>
+										&lt;/span>
+										&lt;span class="form-check">
+											&lt;input type="checkbox" name="sCheck2" id="sCheck22" value="" />
+											&lt;label for="sCheck22">&lt;span>Label1&lt;/span>&lt;/label>
+										&lt;/span>
+
+										&lt;!-- Form Switch -->
+										&lt;span class="form-switch">
+											&lt;input type="checkbox" name="sSwitch2" id="sSwitch21" value="" />
+											&lt;label for="sSwitch21">&lt;span>&lt;/span>&lt;/label>
+										&lt;/span>
+
+										&lt;!-- Form Select -->
+										&lt;span class="form-select">
+											&lt;select name="sSelect1" id="sSelect1">
+												&lt;option value="">콤보상자 목록선택&lt;/option>
+											&lt;/select>
+										&lt;/span>
+
+										&lt;!-- Form Button -->
+										&lt;button type="button" class="form-button" aria-haspopup="true" aria-expanted="false">&lt;span>버튼타입 팝업선택&lt;/span>&lt;/button>
+
+										&lt;!-- Form Attach Files -->
+										&lt;div class="form-file">
+											&lt;input class="upload-name" value="파일선택" disabled />
+											&lt;label for="fileName">업로드&lt;/label>
+											&lt;input type="file" id="fileName" class="upload-hidden" />
+										&lt;/div>
+									&lt;/fieldset>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Default */
+									input:-ms-input-placeholder, textarea:-ms-input-placeholder {color:#999;}/* IE 10 + */
+									input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color:#999;}/* Webkit Browser */
+									input:-moz-placeholder, textarea:-moz-placeholder {color:#999;}/* Mozilla Firefox 4 to 18 */
+									input::-moz-placeholder, textarea::-moz-placeholder {color:#999;}/* Mozilla Firefox 19+ */
+									input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {color:transparent;}/* IE 10 + */
+									input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {color:transparent;}/* Webkit Browser */
+									input:focus:-moz-placeholder, textarea:focus:-moz-placeholder {color:transparent;}/* Mozilla Firefox 4 to 18 */
+									input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {color:transparent;}/* Mozilla Firefox 19+ */
+									input {box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; border:0px; vertical-align:middle;}
+									textarea {width:100%; vertical-align:middle; resize:none;}
+									select {appearance:none; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none;}
+									select::-ms-expand {display:none;}
+									:root select {padding:0px 30px 0px 5px;}
+									.ie9 select {padding:5px 35px 4px 5px;background:none;}
+									.ie9 :root select {padding:0; font-size:0;}
+
+									/* Form Textfield */
+									.form-text {height:36px; padding:0 10px; border:1px solid #ddd; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); @include mixTransition(all 0.3s);}
+									.form-text:focus,.form-text:hover,.form-text.is-focused {border-color:#0089b3;}
+									textarea.form-text {height:auto; padding:10px;}
+
+									/* Form Select */
+									.form-button {display:inline-block; position:relative; height:30px; padding:0 30px 0 10px; border:1px solid #ddd; vertical-align:middle; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); @include mixTransition(all 0.3s);}
+									.form-select {display:inline-block; position:relative;}
+									.form-select select {width:100%; height:30px; padding:0 30px 0 10px; border:1px solid #ddd; vertical-align:middle; border-radius:3px; box-shadow:1px 1px 2px 0px rgba(200,200,200,0.3); @include mixTransition(all 0.3s);}
+									.form-button:after,.form-select:after {content:''; position:absolute; right:10px; top:50%; width:12px; height:7px; margin-top:-3px; background:url('../../images/common/arw_select.png') no-repeat left center;}
+
+									/* Form File */
+									.form-file {position:relative;}
+									.form-file input[type='file'] {position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0}
+									.form-file label {display:inline-block; padding:.5em .75em; color:#999; font-size:inherit; line-height:normal; vertical-align:middle; background-color:#fdfdfd; cursor:pointer; border:1px solid #ebebeb; border-bottom-color:#e2e2e2; border-radius:.25em}
+									.form-file .upload-name {display:inline-block; padding:.5em .75em; font-size:inherit; font-family:inherit; line-height:normal; vertical-align:middle; background-color:#f5f5f5; border:1px solid #ebebeb; border-bottom-color:#e2e2e2; border-radius:.25em; -webkit-appearance:none; -moz-appearance:none; appearance:none}
+
+									/* Form Check */
+									/* Basic */
+									.form-check {display:inline-block; position:relative; margin:5px 0; line-height:1; vertical-align:middle;}
+									.form-check {display:inline-block;}
+									.form-check label {display:inline-block; position:relative; min-width:20px; min-height:20px; font-size:13px; line-height:20px;}
+									.form-check label span {display:inline-block; padding-left:28px;}
+									.form-check label:before, 
+									.form-check label:after {content:''; position:absolute; left:0; top:0;}
+									.form-check label:before {top:0; width:20px; height:20px; border:1px solid #ddd; background:#fff;}
+									.form-check > input {position:absolute; left:0; top:0; width:20px; height:20px;}
+									.form-check + .form-check {margin-left:10px;}
+									/* Checked */
+									.form-check > input:checked + label:before {border-color:$color-primary;}
+									.form-check > input:checked + label:after {left:5px; top:5px;}
+									.form-check > input[type="checkbox"]:checked + label:before {border-color:$color-primary;}
+									.form-check > input[type="checkbox"]:checked + label:after {width:10px; height:7px; background:none; border-left:2px solid $color-primary; border-bottom:2px solid $color-primary; @include mixTransform(rotate(-45deg));}
+									.form-check > input[type="radio"] + label:before {border-radius:50%;}
+									.form-check > input[type="radio"]:checked + label:before {background-color:#fff;}
+									.form-check > input[type="radio"]:checked + label:after {top:5px; left:5px; width:10px; height:10px; border-radius:50%; background:$color-primary;}
+									/* Focused */
+									.form-check > input.is-focused + label:before,
+									.form-check > input:hover + label:before,
+									.form-check > input:focus + label:before {border-color:#888;}
+									.form-check > input:checked:focus + label:before,
+									.form-check > input:checked:hover + label:before {border-color:$color-primary; @include mixTransition(all 0.3s);}
+									/* Disabled */
+									.form-check > input[disabled] + label {color:#999;}
+									.form-check > input[disabled] + label:before {background-color:#f0f0f0;}
+									.form-check > input[disabled]:focus + label:before,
+									.form-check > input[disabled]:hover + label:before {border-color:#ddd;}
+									.form-check > input[disabled]:checked + label:before,
+									.form-check > input[disabled]:checked:focus + label:before,
+									.form-check > input[disabled]:checked:hover + label:before {border-color:#888;}
+									.form-check > input[disabled][type="checkbox"]:checked + label:after {border-color:#888;}
+									.form-check > input[disabled][type="radio"]:checked + label:after {background:#888;}
+									/* Errored */
+									.form-check > input.is-errored + label {color:#f52727;}
+									.form-check > input.is-errored + label:before,
+									.form-check > input.is-errored.is-focused:checked + label:before,
+									.form-check > input.is-errored:checked:hover + label:before,
+									.form-check > input.is-errored:checked:focus + label:before  {border-color:#f52727;}
+									.form-check > input[type="radio"].is-errored:checked + label:before {border-color:#f52727;}
+									.form-check > input[type="radio"].is-errored:checked + label:after {background-color:#f52727;}
+									.form-check > input[type="checkbox"].is-errored:checked + label:before {border-color:#f52727;}
+									.form-check > input[type="checkbox"].is-errored:checked + label:after {border-color:#f52727;}
+
+									/* Form Switch */
+									.form-switch + .form-switch {margin-left:10px;}
+									.form-switch {display:inline-block; position:relative;}
+									.form-switch label {display:inline-block; width:80px;}
+									.form-switch label:before {content:''; display:inline-block; width:100%; height:30px; background-color:#f0f0f0; border-radius:15px; vertical-align:top; box-shadow:2px 2px 3px -2px inset rgba(100,100,100,0.5);}
+									.form-switch input,.form-switch span {position:absolute; left:2px; top:50%; z-index:1; width:40px; height:26px; line-height:26px; text-align:center; border-radius:13px; overflow:hidden; background-color:#aaa; color:#fff; font-size:12px; @include mixTransform(translateY(-50%)); @include mixTransition(all 0.3s);}
+									.form-switch input {z-index:0;}
+									.form-switch input:checked,.form-switch input:checked + label span {left:calc(100% - 42px);}
+									.form-switch input:checked + label span {background-color:$color-primary;}
+									.form-switch input + label span:before {content:'OFF';}
+									.form-switch input:checked + label span:before {content:'ON';}
+									.form-switch input[disabled] + label:before {background-color:#ddd;}
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:js">
+									//파일첨부
+									var fileTarget = $('.form-file .upload-hidden');
+									fileTarget.on('change', function(){
+										if(window.FileReader){
+											var filename = $(this)[0].files[0].name;
+										} else {
+											var filename = $(this).val().split('/').pop().split('\\').pop();
+										}
+
+										$(this).siblings('.upload-name').val(filename);
+									});
+								</pre>
+							</div>
+							<div class="g-example-guide">
+								<h5 class="g-h5">설계가이드</h5>
+								<ul class="g-desc">
+									<li>묵시적인 방법(label 에 checkbox, radio 포함)은 일부 스크린리더에서 해당 마크업을 제대로 읽지 못하므로</li>
+									<li>명시적인 방법(input id 와 label for 연결)으로 사용하는 것을 권장합니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Form Texts</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- Form Static (기본 텍스트) -->
+								<p class="form-static">홍길동</p>
+								<p class="form-static">홍길동은 옛날 옛적의 인물로 어버이를 어버이라 부르지 못하고 어버버한 자식이다.</p>
+								<br />
+
+								<!-- Form Description (기술설명 텍스트) -->
+								<p class="form-desc">비밀번호는 특수문자, 영어 조합의 8자 이상이어야 합니다.</p>
+								<br />
+
+								<!-- Form Alert (경고/에러 텍스트) -->
+								<p class="form-alert color-error" role="alert">비밀번호를 입력하세요.</p>
+								<p class="form-alert color-success" role="alert">인증되었습니다.</p>
+								<br />
+
+								<!-- Form Alert (정보 텍스트) -->
+								<div class="form-info">
+									<p>관련정보를 설명하는 문구입니다.</p>
+									<p>단락 또는 목록 형태로 제공하며 목록에 대한 별도의 가이드가 적용될 수 있습니다.</p>
+								</div>
+								<br />
+
+								<!-- Form 문자 (기호 텍스트) -->
+								<span class="form-char">/</span>
+								<span class="form-char">-</span>
+								<span class="form-char">@</span>
+								<span class="form-char">~</span>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;!-- Form Static (기본 텍스트) -->
+									&lt;p class="form-static">홍길동&lt;/p>
+									&lt;p class="form-static">홍길동은 옛날 옛적의 인물로 어버이를 어버이라 부르지 못하고 어버버한 자식이다.&lt;/p>
+
+									&lt;!-- Form Description (기술설명 텍스트) -->
+									&lt;p class="form-desc">비밀번호는 특수문자, 영어 조합의 8자 이상이어야 합니다.&lt;/p>
+
+									&lt;!-- Form Alert (경고/에러 텍스트) -->
+									&lt;p class="form-alert color-error" role="alert" hidden>비밀번호를 입력하세요.&lt;/p>
+									&lt;p class="form-alert color-success" role="alert" hidden>비밀번호를 입력하세요.&lt;/p>
+
+									&lt;!-- Form Alert (정보 텍스트) -->
+									&lt;div class="form-info">
+										&lt;p>관련정보를 설명하는 문구입니다.&lt;/p>
+										&lt;p>단락 또는 목록 형태로 제공하며 목록에 대한 별도의 가이드가 적용될 수 있습니다.&lt;/p>
+									&lt;/div>
+
+									&lt;!-- Form 문자 (기호 텍스트) -->
+									&lt;span class="form-char">/&lt;/span>
+									&lt;span class="form-char">-&lt;/span>
+									&lt;span class="form-char">@&lt;/span>
+									&lt;span class="form-char">~&lt;/span>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Form Layouts</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">Direction</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="row">
+									<div class="col col-6">
+										<!-- Vertical -->
+										<fieldset class="form-wrap">
+											<legend>Vertical Layout</legend>
+											<div class="form-row vertical">
+												<div class="label-area">
+													<label for="sText21" class="form-label">아이디</label>
+												</div>
+												<div class="control-area">
+													<input type="text" name="sText21" id="sText21" class="form-text" />
+												</div>
+											</div>
+										</fieldset>
+									</div>
+									<div class="col col-6">
+										<!-- Horizontal -->
+										<fieldset class="form-wrap">
+											<legend>Horizontal Layout</legend>
+											<div class="form-row horizontal">
+												<div class="label-area">
+													<label for="sText22" class="form-label">아이디</label>
+												</div>
+												<div class="control-area">
+													<input type="text" name="sText22" id="sText22" class="form-text" />
+												</div>
+											</div>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<div class="grid">
+									<div class="col col-6">
+										<pre class="brush:html">
+											&lt;!-- Vertical -->
+											&lt;div class="form-row vertical">
+												&lt;div class="label-area">
+												&lt;/div>
+												&lt;div class="control-area">
+												&lt;/div>
+											&lt;/div>
+										</pre>
+									</div>
+									<div class="col col-6">
+										<pre class="brush:html">
+											&lt;!-- Horizontal -->
+											&lt;div class="form-row horizontal">
+												&lt;div class="label-area">
+												&lt;/div>
+												&lt;div class="control-area">
+												&lt;/div>
+											&lt;/div>
+										</pre>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Form Group */
+									/* Vertical */
+									.form-row.vertical + .form-row.vertical {margin-top:10px;}
+									.form-row.vertical .control-area {margin-top:2px;}
+									/* Horizontal */
+									.form-row.horizontal + .form-row.horizontal {margin-top:10px;}
+									.form-row.horizontal {display:table; width:100%;}
+									.form-row.horizontal .label-area {display:table-cell; width:100px;}
+									.form-row.horizontal .control-area {display:table-cell;}
+								</pre>
+							</div>
+							<div class="g-example-guide">
+								<h5 class="g-h5">설계가이드</h5>
+								<ul class="g-desc">
+									<li>Direction의 방향이 고정인경우 방향구분을 생략할 수 있다.</li>
+								</ul>
+							</div>
+						</div>
+
+						<h3 class="g-h3">Flexible</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="form-row">
+									<span class="col"><input type="tel" name="sTelNoEx2" id="sTelNoEx11" value="" placeholder="" title="" class="form-text"/></span>
+									<span class="col"><input type="tel" name="sTelNoEx2" id="sTelNoEx12" value="" placeholder="" title="" class="form-text"/></span>
+									<span class="col"><input type="tel" name="sTelNoEx2" id="sTelNoEx13" value="" placeholder="" title="" class="form-text"/></span>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="form-row">
+										&lt;span class="col">&lt;/span>
+										&lt;span class="col">&lt;/span>
+										&lt;span class="col">&lt;/span>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Form Group */
+									/* Flexible */
+									.form-row {display:table; min-width:100%; table-layout:fixed;}
+									.form-row > .col {display:table-cell; position:relative; padding-left:3px; padding-right:3px;}
+									.form-row > .col:first-child {padding-left:0}
+									.form-row > .col:last-child {padding-right:0}
+									.form-row > .col > .form-text,
+									.form-row > .col > .form-select,
+									.form-row > .col > .form-button,
+									.form-row > .col-btn > .btn {width:100%;}
+								</pre>
+							</div>
+							<div class="g-example-guide">
+								<h5 class="g-h5">설계가이드</h5>
+								<ul class="g-desc">
+									<li>Flexible Layout의 기본값을 재정의 할 수 있으며, 컨텐츠 타입별로 구분하여 정의 할 수 있다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Form Mixins</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<fieldset class="form-wrap">
+									<legend>혼합형 입력폼</legend>
+
+									<!-- Icon -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label" for="sMixin1">Icon</label>
+										</div>
+										<div class="control-area type-search1">
+											<div class="form-row float-none">
+												<span class="col">
+													<input type="text" name="sMixin1" id="sMixin1" value="" placeholder="" class="form-text"/>
+													<button type="button" class="btn"><span><i class="fas fa-search"></i></span></button>
+												</span>
+											</div>
+										</div>
+									</div>
+									<hr />
+									<!-- Button 추가 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label" for="sMixin21">Button</label>
+										</div>
+										<div class="control-area type-search2">
+											<div class="form-row float-none">
+												<span class="col"><input type="text" name="sMixin21" id="sMixin21" value="" placeholder="" class="form-text"/></span>
+												<span class="col col-btn lens1"><button type="button" class="btn btn-type3"><span>일</span></button></span>
+											</div>
+										</div>
+									</div>
+									<hr />
+									<!-- Button 추가 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label" for="sMixin22">Button</label>
+										</div>
+										<div class="control-area type-search2">
+											<div class="form-row">
+												<span class="col"><input type="text" name="sMixin22" id="sMixin22" value="" placeholder="" class="form-text"/></span>
+												<span class="col col-btn lens2"><button type="button" class="btn btn-type3"><span>일이</span></button></span>
+											</div>
+										</div>
+									</div>
+									<hr />
+									<!-- Button 추가 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label" for="sMixin23">Button</label>
+										</div>
+										<div class="control-area type-search2">
+											<div class="form-row">
+												<span class="col"><input type="text" name="sMixin23" id="sMixin23" value="" placeholder="" class="form-text"/></span>
+												<span class="col col-btn lens3"><button type="button" class="btn btn-type3"><span>일이삼</span></button></span>
+											</div>
+										</div>
+									</div>
+									<hr />
+									<!-- Button 추가 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label" for="sMixin24">Button</label>
+										</div>
+										<div class="control-area type-search2">
+											<div class="form-row">
+												<span class="col"><input type="text" name="sMixin24" id="sMixin24" value="" placeholder="" class="form-text"/></span>
+												<span class="col col-btn lens4"><button type="button" class="btn btn-type3"><span>일이삼사</span></button></span>
+											</div>
+										</div>
+									</div>
+									<hr />
+									<!-- Button 추가 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label" for="sMixin25">Button</label>
+										</div>
+										<div class="control-area type-search2">
+											<div class="form-row">
+												<span class="col"><input type="text" name="sMixin25" id="sMixin25" value="" placeholder="" class="form-text"/></span>
+												<span class="col col-btn lens5"><button type="button" class="btn btn-type3"><span>일이삼사오</span></button></span>
+											</div>
+										</div>
+									</div>
+									<hr />
+									<!-- Button 추가 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label" for="sMixin26">Button</label>
+										</div>
+										<div class="control-area type-search2">
+											<div class="form-row">
+												<span class="col"><input type="text" name="sMixin26" id="sMixin26" value="" placeholder="" class="form-text"/></span>
+												<span class="col col-btn lens6"><button type="button" class="btn btn-type3"><span>일이삼사오육</span></button></span>
+											</div>
+										</div>
+									</div>
+									<hr />
+									<!-- 구분기호 추가 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label">구분기호</label>
+										</div>
+										<div class="control-area type-telNo">
+											<div class="form-row">
+												<span class="col"><input type="tel" name="sMixin3" id="sMixin31" value="" placeholder="" title="지역 번호" class="form-text"/></span>
+												<span class="col form-char">-</span>
+												<span class="col"><input type="tel" name="sMixin3" id="sMixin32" value="" placeholder="" title="국 번호" class="form-text"/></span>
+												<span class="col form-char">-</span>
+												<span class="col"><input type="tel" name="sMixin3" id="sMixin33" value="" placeholder="" title="가입자 번호" class="form-text"/></span>
+											</div>
+										</div>
+									</div>
+									<hr />
+									<!-- 다양한 폼컨트롤 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label">다양한 폼컨트롤</label>
+										</div>
+										<div class="control-area type-email">
+											<div class="form-row">
+												<span class="col"><input type="text" name="sMixin4" id="sMixin41" value="" placeholder="" title="이메일 사용자 아이디" class="form-text"/></span>
+												<span class="col form-char at">@</span>
+												<span class="col">
+													<span class="form-select">
+														<select name="sMixin4" id="sMixin42" title="이메일 서비스 도메인">
+															<option value="">선택하세요.</option>
+														</select>
+													</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;fieldset class="form-wrap">
+										&lt;legend>혼합형 입력폼&lt;/legend>
+
+										&lt;!-- Icon -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sMixin1">Icon&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-search1">
+												&lt;div class="form-row">
+													&lt;span class="col">
+														&lt;input type="text" name="sMixin1" id="sMixin1" value="" placeholder="" class="form-text"/>
+														&lt;button type="button" class="btn">&lt;span>&lt;i class="fas fa-search">&lt;/i>&lt;/span>&lt;/button>
+													&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- Button 추가 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sMixin21">Button&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-search2">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sMixin21" id="sMixin21" value="" placeholder="" class="form-text"/>&lt;/span>
+													&lt;span class="col col-btn lens1">&lt;button type="button" class="btn btn-type3">&lt;span>일&lt;/span>&lt;/button>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- Button 추가 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sMixin22">Button&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-search2">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sMixin22" id="sMixin22" value="" placeholder="" class="form-text"/>&lt;/span>
+													&lt;span class="col col-btn lens2">&lt;button type="button" class="btn btn-type3">&lt;span>일이&lt;/span>&lt;/button>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- Button 추가 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sMixin23">Button&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-search2">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sMixin23" id="sMixin23" value="" placeholder="" class="form-text"/>&lt;/span>
+													&lt;span class="col col-btn lens3">&lt;button type="button" class="btn btn-type3">&lt;span>일이삼&lt;/span>&lt;/button>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- Button 추가 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sMixin24">Button&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-search2">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sMixin24" id="sMixin24" value="" placeholder="" class="form-text"/>&lt;/span>
+													&lt;span class="col col-btn lens4">&lt;button type="button" class="btn btn-type3">&lt;span>일이삼사&lt;/span>&lt;/button>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- Button 추가 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sMixin25">Button&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-search2">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sMixin25" id="sMixin25" value="" placeholder="" class="form-text"/>&lt;/span>
+													&lt;span class="col col-btn lens5">&lt;button type="button" class="btn btn-type3">&lt;span>일이삼사오&lt;/span>&lt;/button>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- Button 추가 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sMixin26">Button&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-search2">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sMixin26" id="sMixin26" value="" placeholder="" class="form-text"/>&lt;/span>
+													&lt;span class="col col-btn lens6">&lt;button type="button" class="btn btn-type3">&lt;span>일이삼사오육&lt;/span>&lt;/button>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 구분기호 추가 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label">구분기호&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-telNo">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="tel" name="sMixin3" id="sMixin31" value="" placeholder="" title="지역 번호" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char">-&lt;/span>
+													&lt;span class="col">&lt;input type="tel" name="sMixin3" id="sMixin32" value="" placeholder="" title="국 번호" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char">-&lt;/span>
+													&lt;span class="col">&lt;input type="tel" name="sMixin3" id="sMixin33" value="" placeholder="" title="가입자 번호" class="form-text"/>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 다양한 폼컨트롤 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label">다양한 폼컨트롤&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-email">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sMixin4" id="sMixin41" value="" placeholder="" title="이메일 사용자 아이디" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char at">@&lt;/span>
+													&lt;span class="col">
+														&lt;span class="form-select">
+															&lt;select name="sMixin4" id="sMixin42" title="이메일 서비스 도메인">
+																&lt;option value="">선택하세요.&lt;/option>
+															&lt;/select>
+														&lt;/span>
+													&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+									&lt;/fieldset>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Form Contents</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<fieldset class="form-wrap form-list">
+									<legend>유형별 입력폼</legend>
+
+									<!-- 아이디 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label" for="sID">아이디</label>
+										</div>
+										<div class="control-area">
+											<input type="text" name="sID" id="sID" value="" placeholder="" class="form-text" />
+										</div>
+									</div>
+
+									<!-- 비밀번호 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label" for="sPassword">비밀번호</label>
+										</div>
+										<div class="control-area">
+											<div class="form-row">
+												<span class="col"><input type="password" name="sPassword" id="sPassword" value="" placeholder="" class="form-text"/></span>
+											</div>
+										</div>
+									</div>
+
+									<!-- 직장검색 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label" for="sSearchA">직장검색 (type-search1)</label>
+										</div>
+										<div class="control-area type-search1">
+											<div class="form-row">
+												<span class="col">
+													<input type="text" name="sSearchA" id="sSearchA" value="" placeholder="" class="form-text"/>
+													<button type="button" class="btn"><span><i class="fas fa-search"></i></span></button>
+												</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- 우편번호 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label" for="sAddress1">주소 (type-address)</label>
+										</div>
+										<div class="control-area type-address">
+											<div class="form-row">
+												<span class="col"><input type="text" name="sAddress" id="sAddress1" value="" placeholder="" title="우편번호" class="form-text"/></span>
+												<span class="col col-btn lens4"><button type="button" class="btn btn-type3"><span>우편번호</span></button></span>
+											</div>
+											<div class="form-row">
+												<span class="col"><input type="text" name="sAddress" id="sAddress2" value="" placeholder="" title="기본주소" class="form-text"/></span>
+											</div>
+											<div class="form-row">
+												<span class="col"><input type="text" name="sAddress" id="sAddress3" value="" placeholder="" title="상세주소" class="form-text"/></span>
+											</div>
+										</div>
+									</div>
+
+									<!-- 일반전화번호 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label">일반전화번호 (type-telNo)</label>
+										</div>
+										<div class="control-area type-telNo">
+											<div class="form-row">
+												<span class="col"><input type="tel" name="sTelNo" id="sTelNo1" value="" placeholder="" title="지역 번호" class="form-text"/></span>
+												<span class="col form-char">-</span>
+												<span class="col"><input type="tel" name="sTelNo" id="sTelNo2" value="" placeholder="" title="국 번호" class="form-text"/></span>
+												<span class="col form-char">-</span>
+												<span class="col"><input type="tel" name="sTelNo" id="sTelNo3" value="" placeholder="" title="가입자 번호" class="form-text"/></span>
+											</div>
+										</div>
+									</div>
+
+									<!-- 휴대전화번호 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label">휴대전화번호 (type-phoneNo)</label>
+										</div>
+										<div class="control-area type-phoneNo">
+											<div class="form-row">
+												<span class="col"><input type="tel" name="sPhoneNo" id="sPhoneNo1" value="" placeholder="" title="사업자 식별번호" class="form-text"/></span>
+												<span class="col form-char">-</span>
+												<span class="col"><input type="tel" name="sPhoneNo" id="sPhoneNo2" value="" placeholder="" title="국 번호" class="form-text"/></span>
+												<span class="col form-char">-</span>
+												<span class="col"><input type="tel" name="sPhoneNo" id="sPhoneNo3" value="" placeholder="" title="가입자 번호" class="form-text"/></span>
+											</div>
+										</div>
+									</div>
+
+									<!-- 이메일주소 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label">이메일주소 (type-email1)</label>
+										</div>
+										<div class="control-area type-email1">
+											<div class="form-row">
+												<span class="col"><input type="text" name="sEmail" id="sEmail1" value="" placeholder="" title="이메일 사용자 아이디" class="form-text"/></span>
+												<span class="col form-char at">@</span>
+												<span class="col"><input type="text" name="sEmail" id="sEmail2" value="" placeholder="" title="이메일 서비스 도메인" class="form-text"/></span>
+											</div>
+										</div>
+									</div>
+
+									<!-- 이메일주소 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label">이메일주소 (type-email2)</label>
+										</div>
+										<div class="control-area type-email2">
+											<div class="form-row flexible">
+												<span class="col"><input type="text" name="sEmail" id="sEmail3" value="" placeholder="" title="이메일 사용자 아이디" class="form-text"/></span>
+												<span class="col form-char at">@</span>
+												<span class="col col-select">
+													<span class="form-select">
+														<select name="sSelect1" id="sEmail4" title="이메일 서비스 도메인">
+															<option value="">선택하세요.</option>
+														</select>
+													</span>
+												</span>
+											</div>
+										</div>
+									</div>
+
+									<!-- 주민등록번호 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label">주민등록번호 (type-socialNo)</label>
+										</div>
+										<div class="control-area type-socialNo">
+											<div class="form-row">
+												<span class="col"><input type="tel" name="sSocialNo" id="sSocialNo1" value="" placeholder="" title="주민등록번호 앞 6자리" class="form-text"/></span>
+												<span class="col form-char">-</span>
+												<span class="col"><input type="password" name="sSocialNo" id="sSocialNo2" value="" placeholder="" title="주민등록번호 뒤 7자리" class="form-text"/></span>
+											</div>
+										</div>
+									</div>
+
+									<!-- 외국인등록번호 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label">외국인등록번호 (type-globalNo)</label>
+										</div>
+										<div class="control-area type-globalNo">
+											<div class="form-row">
+												<span class="col"><input type="tel" name="sGlobalNo" id="sGlobalNo1" value="" placeholder="" title="외국인등록번호 앞 6자리" class="form-text"/></span>
+												<span class="col form-char">-</span>
+												<span class="col"><input type="password" name="sGlobalNo" id="sGlobalNo2" value="" placeholder="" title="외국인등록번호 뒤 7자리" class="form-text"/></span>
+											</div>
+										</div>
+									</div>
+
+									<!-- 법인번호 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label">법인번호 (type-corpNo)</label>
+										</div>
+										<div class="control-area type-corpNo">
+											<div class="form-row">
+												<span class="col"><input type="tel" name="sCorpNo" id="sCorpNo1" value="" placeholder="" title="법인번호 앞 6자리" class="form-text"/></span>
+												<span class="col form-char">-</span>
+												<span class="col"><input type="tel" name="sCorpNo" id="sCorpNo2" value="" placeholder="" title="법인번호 뒤 7자리" class="form-text"/></span>
+											</div>
+										</div>
+									</div>
+
+									<!-- 사업자등록번호 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label">사업자등록번호 (type-bizNo)</label>
+										</div>
+										<div class="control-area type-bizNo">
+											<div class="form-row">
+												<span class="col"><input type="tel" name="sBizNo" id="sBizNo1" value="" placeholder="" title="사업자등록번호 앞 3자리" class="form-text"/></span>
+												<span class="col form-char">-</span>
+												<span class="col"><input type="tel" name="sBizNo" id="sBizNo2" value="" placeholder="" title="사업자등록번호 가운데 2자리" class="form-text"/></span>
+												<span class="col form-char">-</span>
+												<span class="col"><input type="tel" name="sBizNo" id="sBizNo3" value="" placeholder="" title="사업자등록번호 뒤 5자리" class="form-text"/></span>
+											</div>
+										</div>
+									</div>
+
+									<!-- 카드번호 -->
+									<div class="form-row vertical">
+										<div class="label-area">
+											<label class="form-label">카드번호 (type-cardNo)</label>
+										</div>
+										<div class="control-area type-cardNo">
+											<div class="form-row">
+												<span class="col"><input type="tel" name="sCardNo" id="sCardNo1" value="" placeholder="" title="카드번호 앞 3자리" class="form-text"/></span>
+												<span class="col form-char">-</span>
+												<span class="col"><input type="tel" name="sCardNo" id="sCardNo2" value="" placeholder="" title="카드번호 가운데 2자리" class="form-text"/></span>
+												<span class="col form-char">-</span>
+												<span class="col"><input type="tel" name="sCardNo" id="sCardNo3" value="" placeholder="" title="카드번호 뒤 5자리" class="form-text"/></span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;fieldset class="form-wrap">
+										&lt;legend>유형별 입력폼&lt;/legend>
+
+										&lt;!-- 아이디 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sID">아이디&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sID" id="sID" value="" placeholder="아이디 입력" class="form-text"/>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 비밀번호 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sPassword">비밀번호&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="password" name="sPassword" id="sPassword" value="" placeholder="비밀번호 입력" class="form-text"/>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 직장검색 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sSearchA">직장검색&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-search1">
+												&lt;div class="form-row">
+													&lt;span class="col">
+														&lt;input type="text" name="sSearchA" id="sSearchA" value="" placeholder="" class="form-text"/>
+														&lt;button type="button" class="btn">&lt;span>&lt;i class="fas fa-search">&lt;/i>&lt;/span>&lt;/button>
+													&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 우편번호 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sZipcode">우편번호&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-search2">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sZipcode" id="sZipcode" value="" placeholder="" class="form-text"/>&lt;/span>
+													&lt;span class="col col-btn lens4">&lt;button type="button" class="btn btn-type3">&lt;span>우편번호&lt;/span>&lt;/button>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 일반전화번호 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sTelNo1">일반전화번호 (type-telNo)&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-telNo">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="tel" name="sTelNo" id="sTelNo1" value="" placeholder="" title="지역 번호" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char">-&lt;/span>
+													&lt;span class="col">&lt;input type="tel" name="sTelNo" id="sTelNo2" value="" placeholder="" title="국 번호" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char">-&lt;/span>
+													&lt;span class="col">&lt;input type="tel" name="sTelNo" id="sTelNo3" value="" placeholder="" title="가입자 번호" class="form-text"/>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 휴대전화번호 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sPhoneNo1">휴대전화번호 (type-phoneNo)&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-phoneNo">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="tel" name="sPhoneNo" id="sPhoneNo1" value="" placeholder="" title="사업자 식별번호" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char">-&lt;/span>
+													&lt;span class="col">&lt;input type="tel" name="sPhoneNo" id="sPhoneNo2" value="" placeholder="" title="국 번호" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char">-&lt;/span>
+													&lt;span class="col">&lt;input type="tel" name="sPhoneNo" id="sPhoneNo3" value="" placeholder="" title="가입자 번호" class="form-text"/>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 이메일주소 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sEmail1">이메일주소 TypeA (type-email)&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-email">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sEmail" id="sEmail1" value="" placeholder="" title="이메일 사용자 아이디" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char at">@&lt;/span>
+													&lt;span class="col">&lt;input type="text" name="sEmail" id="sEmail2" value="" placeholder="" title="이메일 서비스 도메인" class="form-text"/>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 이메일주소 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sEmail3">이메일주소 TypeB (type-email)&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-email">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sEmail" id="sEmail3" value="" placeholder="" title="이메일 사용자 아이디" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char at">@&lt;/span>
+													&lt;span class="col">
+														&lt;span class="form-select">
+															&lt;select name="sSelect1" id="sEmail4" title="이메일 서비스 도메인">
+																&lt;option value="">선택하세요.&lt;/option>
+															&lt;/select>
+														&lt;/span>
+													&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 주민등록번호 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sSocialNo1">주민등록번호 (type-socialNo)&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-socialNo">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sSocialNo" id="sSocialNo1" value="" placeholder="" title="주민등록번호 앞 6자리" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char">-&lt;/span>
+													&lt;span class="col">&lt;input type="password" name="sSocialNo" id="sSocialNo2" value="" placeholder="" title="주민등록번호 뒤 7자리" class="form-text"/>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 외국인등록번호 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sGlobalNo1">외국인등록번호 (type-globalNo)&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-globalNo">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sGlobalNo" id="sGlobalNo1" value="" placeholder="" title="외국인등록번호 앞 6자리" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char">-&lt;/span>
+													&lt;span class="col">&lt;input type="password" name="sGlobalNo" id="sGlobalNo2" value="" placeholder="" title="외국인등록번호 뒤 7자리" class="form-text"/>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 법인번호 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sCorpNo1">법인번호 (type-corpNo)&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-corpNo">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sCorpNo" id="sCorpNo1" value="" placeholder="" title="법인번호 앞 6자리" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char">-&lt;/span>
+													&lt;span class="col">&lt;input type="text" name="sCorpNo" id="sCorpNo2" value="" placeholder="" title="법인번호 뒤 7자리" class="form-text"/>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 사업자등록번호 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sBizNo1">사업자등록번호 (type-bizNo)&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-bizNo">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sBizNo" id="sBizNo1" value="" placeholder="숫자만 입력" title="사업자등록번호 앞 3자리" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char">-&lt;/span>
+													&lt;span class="col">&lt;input type="text" name="sBizNo" id="sBizNo2" value="" placeholder="숫자만 입력" title="사업자등록번호 가운데 2자리" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char">-&lt;/span>
+													&lt;span class="col">&lt;input type="text" name="sBizNo" id="sBizNo3" value="" placeholder="숫자만 입력" title="사업자등록번호 뒤 5자리" class="form-text"/>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+
+										&lt;!-- 카드번호 -->
+										&lt;div class="form-row vertical">
+											&lt;div class="label-area">
+												&lt;label class="form-label" for="sCardNo1">카드번호 (type-cardNo)&lt;/label>
+											&lt;/div>
+											&lt;div class="control-area type-cardNo">
+												&lt;div class="form-row">
+													&lt;span class="col">&lt;input type="text" name="sCardNo" id="sCardNo1" value="" placeholder="숫자만 입력" title="카드번호 앞 3자리" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char">-&lt;/span>
+													&lt;span class="col">&lt;input type="text" name="sCardNo" id="sCardNo2" value="" placeholder="숫자만 입력" title="카드번호 가운데 2자리" class="form-text"/>&lt;/span>
+													&lt;span class="col form-char">-&lt;/span>
+													&lt;span class="col">&lt;input type="text" name="sCardNo" id="sCardNo3" value="" placeholder="숫자만 입력" title="카드번호 뒤 5자리" class="form-text"/>&lt;/span>
+												&lt;/div>
+											&lt;/div>
+										&lt;/div>
+									&lt;/fieldset>
+								</pre>
+							</div>
+							<div class="g-example-guide">
+								<h5 class="g-h5">설계가이드</h5>
+								<ul class="g-desc">
+									<li>input type="number" : 수치를 의미하는 값을 입력하는 경우</li>
+									<li>input type="tel" : 숫자 문자열만 입력하는 경우</li>
+									<li>여러개의 컨트롤에 모두 title제공을 하는경우, label연결은 생략한다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

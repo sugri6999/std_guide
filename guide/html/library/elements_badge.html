@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body id="elements">
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Badge</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Text</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="badge-wrap" style="position:static">
+									<span style="display:inline-block; width:60px;">Basic</span>
+									<span class="badge-type1">1</span>
+									<span class="badge-type1 outline">1</span>
+								</div>
+								<br>
+								<div class="badge-wrap" style="position:static">
+									<span style="display:inline-block; width:60px;">Primary</span>
+									<span class="badge-type1 primary">1</span>
+									<span class="badge-type1 primary outline">1</span>
+								</div>
+								<br>
+								<div class="badge-wrap" style="position:static">
+									<span style="display:inline-block; width:60px;">Colored</span>
+									<span class="badge-type1 type1">1</span>
+									<span class="badge-type1 type2">2</span>
+									<span class="badge-type1 type3">3</span>
+									<span class="badge-type1 type1 outline">1</span>
+									<span class="badge-type1 type2 outline">2</span>
+									<span class="badge-type1 type3 outline">3</span>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<!-- Basic -->
+									<div class="badge-wrap">
+										<span class="badge-type1">1</span>
+										<span class="badge-type1 outline">1</span>
+									</div>
+
+									<!-- Primary -->
+									<div class="badge-wrap">
+										<span class="badge-type1 primary">1</span>
+										<span class="badge-type1 primary outline">1</span>
+									</div>
+
+									<!-- Colored -->
+									<div class="badge-wrap">
+										<span class="badge-type1 type1">1</span>
+										<span class="badge-type1 type2">2</span>
+										<span class="badge-type1 type3">3</span>
+										<span class="badge-type1 type1 outline">1</span>
+										<span class="badge-type1 type2 outline">2</span>
+										<span class="badge-type1 type3 outline">3</span>
+									</div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									.badge-type1 {display:inline-block; width:30px; height:30px; padding-bottom:1px; background-color:#444; color:#fff; line-height:29px; text-align:center; vertical-align:middle;}
+									.badge-type1.outline {background:transparent; border:1px solid #444; color:#444; line-height:27px;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Image</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<div class="badge-wrap" style="position:static">
+									<span class="badge badge-type2">1</span>
+									<span class="badge badge-type2">2</span>
+									<span class="badge badge-type2">3</span>
+									<span class="badge badge-type2">40</span>
+									<span class="badge badge-type2">99</span>
+								</div>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<div class="badge-wrap">
+										<span class="badge badge-이름"></span>
+									</div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

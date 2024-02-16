@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body id="elements">
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Pagination</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="pagination-wrap">
+										<span class="blind-area" aria-label="공지사항 100페이지 중 현재 2페이지"></span>
+										<div class="pagination">
+											<span class="page-btn-group">
+												<a href="#none" class="btn-ico page-btn first" disabled aria-label="처음"></a>
+												<a href="#none" class="btn-ico page-btn prev" disabled aria-label="이전"></a>
+											</span>
+											<span class="page-num-group">
+												<a href="#none" class="page-num" aria-label="1 페이지">1</a>
+												<span class="page-num is-current" aria-label="2 페이지 현재항목">2</span>
+												<a href="#none" class="page-num" aria-label="3 페이지">3</a>
+												<a href="#none" class="page-num" aria-label="4 페이지">4</a>
+												<a href="#none" class="page-num" aria-label="5 페이지">5</a>
+												<a href="#none" class="page-num" aria-label="6 페이지">6</a>
+												<a href="#none" class="page-num" aria-label="7 페이지">7</a>
+												<a href="#none" class="page-num" aria-label="8 페이지">8</a>
+												<a href="#none" class="page-num" aria-label="9 페이지">9</a>
+												<a href="#none" class="page-num" aria-label="10 페이지">10</a>
+											</span>
+											<span class="page-btn-group">
+												<a href="#none" class="btn-ico page-btn next" aria-label="다음"></a>
+												<a href="#none" class="btn-ico page-btn last" aria-label="마지막"></a>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="pagination-wrap">
+										&lt;span class="blind-area" aria-label="공지사항 100페이지 중 현재 2페이지">&lt;/span>
+										&lt;div class="pagination">
+											&lt;span class="page-btn-group">
+												&lt;a href="#none" class="btn-ico page-btn first" disabled aria-label="처음">&lt;/a>
+												&lt;a href="#none" class="btn-ico page-btn prev" disabled aria-label="이전">&lt;/a>
+											&lt;/span>
+											&lt;span class="page-num-group">
+												&lt;a href="#none" class="page-num" aria-label="1 페이지">1&lt;/a>
+												&lt;span class="page-num is-current" aria-label="2 페이지 현재항목">2&lt;/span>
+												&lt;a href="#none" class="page-num" aria-label="3 페이지">3&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="4 페이지">4&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="5 페이지">5&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="6 페이지">6&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="7 페이지">7&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="8 페이지">8&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="9 페이지">9&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="10 페이지">10&lt;/a>
+											&lt;/span>
+											&lt;span class="page-btn-group">
+												&lt;a href="#none" class="btn-ico page-btn next" aria-label="다음">&lt;/a>
+												&lt;a href="#none" class="btn-ico page-btn last" aria-label="마지막">&lt;/a>
+											&lt;/span>
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										## Pagination
+									-------------------------------------------------------------------*/
+									/* Default */
+									.pagination-wrap {position:relative; text-align:center;}
+									.pagination {display:inline-block; position:relative; z-index:10; vertical-align:top;}
+									.pagination:after {content:''; display:block; clear:both;}
+									.pagination .page-btn-group,.pagination .page-num-group,.pagination .page-btn,.pagination .page-num {display:inline-block; position:relative; z-index:0; float:left; overflow:hidden;}
+
+									/* Design */
+									.pagination .page-num-group {margin:0 16px;}
+									.pagination .page-btn,.pagination .page-num {min-width:30px; height:30px; padding:0 5px 1px; line-height:27px; border:1px solid #ddd;}
+									.pagination .page-btn + .page-btn,.pagination .page-num + .page-num {margin-left:4px;}
+									.pagination .page-btn {text-indent:-999px;}
+									.pagination .page-btn:after {content:''; display:inline-block; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); -webkit-transform:translate(-50%, -50%); background-image:url(../../images/common/ico_pagination.png);}
+									.pagination .page-btn.first:after {width:13px; height:14px; background-position:0 0;}
+									.pagination .page-btn.prev:after {width:8px; height:14px; background-position:-30px 0;}
+									.pagination .page-btn.next:after {width:8px; height:14px; background-position:-60px 0;}
+									.pagination .page-btn.last:after {width:13px; height:14px; background-position:-90px 0;}
+									.pagination .page-btn[disabled]:after {background-position-y:-30px !important;}
+									.pagination .page-num.is-current {border:1px solid $color-primary;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Stick</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<div class="g-example-preview">
+									<div class="pagination-wrap">
+										<span class="blind-area" aria-label="공지사항 100페이지 중 현재 2페이지"></span>
+										<div class="pagination pagenation-stick">
+											<span class="page-btn-group">
+												<a href="#none" class="btn-ico page-btn first" disabled aria-label="처음"></a>
+												<a href="#none" class="btn-ico page-btn prev" disabled aria-label="이전"></a>
+											</span>
+											<span class="page-num-group">
+												<a href="#none" class="page-num" aria-label="1 페이지">1</a>
+												<span class="page-num is-current" aria-label="2 페이지 현재항목">2</span>
+												<a href="#none" class="page-num" aria-label="3 페이지">3</a>
+												<a href="#none" class="page-num" aria-label="4 페이지">4</a>
+												<a href="#none" class="page-num" aria-label="5 페이지">5</a>
+												<a href="#none" class="page-num" aria-label="6 페이지">6</a>
+												<a href="#none" class="page-num" aria-label="7 페이지">7</a>
+												<a href="#none" class="page-num" aria-label="8 페이지">8</a>
+												<a href="#none" class="page-num" aria-label="9 페이지">9</a>
+												<a href="#none" class="page-num" aria-label="10 페이지">10</a>
+											</span>
+											<span class="page-btn-group">
+												<a href="#none" class="btn-ico page-btn next" aria-label="다음"></a>
+												<a href="#none" class="btn-ico page-btn last" aria-label="마지막"></a>
+											</span>
+										</div>
+									</div>
+								</div>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="pagination-wrap">
+										&lt;span class="blind-area" aria-label="공지사항 100페이지 중 현재 2페이지">&lt;/span>
+										&lt;div class="pagination pagenation-stick">
+											&lt;span class="page-btn-group">
+												&lt;a href="#none" class="btn-ico page-btn first" disabled aria-label="처음">&lt;/a>
+												&lt;a href="#none" class="btn-ico page-btn prev" disabled aria-label="이전">&lt;/a>
+											&lt;/span>
+											&lt;span class="page-num-group">
+												&lt;a href="#none" class="page-num" aria-label="1 페이지">1&lt;/a>
+												&lt;span class="page-num is-current" aria-label="2 페이지 현재항목">2&lt;/span>
+												&lt;a href="#none" class="page-num" aria-label="3 페이지">3&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="4 페이지">4&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="5 페이지">5&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="6 페이지">6&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="7 페이지">7&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="8 페이지">8&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="9 페이지">9&lt;/a>
+												&lt;a href="#none" class="page-num" aria-label="10 페이지">10&lt;/a>
+											&lt;/span>
+											&lt;span class="page-btn-group">
+												&lt;a href="#none" class="btn-ico page-btn next" aria-label="다음">&lt;/a>
+												&lt;a href="#none" class="btn-ico page-btn last" aria-label="마지막">&lt;/a>
+											&lt;/span>
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* ui-stick */
+									.pagination.pagination-stick .page-btn + .page-btn,.pagination.paginationeo-stick .page-num + .page-num {margin-left:-1px;}
+									.pagination.pagination-stick .page-num.is-current + .page-num {margin-left:0; border-left:0;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

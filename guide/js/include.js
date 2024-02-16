@@ -46,7 +46,7 @@ var include = {
 		//document.write('					<li><a href="'+gBaseURL.menu0+'intro.html" data-aside="g-snbMenu0" data-url="'+gBaseURL.menu0+'">Intro</a></li>');
 		document.write('					<li><a href="'+gBaseURL.menu1+'rule_intro.html" data-aside="g-snbMenu1" data-url="'+gBaseURL.menu1+'">규칙가이드</a></li>');
 		document.write('					<li><a href="'+gBaseURL.menu2+'plan_codeset.html" data-aside="g-snbMenu2" data-url="'+gBaseURL.menu2+'">설계가이드</a></li>');
-		document.write('					<li><a href="'+gBaseURL.menu3+'elements_color.html" data-aside="g-snbMenu3" data-url="'+gBaseURL.menu3+'">라이브러리</a></li>');
+		document.write('					<li><a href="'+gBaseURL.menu3+'elements_section.html" data-aside="g-snbMenu3" data-url="'+gBaseURL.menu3+'">라이브러리</a></li>');
 		document.write('					<li><a href="'+gBaseURL.menu4+'ia_index.html" data-aside="g-snbMenu4" data-url="'+gBaseURL.menu4+'">메뉴현황판</a></li>');
 		// document.write('					<li><a href="'+gBaseURL.menu5+'wa_index.html" data-aside="g-snbMenu5" data-url="'+gBaseURL.menu5+'">접근성점검</a></li>');
 		// document.write('					<li><a href="'+gBaseURL.menu6+'prototype_conventions.html" data-aside="g-snbMenu6" data-url="'+gBaseURL.menu6+'">가이드템플릿</a></li>');
@@ -132,7 +132,7 @@ var include = {
 		},
 
 		//Library
-		menu3 : function(){
+		menu3: function () {
 			var baseURL = gBaseURL.menu3;
 			document.write('				<!-- library -->');
 			document.write('				<ul class="g-depth1 g-snbMenu3">');
@@ -145,10 +145,23 @@ var include = {
 			document.write('							</dt>');
 			document.write('							<dd id="accorMenu11" class="accordion-content" aria-hidden="false">');
 			document.write('								<ul class="g-depth2">');
-			document.write('									<li class="g-node2"><a href="'+baseURL+'elements_color.html">Color</a></li>');
-			document.write('									<li class="g-node2"><a href="'+baseURL+'elements_typo.html">Typography</a></li>');
-			document.write('									<li class="g-node2"><a href="'+baseURL+'elements_app.html">App Bar</a></li>');
-			document.write('									<li class="g-node2"><a href="'+baseURL+'elements_input.html">Text Input Field</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_section.html">Section</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_form.html">Form</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_button.html">Button</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_icon.html">Icon</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_label.html">Label</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_badge.html">Badge</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_bullet.html">Bullet</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_thumbnail.html">Thumbnail</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_breadcrumb.html">Breadcrumb</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_list.html">List</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_define.html">Define</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_box.html">Box</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_card.html">Card</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_step.html">Step</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_table.html">Table</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_pagination.html">Pagination</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'elements_progress.html">Progress</a></li>');
 			document.write('								</ul>');
 			document.write('							</dd>');
 			document.write('							<dt class="accordion-title">');
@@ -158,7 +171,17 @@ var include = {
 			document.write('							</dt>');
 			document.write('							<dd id="accorMenu12" class="accordion-content" aria-hidden="true">');
 			document.write('								<ul class="g-depth2">');
-			document.write('									<li class="g-node2"><a href="'+baseURL+'modules_tab.html">Tab</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_tab.html">Tab</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_accordion.html">Accordion</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_folder.html">Folder</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_collapse.html">Collapse</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_tooltip.html">Tooltip</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_dropdown.html">Dropdown</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_modal.html">Modal</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_popup.html">Full Popup</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_sticky.html">Sticky</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_spyscroll.html">Spy Scroll</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_customscroll.html">Custom Scroll</a></li>');
 			document.write('								</ul>');
 			document.write('							</dd>');
 			document.write('							<dt class="accordion-title">');
@@ -168,7 +191,7 @@ var include = {
 			document.write('							</dt>');
 			document.write('							<dd id="accorMenu13" class="accordion-content" aria-hidden="true">');
 			document.write('								<ul class="g-depth2">');
-			document.write('									<li class="g-node2"><a href="'+baseURL+'bx_slider.html">BX Slider</a></li>');
+			document.write('									<li class="g-node2"><a href="' + baseURL + 'bx_slider.html">BX Slider</a></li>');
 			document.write('								</ul>');
 			document.write('							</dd>');
 			document.write('						</dl>');

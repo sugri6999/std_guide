@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body id="elements">
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Bullet</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">공통</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn is-active">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-footer is-active">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										## Bullet
+									-------------------------------------------------------------------*/
+									/* Default */
+									.bul > li, .bul > p, .bul-dt > dt, .bul-dd > dd {display:table; line-height:20px;}
+									.bul > li::before, .bul > p::before, .bul-dt > dt::before, .bul-dd > dd::before {content:''; display:table-cell; position:relative; padding-right:5px; background:url(../../images/bul_sprite.png) no-repeat 999em 999em;}
+									.bul > li[data-bul]::before {content:attr(data-bul) !important;}/* (사용자정의 목록) data-bul속성 사용하는 경우 우선순위로 적용 */
+									.bul-dt.bul-dot > dt:before,.bul-dd.bul-dot > dd:before,.bul-dot > li::before,
+									.bul-dt.bul-circle > dt:before,.bul-dd.bul-circle > dd::before,.bul-circle > li::before,
+									.bul-dt.bul-square > dt:before,.bul-dd.bul-square > dd:before,.bul-square > li::before {display:inline-block; padding-right:0;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">순서없는 목록</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">이미지블릿</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<ul class="bul bul-dot">
+									<li>목록 텍스트
+										<ul class="bul bul-circle">
+											<li>목록 텍스트
+												<ul class="bul bul-square">
+													<li>목록 텍스트</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+								<br>
+								<dl class="bul-dt bul-dot">
+									<dt>블릿 제목</dt>
+									<dd>일반 텍스트</dd>
+								</dl>
+								<br>
+								<dl class="bul-dd bul-dot">
+									<dt>일반 제목</dt>
+									<dd>블릿 텍스트</dd>
+								</dl>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<!-- 순서없는목록 -->
+									<ul class="bul bul-dot">
+										<li>목록 텍스트
+											<ul class="bul bul-circle">
+												<li>목록 텍스트
+													<ul class="bul bul-square">
+														<li>목록 텍스트</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+
+									<!-- 정의목록 -->
+									<dl class="bul-dt bul-dot">
+										<dt>블릿 제목</dt>
+										<dd>일반 텍스트</dd>
+									</dl>
+									<dl class="bul-dd bul-dot">
+										<dt>일반 제목</dt>
+										<dd>블릿 텍스트</dd>
+									</dl>
+
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* 순서없는목록 */
+									.bul-dot > li {padding-left:14px;} .bul-dot > li::before {top:-4px; margin-left:-14px; margin-right:11px; width:3px; height:3px; border-radius:50%; background-color:#222;} .dv-ie ul.bul-dot > li::before {top:0px;}
+									.bul-circle > li {padding-left:16px;} .bul-circle > li::before {top:-3px; margin-left:-16px; margin-right:12px; width:5px; height:5px; border-radius:50%; background-color:#222;} .dv-ie ul.bul-circle > li::before {top:-1px;}
+									.bul-square > li {padding-left:16px;} .bul-square > li::before {top:-3px; margin-left:-16px; margin-right:12px; width:5px; height:5px; border-radius:0; background-color:#222;} .dv-ie ul.bul-square > li::before {top:-1px;}
+
+									/* 정의목록 DT */
+									.bul-dt.bul-dot > dt {padding-left:14px;} .bul-dt.bul-dot > dt::before {top:-4px; margin-left:-14px; margin-right:11px; width:3px; height:3px; border-radius:50%; background-color:#222;} .dv-ie .bul-dt.bul-dot > dt::before {top:0px;}
+									.bul-dt.bul-circle > dt {padding-left:16px;} .bul-dt.bul-circle > dt::before {top:-3px; margin-left:-16px; margin-right:12px; width:5px; height:5px; border-radius:50%; background-color:#222;} .dv-ie .bul-dt.bul-circle > dt::before {top:-1px;}
+									.bul-dt.bul-square > dt {padding-left:16px;} .bul-dt.bul-square > dt::before {top:-3px; margin-left:-16px; margin-right:12px; width:5px; height:5px; border-radius:0; background-color:#222;} .dv-ie .bul-dt.bul-square > dt::before {top:-1px;}
+
+									/* 정의목록 DD */
+									.bul-dd.bul-dot > dd {padding-left:14px;} .bul-dd.bul-dot > dd::before {top:-4px; margin-left:-14px; margin-right:11px; width:3px; height:3px; border-radius:50%; background-color:#222;} .dv-ie .bul-dd.bul-dot > dd::before {top:0px;}
+									.bul-dd.bul-circle > dd {padding-left:16px;} .bul-dd.bul-circle > dd::before {top:-3px; margin-left:-16px; margin-right:12px; width:5px; height:5px; border-radius:50%; background-color:#222;} .dv-ie .bul-dd.bul-circle > dd::before {top:-1px;}
+									.bul-dd.bul-square > dd {padding-left:16px;} .bul-dd.bul-square > dd::before {top:-3px; margin-left:-16px; margin-right:12px; width:5px; height:5px; border-radius:0; background-color:#222;} .dv-ie .bul-dd.bul-square > dd::before {top:-1px;}
+
+								</pre>
+							</div>
+						</div>
+
+						<h3 class="g-h3">특수문자</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<ul class="bul bul-hyphen">
+									<li>목록 텍스트</li>
+								</ul>
+								<br>
+								<ul class="bul bul-star">
+									<li>목록 텍스트</li>
+								</ul>
+								<br>
+								<ul class="bul bul-bill">
+									<li>목록 텍스트</li>
+								</ul>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<!-- 하이픈 -->
+									<ul class="bul bul-hyphen">
+										<li>목록 텍스트</li>
+									</ul>
+
+									<!-- 스타 -->
+									<ul class="bul bul-star">
+										<li>목록 텍스트</li>
+									</ul>
+
+									<!-- 당구장 -->
+									<ul class="bul bul-bill">
+										<li>목록 텍스트</li>
+									</ul>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* 특수문자 */
+									.bul-hyphen > li::before, .bul-hyphen > p::before {content:'-';}
+									.bul-star > li::before, .bul-star > p::before {content:'*';}
+									.bul-bill > li::before, .bul-bill > p::before {content:'※';}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">순서있는 목록</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">숫자</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn is-copyed">HTML</a>
+									<a href="javascript:;" class="g-example-btn is-copyed">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<ol class="bul bul-num1">
+									<li>목록 텍스트
+										<ol class="bul bul-num2">
+											<li>목록 텍스트
+												<ol class="bul bul-num3">
+													<li>목록 텍스트
+														<ol class="bul bul-num4">
+															<li>목록 텍스트
+															</li>
+														</ol>
+													</li>
+												</ol>
+											</li>
+										</ol>
+									</li>
+								</ol>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<ol class="bul bul-num1">
+										<li>목록 텍스트
+											<ol class="bul bul-num2">
+												<li>목록 텍스트
+													<ol class="bul bul-num3">
+														<li>목록 텍스트
+															<ol class="bul bul-num4">
+																<li>목록 텍스트
+																</li>
+															</ol>
+														</li>
+													</ol>
+												</li>
+											</ol>
+										</li>
+									</ol>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* 숫자목록 : 1. (1) 1) ① */
+									.bul-num1 {counter-reset:num1;} .bul-num1 > li::before {counter-increment:num1; content:counter(num1, decimal) ".";}
+									.bul-num2 {counter-reset:num2;} .bul-num2 > li::before {counter-increment:num2; content:"(" counter(num2, decimal) ")";}
+									.bul-num3 {counter-reset:num3;} .bul-num3 > li::before {counter-increment:num3; content:counter(num3, decimal) ")";}
+									.bul-num4 > li::before {content:'①';} .bul-num4 > li+li::before {content:'②';} .bul-num4 > li+li+li::before {content:'③';} .bul-num4 > li+li+li+li::before {content:'④';} .bul-num4 > li+li+li+li+li::before {content:'⑤';} .bul-num4 > li+li+li+li+li+li::before {content:'⑥';} .bul-num4 > li+li+li+li+li+li+li::before {content:'⑦';} .bul-num4 > li+li+li+li+li+li+li+li::before {content:'⑧';} .bul-num4 > li+li+li+li+li+li+li+li+li::before {content:'⑨';} .bul-num4 > li+li+li+li+li+li+li+li+li+li::before {content:'⑩';}
+								</pre>
+							</div>
+						</div>
+
+						<h3 class="g-h3">한글</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn is-copyed">HTML</a>
+									<a href="javascript:;" class="g-example-btn is-copyed">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<ol class="bul bul-kor1">
+									<li>목록 텍스트
+										<ol class="bul bul-kor2">
+											<li>목록 텍스트
+												<ol class="bul bul-kor3">
+													<li>목록 텍스트</li>
+												</ol>
+											</li>
+										</ol>
+									</li>
+								</ol>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<ol class="bul bul-kor1">
+										<li>목록 텍스트
+											<ol class="bul bul-kor2">
+												<li>목록 텍스트
+													<ol class="bul bul-kor3">
+														<li>목록 텍스트</li>
+													</ol>
+												</li>
+											</ol>
+										</li>
+									</ol>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* 한글목록 가. (가) 가) */
+									.bul-kor1 > li::before {content:'가';} .bul-kor1 > li+li::before {content:'나';} .bul-kor1 > li+li+li::before {content:'다';} .bul-kor1 > li+li+li+li::before {content:'라';} .bul-kor1 > li+li+li+li+li::before {content:'마';} .bul-kor1 > li+li+li+li+li+li::before {content:'바';} .bul-kor1 > li+li+li+li+li+li+li::before {content:'사';} .bul-kor1 > li+li+li+li+li+li+li+li::before {content:'아';} .bul-kor1 > li+li+li+li+li+li+li+li+li::before {content:'자';} .bul-kor1 > li+li+li+li+li+li+li+li+li+li::before {content:'차';} .bul-kor1 > li+li+li+li+li+li+li+li+li+li+li::before {content:'카';} .bul-kor1 > li+li+li+li+li+li+li+li+li+li+li+li::before {content:'타';} .bul-kor1 > li+li+li+li+li+li+li+li+li+li+li+li+li::before {content:'파';} .bul-kor1 > li+li+li+li+li+li+li+li+li+li+li+li+li+li::before {content:'하';}
+									.bul-kor2 > li::before {content:'(가)';} .bul-kor2 > li+li::before {content:'(나)';} .bul-kor2 > li+li+li::before {content:'(다)';} .bul-kor2 > li+li+li+li::before {content:'(라)';} .bul-kor2 > li+li+li+li+li::before {content:'(마)';} .bul-kor2 > li+li+li+li+li+li::before {content:'(바)';} .bul-kor2 > li+li+li+li+li+li+li::before {content:'(사)';} .bul-kor2 > li+li+li+li+li+li+li+li::before {content:'(아)';} .bul-kor2 > li+li+li+li+li+li+li+li+li::before {content:'(자)';} .bul-kor2 > li+li+li+li+li+li+li+li+li+li::before {content:'(차)';} .bul-kor2 > li+li+li+li+li+li+li+li+li+li+li::before {content:'(카)';} .bul-kor2 > li+li+li+li+li+li+li+li+li+li+li+li::before {content:'(타)';} .bul-kor2 > li+li+li+li+li+li+li+li+li+li+li+li+li::before {content:'(파)';} .bul-kor2 > li+li+li+li+li+li+li+li+li+li+li+li+li+li::before {content:'(하)';}
+									.bul-kor3 > li::before {content:'가)';} .bul-kor3 > li+li::before {content:'나)';} .bul-kor3 > li+li+li::before {content:'다)';} .bul-kor3 > li+li+li+li::before {content:'라)';} .bul-kor3 > li+li+li+li+li::before {content:'마)';} .bul-kor3 > li+li+li+li+li+li::before {content:'바)';} .bul-kor3 > li+li+li+li+li+li+li::before {content:'사)';} .bul-kor3 > li+li+li+li+li+li+li+li::before {content:'아)';} .bul-kor3 > li+li+li+li+li+li+li+li+li::before {content:'자)';} .bul-kor3 > li+li+li+li+li+li+li+li+li+li::before {content:'차)';} .bul-kor3 > li+li+li+li+li+li+li+li+li+li+li::before {content:'카)';} .bul-kor3 > li+li+li+li+li+li+li+li+li+li+li+li::before {content:'타)';} .bul-kor3 > li+li+li+li+li+li+li+li+li+li+li+li+li::before {content:'파)';} .bul-kor3 > li+li+li+li+li+li+li+li+li+li+li+li+li+li::before {content:'하)';}
+								</pre>
+							</div>
+						</div>
+
+						<h3 class="g-h3">영어</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn is-copyed">HTML</a>
+									<a href="javascript:;" class="g-example-btn is-copyed">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<ol class="bul bul-eng1">
+									<li>목록 텍스트
+										<ol class="bul bul-eng2">
+											<li>목록 텍스트
+												<ol class="bul bul-eng3">
+													<li>목록 텍스트
+														<ol class="bul bul-eng4">
+															<li>목록 텍스트</li>
+														</ol>
+													</li>
+												</ol>
+											</li>
+										</ol>
+									</li>
+								</ol>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<ol class="bul bul-eng1">
+										<li>목록 텍스트
+											<ol class="bul bul-eng2">
+												<li>목록 텍스트
+													<ol class="bul bul-eng3">
+														<li>목록 텍스트
+															<ol class="bul bul-eng4">
+																<li>목록 텍스트</li>
+															</ol>
+														</li>
+													</ol>
+												</li>
+											</ol>
+										</li>
+									</ol>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* 알파벳목록 A. (a) a) ⓐ */
+									.bul-eng1 {counter-reset:eng1;} .bul-eng1 > li::before {counter-increment:eng1; content:counter(eng1, upper-alpha) ".";}
+									.bul-eng2 {counter-reset:eng2;} .bul-eng2 > li::before {counter-increment:eng2; content:"(" counter(eng2, lower-alpha) ")";}
+									.bul-eng3 {counter-reset:eng3;} .bul-eng3 > li::before {counter-increment:eng3; content:counter(eng3, lower-alpha) ")";}
+									.bul-eng4 > li::before {content:'ⓐ';} .bul-eng4 > li+li::before {content:'ⓑ';} .bul-eng4 > li+li+li::before {content:'ⓒ';} .bul-eng4 > li+li+li+li::before {content:'ⓓ';} .bul-eng4 > li+li+li+li+li::before {content:'ⓔ';} .bul-eng4 > li+li+li+li+li+li::before {content:'ⓕ';} .bul-eng4 > li+li+li+li+li+li+li::before {content:'ⓖ';} .bul-eng4 > li+li+li+li+li+li+li+li::before {content:'ⓗ';} .bul-eng4 > li+li+li+li+li+li+li+li+li::before {content:'ⓘ';} .bul-eng4 > li+li+li+li+li+li+li+li+li+li::before {content:'ⓙ';}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

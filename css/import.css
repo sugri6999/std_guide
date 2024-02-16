@@ -11,8 +11,12 @@
 	Css 파일 불러오기
 -------------------------------------------------------------------*/
 @import url('reset.css');				/* 초기화 스타일 */
+@import url('base.css');				/* 가변적 스타일 */
 @import url('common.css');				/* 전역 공통 스타일 */
 @import url('layout.css');				/* 레이아웃 스타일 */
-@import url('ui.css');				/* 전역 공통 스타일 */
+@import url('ui.css');					/* 공통형태 스타일 */
+@import url('main.css');				/* 메인 스타일 */
+@import url('contents.css');			/* 페이지 스타일 */
 @import url('lib/animate.css');			/* 애니메이트 스타일 */
 @import url('lib/plugin.css');			/* 플러그인 스타일 */
+@import url('lib/axicon.css');			/* 텍스트아이콘 스타일 */

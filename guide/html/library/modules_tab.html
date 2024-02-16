@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body id="modules">
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Tab</h1>
+				<p class="g-explain-h1">Library Modules</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="tab-wrap">
+										<div class="tab-nav tab-basic">
+											<ul role="tablist">
+												<li role="presentation" class="is-active"><a href="#tabContent11" role="tab" aria-controls="tabContent11" aria-selected="true" aria-expanded="true">탭제목1</a></li>
+												<li role="presentation"><a href="#tabContent12" role="tab" aria-controls="tabContent12" aria-selected="false" aria-expanded="false">탭제목2</a></li>
+											</ul>
+										</div>
+										<div class="tab-body">
+											<!-- 탭내용1 -->
+											<div id="tabContent11" class="tab-content is-active" aria-hidden="false">
+												<div class="blind-area" role="text" aria-label="탭제목1 Tab Panel"></div><!-- role="tabpanel"(안읽어줌) 대체텍스트(Tab Panel) 직접입력 -->
+												<div class="tab-inner">
+													탭내용1
+												</div>
+											</div>
+											<!-- //탭내용1 -->
+											<!-- 탭내용2 -->
+											<div id="tabContent12" class="tab-content" aria-hidden="true">
+												<div class="blind-area" role="text" aria-label="탭제목2 Tab Panel"></div><!-- role="tabpanel"(안읽어줌) 대체텍스트(Tab Panel) 직접입력  -->
+												<div class="tab-inner">
+													탭내용2
+												</div>
+											</div>
+											<!-- //탭내용2 -->
+										</div>
+									</div>
+
+									<br>
+									탭 외부호출 :
+									<button type="button" onclick="ui.tab.action('#tabContent11')"><span>탭 제목1</span></button>
+									<button type="button" onclick="ui.tab.action('#tabContent12')"><span>탭 제목2</span></button>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="tab-wrap">
+										&lt;div class="tab-nav tab-basic">
+											&lt;ul role="tablist">
+												&lt;li role="presentation" class="is-active">&lt;a href="#tabContent11" role="tab" aria-controls="tabContent11" aria-selected="true">탭제목1&lt;/a>&lt;/li>
+												&lt;li role="presentation">&lt;a href="#tabContent12" role="tab" aria-controls="tabContent12" aria-selected="false">탭제목2&lt;/a>&lt;/li>
+											&lt;/ul>
+										&lt;/div>
+										&lt;div class="tab-body">
+											&lt;!-- 탭내용1 -->
+											&lt;div id="tabContent11" class="tab-content is-active" aria-hidden="false">
+												&lt;div class="blind-area" role="text" aria-label="탭제목1 Tab Panel">&lt;/div>&lt;!-- role="tabpanel"(안읽어줌) 대체텍스트(Tab Panel) 직접입력 -->
+												&lt;div class="tab-inner">
+													탭내용1
+												&lt;/div>
+											&lt;/div>
+											&lt;!-- //탭내용1 -->
+											&lt;!-- 탭내용2 -->
+											&lt;div id="tabContent12" class="tab-content" aria-hidden="true">
+												&lt;div class="blind-area" role="text" aria-label="탭제목2 Tab Panel">&lt;/div>&lt;!-- role="tabpanel"(안읽어줌) 대체텍스트(Tab Panel) 직접입력  -->
+												&lt;div class="tab-inner">
+													탭내용2
+												&lt;/div>
+											&lt;/div>
+											&lt;!-- //탭내용2 -->
+										&lt;/div>
+									&lt;/div>
+
+									탭 외부호출 :
+									&lt;button type="button" onclick="ui.tab.action('#tabContent11')">&lt;span>탭 제목1&lt;/span>&lt;/button>
+									&lt;button type="button" onclick="ui.tab.action('#tabContent12')">&lt;span>탭 제목2&lt;/span>&lt;/button>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/*-------------------------------------------------------------------
+										## Tabs
+									-------------------------------------------------------------------*/
+									/* Default */
+									.tab-nav ul::after {display:block; clear:both; content:'';}
+									.tab-nav li {position:relative; float:left; text-align:center;}
+									.tab-nav li > a {display:block; padding:10px;}
+									.tab-nav li.is-active > a::after {content:'선택됨'; position:absolute; top:-9999px;}
+									.tab-content {display:none; position:relative; padding:10px;}
+									.tab-content > .tab-inner {position:relative; z-index:1;}
+									.tab-content.is-active {display:block;}
+
+									/* Design Basic */
+									.tab-basic ul {border-bottom:1px solid $color-primary;}
+									.tab-basic li a {background:#e1e2e6; color:#222;}
+									.tab-basic li.is-active a {background:$color-primary; color:#fff;}
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:js">
+									var ui = {
+										init : function(){
+											if ($('.tab-nav').length){this.tab.init();} // Tab
+										},
+
+										/*
+											기능정의 : #Tab
+											연결방식 : href="" / id=""
+											화면경로 : modules/modules_tab.html
+											화면메뉴 : 대메뉴 > 중메뉴 > 소메뉴 > 화면명
+										*/
+										tab : {
+											eleButton : '.tab-nav a',
+											eleContent : '.tab-content',
+											clsActive : 'is-active',
+											init : function(){
+												var _this = this;
+												$(this.eleContent+'.'+this.clsActive).each(function(){_this.action('#'+$(this).attr('id'))});
+												this.event($(this.eleButton));
+											},
+											event : function($this){
+												var _this = this;
+												$this.not('.is-clicked').on('click', function(){
+													_this.action($(this).attr('href')); return false;
+												}).attr('.is-clicked');
+											},
+											action : function(id){
+												$(this.eleButton+'[href="'+id+'"]').attr({'aria-selected':'true', 'aria-expanded':'true'}).parent().addClass(this.clsActive).siblings().removeClass(this.clsActive).children().attr({'aria-selected':'false', 'aria-expanded':'false'});
+												$(id).addClass(this.clsActive).attr('aria-hidden', 'false').siblings().removeClass(this.clsActive).attr('aria-hidden', 'true');
+											},
+										},
+									}
+								</pre>
+							</div>
+							<div class="g-example-guide">
+								<h5 class="g-h5">설계가이드</h5>
+								<ul class="g-desc">
+									<li><a href="https://www.w3.org/TR/wai-aria-practices/examples/tabs/tabs-1/tabs.html" title="새창열림" target="_blank">W3C WAI-ARIA 제작방법 1.1 - 탭 예제</a></li>
+									<li>확장성, 기본옵션, 외부호출 기능을 고려한다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Flexible</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="tab-wrap">
+										<div class="tab-nav tab-basic tab-flexible">
+											<ul role="tablist">
+												<li role="presentation" class="is-active"><a href="#tabContent21" id="tabNav2-1" role="tab" aria-controls="tabContent21" aria-selected="true">탭제목1</a></li>
+												<li role="presentation"><a href="#tabContent22" id="tabNav2-2" role="tab" aria-controls="tabContent22" aria-selected="false">탭제목2</a></li>
+											</ul>
+										</div>
+										<div class="tab-body">
+											<!-- 탭내용1 -->
+											<div id="tabContent21" class="tab-content is-active" aria-hidden="false">
+												<span class="blind-area" role="tabpanel" aria-labelledby="tabNav2-1"></span><!-- 탭제목 전달요소 -->
+												탭내용1
+											</div>
+											<!-- //탭내용1 -->
+											<!-- 탭내용2 -->
+											<div id="tabContent22" class="tab-content" aria-hidden="true">
+												<span class="blind-area"  role="tabpanel" aria-labelledby="tabNav2-2"></span><!-- 탭제목 전달요소 -->
+												탭내용2
+											</div>
+											<!-- //탭내용2 -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="tab-nav tab-basic tab-flexible">
+										...
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Layout */
+									.tab-flexible ul {display:table; table-layout:fixed; width:100%;}
+									.tab-flexible ul::after {display:none;}
+									.tab-flexible li {display:table-cell; float:none;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Grid Column</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="tab-wrap">
+										<div class="tab-nav tab-basic">
+											<ul role="tablist" class="grid">
+												<li role="presentation" class="col col-3 is-active"><a href="#tabContent31" id="tabNav3-1" role="tab" aria-controls="tabContent31" aria-selected="true">탭제목1</a></li>
+												<li role="presentation" class="col col-3"><a href="#tabContent32" id="tabNav3-2" role="tab" aria-controls="tabContent32" aria-selected="false">탭제목2</a></li>
+												<li role="presentation" class="col col-3"><a href="#tabContent33" id="tabNav3-3" role="tab" aria-controls="tabContent33" aria-selected="false">탭제목3</a></li>
+												<li role="presentation" class="col col-3"><a href="#tabContent34" id="tabNav3-4" role="tab" aria-controls="tabContent34" aria-selected="false">탭제목4</a></li>
+												<li role="presentation" class="col col-3"><a href="#tabContent35" id="tabNav3-5" role="tab" aria-controls="tabContent35" aria-selected="false">탭제목5</a></li>
+												<li role="presentation" class="col col-3"><a href="#tabContent36" id="tabNav3-6" role="tab" aria-controls="tabContent36" aria-selected="false">탭제목6</a></li>
+												<li role="presentation" class="col col-3"><a href="#tabContent37" id="tabNav3-7" role="tab" aria-controls="tabContent37" aria-selected="false">탭제목7</a></li>
+												<li role="presentation" class="col col-3"><a href="#tabContent38" id="tabNav3-8" role="tab" aria-controls="tabContent38" aria-selected="false">탭제목8</a></li>
+											</ul>
+										</div>
+										<div class="tab-body">
+											<!-- 탭내용1 -->
+											<div id="tabContent31" class="tab-content is-active" aria-hidden="false">
+												<span class="blind-area" role="tabpanel" aria-labelledby="tabNav3-1"></span><!-- 탭제목 전달요소 -->
+												탭내용1
+											</div>
+											<!-- //탭내용1 -->
+											<!-- 탭내용2 -->
+											<div id="tabContent32" class="tab-content" aria-hidden="true">
+												<span class="blind-area"  role="tabpanel" aria-labelledby="tabNav3-2"></span><!-- 탭제목 전달요소 -->
+												탭내용2
+											</div>
+											<!-- //탭내용2 -->
+											<!-- 탭내용3 -->
+											<div id="tabContent33" class="tab-content" aria-hidden="true">
+												<span class="blind-area"  role="tabpanel" aria-labelledby="tabNav3-3"></span><!-- 탭제목 전달요소 -->
+												탭내용3
+											</div>
+											<!-- //탭내용3 -->
+											<!-- 탭내용4 -->
+											<div id="tabContent34" class="tab-content" aria-hidden="true">
+												<span class="blind-area"  role="tabpanel" aria-labelledby="tabNav3-4"></span><!-- 탭제목 전달요소 -->
+												탭내용4
+											</div>
+											<!-- //탭내용4 -->
+											<!-- 탭내용5 -->
+											<div id="tabContent35" class="tab-content" aria-hidden="true">
+												<span class="blind-area"  role="tabpanel" aria-labelledby="tabNav3-5"></span><!-- 탭제목 전달요소 -->
+												탭내용5
+											</div>
+											<!-- //탭내용5 -->
+											<!-- 탭내용6 -->
+											<div id="tabContent36" class="tab-content" aria-hidden="true">
+												<span class="blind-area"  role="tabpanel" aria-labelledby="tabNav3-6"></span><!-- 탭제목 전달요소 -->
+												탭내용6
+											</div>
+											<!-- //탭내용6 -->
+											<!-- 탭내용7 -->
+											<div id="tabContent37" class="tab-content" aria-hidden="true">
+												<span class="blind-area"  role="tabpanel" aria-labelledby="tabNav3-7"></span><!-- 탭제목 전달요소 -->
+												탭내용7
+											</div>
+											<!-- //탭내용7 -->
+											<!-- 탭내용8 -->
+											<div id="tabContent38" class="tab-content" aria-hidden="true">
+												<span class="blind-area"  role="tabpanel" aria-labelledby="tabNav3-8"></span><!-- 탭제목 전달요소 -->
+												탭내용8
+											</div>
+											<!-- //탭내용8 -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="tab-nav tab-basic">
+										&lt;ul role="tablist" class="grid">
+											&lt;li role="presentation" class="col col-3 is-active">...&lt;/li>
+											&lt;li role="presentation" class="col col-3">...&lt;/li>
+											&lt;li role="presentation" class="col col-3">...&lt;/li>
+											&lt;li role="presentation" class="col col-3">...&lt;/li>
+											&lt;li role="presentation" class="col col-3">...&lt;/li>
+											&lt;li role="presentation" class="col col-3">...&lt;/li>
+											&lt;li role="presentation" class="col col-3">...&lt;/li>
+											&lt;li role="presentation" class="col col-3">...&lt;/li>
+										&lt;/ul>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									(Grid System)
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Transition</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="g-example-preview">
+									<div class="tab-wrap">
+										<div class="tab-nav tab-type1 tab-transition">
+											<ul role="tablist">
+												<li class="is-active"><a href="#tabContent41">탭제목1</a></li>
+												<li><a href="#tabContent42">탭제목2</a></li>
+												<li><a href="#tabContent43">탭제목3</a></li>
+												<li><a href="#tabContent44">탭제목4</a></li>
+											</ul>
+										</div>
+										<div class="tab-body">
+											<!-- 탭내용1 -->
+											<div id="tabContent41" class="tab-content is-active">
+												<p>탭내용1</p>
+											</div>
+											<!-- //탭내용1 -->
+											<!-- 탭내용2 -->
+											<div id="tabContent42" class="tab-content">
+												<p>탭내용2</p>
+											</div>
+											<!-- //탭내용2 -->
+											<!-- 탭내용3 -->
+											<div id="tabContent43" class="tab-content">
+												<p>탭내용3</p>
+											</div>
+											<!-- //탭내용3 -->
+											<!-- 탭내용4 -->
+											<div id="tabContent44" class="tab-content">
+												<p>탭내용4</p>
+											</div>
+											<!-- //탭내용4 -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="tab-nav tab-type1 tab-transition">
+										...
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Transition */
+									.tab-transition a:hover::before,
+									.tab-transition a:focus::before,
+									.tab-transition .is-active a::before {transition:all 0.2s ease-out 0s;-webkit-transition:all 0.2s ease-out 0s;-moz-transition:all 0.2s ease-out 0s;-o-transition:all 0.2s ease-out 0s;}
+
+									/* Design Type1 */
+									.tab-type1 a {color:#777;}
+									.tab-type1 a:before {content:''; display:inline-block; position:absolute; left:50%; bottom:0; width:0; height:2px; background-color:$color-primary; transform:translate(-50%, 0); -webkit-transform:translate(-50%, 0);}
+									.tab-type1 .is-active a {color:$color-primary;}
+									.tab-type1 a:hover:before,
+									.tab-type1 a:focus:before,
+									.tab-type1 .is-active a:before {width:100%;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>

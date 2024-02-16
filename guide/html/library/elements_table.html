@@ -1,0 +1,980 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<script src="../../js/include.js"></script>
+<script>include.meta()</script>
+<script>include.head()</script>
+</head>
+<body id="elements">
+<div id="g-wrapper">
+	<script>include.header()</script>
+	<div id="g-container">
+		<script>include.aside.init()</script>
+
+		<!-- Content -->
+		<article id="g-content">
+			<div class="g-content-header">
+				<h1 class="g-h1">Table</h1>
+				<p class="g-explain-h1">Library Elements</p>
+			</div>
+			<div class="g-content-body">
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Basic</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit">Markup Codeview</strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<div class="tbl-wrap">
+									<h4 class="g-h4 marginT-0">Columns Only</h4>
+									<div class="tbl tbl-type1">
+										<table>
+											<caption>
+												<strong>제목 요약</strong>
+												<p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목4 로 구성되었습니다.</p>
+											</caption>
+											<colgroup>
+												<col style="width:25%">
+												<col style="width:25%">
+												<col style="width:25%">
+												<col style="width:auto">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">셀제목1</th>
+													<th scope="col">셀제목2</th>
+													<th scope="col">셀제목3</th>
+													<th scope="col">셀제목4</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>셀내용</td>
+													<td>셀내용</td>
+													<td>셀내용</td>
+													<td>셀내용</td>
+												</tr>
+												<tr>
+													<td>셀내용</td>
+													<td>셀내용</td>
+													<td>셀내용</td>
+													<td>셀내용</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<h4 class="g-h4">Rows Only</h4>
+									<div class="tbl-wrap">
+										<div class="tbl tbl-type1">
+											<table>
+												<caption>
+													<strong>제목 요약</strong>
+													<p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목4 로 구성되었습니다.</p>
+												</caption>
+												<colgroup>
+													<col style="width:25%">
+													<col style="width:25%">
+													<col style="width:25%">
+													<col style="width:auto">
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="row">셀내용</th>
+														<td>셀내용</td>
+														<th scope="row">셀내용</th>
+														<td>셀내용</td>
+													</tr>
+													<tr>
+														<th scope="row">셀내용</th>
+														<td>셀내용</td>
+														<th scope="row">셀내용</th>
+														<td>셀내용</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+
+								</div>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;!-- Columns Only -->
+									&lt;div class="tbl-wrap">
+										&lt;div class="tbl tbl-type1">
+											&lt;table>
+												&lt;caption>
+													&lt;strong>제목 요약&lt;/strong>
+													&lt;p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목4 로 구성되었습니다.&lt;/p>
+												&lt;/caption>
+												&lt;colgroup>
+													&lt;col style="width:25%">
+													&lt;col style="width:25%">
+													&lt;col style="width:25%">
+													&lt;col style="width:auto">
+												&lt;/colgroup>
+												&lt;thead>
+													&lt;tr>
+														&lt;th scope="col">셀제목1&lt;/th>
+														&lt;th scope="col">셀제목2&lt;/th>
+														&lt;th scope="col">셀제목3&lt;/th>
+														&lt;th scope="col">셀제목4&lt;/th>
+													&lt;/tr>
+												&lt;/thead>
+												&lt;tbody>
+													&lt;tr>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+													&lt;/tr>
+													&lt;tr>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+													&lt;/tr>
+												&lt;/tbody>
+											&lt;/table>
+										&lt;/div>
+									&lt;/div>
+
+									&lt;!-- Rows Only -->
+									&lt;div class="tbl-wrap">
+										&lt;div class="tbl tbl-type1">
+											&lt;table>
+												&lt;caption>
+													&lt;strong>제목 요약&lt;/strong>
+													&lt;p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목4 로 구성되었습니다.&lt;/p>
+												&lt;/caption>
+												&lt;colgroup>
+													&lt;col style="width:25%">
+													&lt;col style="width:25%">
+													&lt;col style="width:25%">
+													&lt;col style="width:auto">
+												&lt;/colgroup>
+												&lt;tbody>
+													&lt;tr>
+														&lt;th scope="row">셀내용&lt;/th>
+														&lt;td>셀내용&lt;/td>
+														&lt;th scope="row">셀내용&lt;/th>
+														&lt;td>셀내용&lt;/td>
+													&lt;/tr>
+													&lt;tr>
+														&lt;th scope="row">셀내용&lt;/th>
+														&lt;td>셀내용&lt;/td>
+														&lt;th scope="row">셀내용&lt;/th>
+														&lt;td>셀내용&lt;/td>
+													&lt;/tr>
+												&lt;/tbody>
+											&lt;/table>
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Default */
+									.tbl-wrap {overflow:hidden;}
+									.tbl {overflow:hidden; margin:0 -1px;}
+									.tbl > table {width:100%; margin:-1px 0; table-layout:fixed; border-collapse:collapse; border:0; border-spacing:0;}
+
+									/* Basic Type */
+									.tbl-type1 {overflow:hidden; margin:0 -1px; border:1px solid #444; border-width:2px 0 1px 0;}
+									.tbl-type1 table {margin:-1px 0;}
+									.tbl-type1 th, .tbl-type1 td {padding:6px 15px; text-align:left; border:1px solid #ddd;}
+									.tbl-type1 thead th {background-color:#f1f3f9; text-align:center; border-bottom-color:#444;}
+									.tbl-type1 tbody th {background-color:#f1f3f9;}
+									.tbl-type1 .depth2 {background-color:#f1f3f9;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Both</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<div class="tbl-wrap">
+									<h4 class="g-h4 marginT-0">Colgroup</h4>
+									<div class="tbl tbl-type1">
+										<table>
+											<caption>
+												<strong>제목 요약</strong>
+												<p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목3-1, 셀제목3-2 로 구성되었습니다.</p>
+											</caption>
+											<colgroup>
+												<col style="width:25%">
+												<col style="width:25%">
+												<col style="width:25%">
+												<col style="width:auto">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col" rowspan="2">셀제목1</th>
+													<th scope="col" rowspan="2">셀제목2</th>
+													<th scope="colgroup" colspan="2">셀제목3</th>
+												</tr>
+												<tr>
+													<th scope="col">셀제목3-1</th>
+													<th scope="col">셀제목3-2</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>셀내용</td>
+													<td>셀내용</td>
+													<td>셀내용</td>
+													<td>셀내용</td>
+												</tr>
+												<tr>
+													<td>셀내용</td>
+													<td>셀내용</td>
+													<td>셀내용</td>
+													<td>셀내용</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<h4 class="g-h4">Rowgroup</h4>
+								<div class="tbl-wrap">
+									<div class="tbl tbl-type1">
+										<table>
+											<caption>
+												<strong>제목 요약</strong>
+												<p>이 표는 셀제목1, 셀제목1-1, 셀제목1-2, 셀제목1-3 로 구성되었습니다.</p>
+											</caption>
+											<colgroup>
+												<col style="width:25%">
+												<col style="width:25%">
+												<col style="width:25%">
+												<col style="width:auto">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="rowgroup" rowspan="3">셀제목1</th>
+													<th scope="row">셀제목1-1</th>
+													<td>셀내용</td>
+													<td>셀내용</td>
+												</tr>
+												<tr>
+													<th scope="row">셀제목1-2</th>
+													<td>셀내용</td>
+													<td>셀내용</td>
+												</tr>
+												<tr>
+													<th scope="row">셀제목1-3</th>
+													<td>셀내용</td>
+													<td>셀내용</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<div class="tbl-wrap">
+									<h4 class="g-h4">Colored</h4>
+									<div class="tbl tbl-type1">
+										<table>
+											<caption>
+												<strong>제목 요약</strong>
+												<p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목3-1, 셀제목3-2 로 구성되었습니다.</p>
+											</caption>
+											<colgroup>
+												<col style="width:25%">
+												<col style="width:25%">
+												<col style="width:25%">
+												<col style="width:auto">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col" rowspan="2">셀제목1</th>
+													<th scope="col" rowspan="2">셀제목2</th>
+													<th scope="colgroup" colspan="2">셀제목3</th>
+												</tr>
+												<tr>
+													<th scope="col" class="th-depth2">셀제목3-1</th>
+													<th scope="col" class="th-depth2">셀제목3-2</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="rowgroup" rowspan="3">셀내용</th>
+													<th scope="row" class="th-depth2">셀내용</th>
+													<td>셀내용</td>
+													<td>셀내용</td>
+												</tr>
+												<tr>
+													<th scope="row" class="th-depth2">셀내용</th>
+													<td>셀내용</td>
+													<td>셀내용</td>
+												</tr>
+												<tr>
+													<th scope="row" class="th-depth2">셀내용</th>
+													<td>셀내용</td>
+													<td>셀내용</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;!-- Colgroup -->
+									&lt;div class="tbl-wrap">
+										&lt;div class="tbl tbl-type1">
+											&lt;table>
+												&lt;caption>
+													&lt;strong>제목 요약&lt;/strong>
+													&lt;p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목3-1, 셀제목3-2 로 구성되었습니다.&lt;/p>
+												&lt;/caption>
+												&lt;colgroup>
+													&lt;col style="width:25%">
+													&lt;col style="width:25%">
+													&lt;col style="width:25%">
+													&lt;col style="width:auto">
+												&lt;/colgroup>
+												&lt;thead>
+													&lt;tr>
+														&lt;th scope="col" rowspan="2">셀제목1&lt;/th>
+														&lt;th scope="col" rowspan="2">셀제목2&lt;/th>
+														&lt;th scope="colgroup" colspan="2">셀제목3&lt;/th>
+													&lt;/tr>
+													&lt;tr>
+														&lt;th scope="col">셀제목3-1&lt;/th>
+														&lt;th scope="col">셀제목3-2&lt;/th>
+													&lt;/tr>
+												&lt;/thead>
+												&lt;tbody>
+													&lt;tr>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+													&lt;/tr>
+													&lt;tr>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+													&lt;/tr>
+												&lt;/tbody>
+											&lt;/table>
+										&lt;/div>
+									&lt;/div>
+
+									&lt;!-- Rowgroup -->
+									&lt;div class="tbl-wrap">
+										&lt;div class="tbl tbl-type1">
+											&lt;table>
+												&lt;caption>
+													&lt;strong>제목 요약&lt;/strong>
+													&lt;p>이 표는 셀제목1, 셀제목1-1, 셀제목1-2, 셀제목1-3 로 구성되었습니다.&lt;/p>
+												&lt;/caption>
+												&lt;colgroup>
+													&lt;col style="width:25%">
+													&lt;col style="width:25%">
+													&lt;col style="width:25%">
+													&lt;col style="width:auto">
+												&lt;/colgroup>
+												&lt;tbody>
+													&lt;tr>
+														&lt;th scope="rowgroup" rowspan="3">셀내용1&lt;/th>
+														&lt;th scope="row">셀제목1-1&lt;/th>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+													&lt;/tr>
+													&lt;tr>
+														&lt;th scope="row">셀제목1-2&lt;/th>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+													&lt;/tr>
+													&lt;tr>
+														&lt;th scope="row">셀제목1-3&lt;/th>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+													&lt;/tr>
+												&lt;/tbody>
+											&lt;/table>
+										&lt;/div>
+									&lt;/div>
+
+									&lt;!-- Colored -->
+									&lt;div class="tbl-wrap">
+										&lt;div class="tbl tbl-type1">
+											&lt;table>
+												&lt;caption>
+													&lt;strong>제목 요약&lt;/strong>
+													&lt;p>이 표는 셀제목1, 셀제목2, 셀제목3, 셀제목3-1, 셀제목3-2 로 구성되었습니다.&lt;/p>
+												&lt;/caption>
+												&lt;colgroup>
+													&lt;col style="width:25%">
+													&lt;col style="width:25%">
+													&lt;col style="width:25%">
+													&lt;col style="width:auto">
+												&lt;/colgroup>
+												&lt;thead>
+													&lt;tr>
+														&lt;th scope="col" rowspan="2">셀제목1&lt;/th>
+														&lt;th scope="col" rowspan="2">셀제목2&lt;/th>
+														&lt;th scope="colgroup" colspan="2">셀제목3&lt;/th>
+													&lt;/tr>
+													&lt;tr>
+														&lt;th scope="col" class="th-depth2">셀제목3-1&lt;/th>
+														&lt;th scope="col" class="th-depth2">셀제목3-2&lt;/th>
+													&lt;/tr>
+												&lt;/thead>
+												&lt;tbody>
+													&lt;tr>
+														&lt;th scope="rowgroup" rowspan="3">셀내용&lt;/th>
+														&lt;th scope="row" class="th-depth2">셀내용&lt;/th>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+													&lt;/tr>
+													&lt;tr>
+														&lt;th scope="row" class="th-depth2">셀내용&lt;/th>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+													&lt;/tr>
+													&lt;tr>
+														&lt;th scope="row" class="th-depth2">셀내용&lt;/th>
+														&lt;td>셀내용&lt;/td>
+														&lt;td>셀내용&lt;/td>
+													&lt;/tr>
+												&lt;/tbody>
+											&lt;/table>
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Board</h2>
+					</div>
+					<div class="g-section-body">
+						<h3 class="g-h3">List</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<div class="tbl-wrap">
+									<div class="tbl tbl-list">
+										<table>
+											<caption>
+												<strong>게시판 목록</strong>
+												<p>이 표는 번호, 제목, 작성자, 작성일로 구성되었습니다.</p>
+											</caption>
+											<colgroup>
+												<col style="width:8%" />
+												<col style="width:auto" />
+												<col style="width:12%" />
+												<col style="width:12%" />
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">번호</th>
+													<th scope="col">제목</th>
+													<th scope="col">작성자</th>
+													<th scope="col">작성일</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td class="align-l">리튬이온 배터리 안전사용에 대하여 알려 드립니다.</td>
+													<td>관리자</td>
+													<td>2014-08-19</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td class="align-l">인텔社 CPU 펌웨어 업데이트에 대해 안내드립니다.</td>
+													<td>관리자</td>
+													<td>2014-08-19</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td class="align-l">휴대폰 유무선 충전 관련 안전 주의 사항</td>
+													<td>관리자</td>
+													<td>2017-05-04</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td class="align-l">고객지원 시스템 점검 안내 (3/4)</td>
+													<td>관리자</td>
+													<td>2018-02-28</td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td class="align-l">삼성 스마트 카메라 Kakao Story 및 Sky Drive 서비스 종료</td>
+													<td>관리자</td>
+													<td>2014-11-06</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="tbl-wrap">
+										&lt;div class="tbl tbl-list">
+											&lt;table>
+												&lt;caption>
+													&lt;strong>게시판 목록&lt;/strong>
+													&lt;p>이 표는 번호, 제목, 작성자, 작성일로 구성되었습니다.&lt;/p>
+												&lt;/caption>
+												&lt;colgroup>
+													&lt;col style="width:8%" />
+													&lt;col style="width:auto" />
+													&lt;col style="width:12%" />
+													&lt;col style="width:12%" />
+												&lt;/colgroup>
+												&lt;thead>
+													&lt;tr>
+														&lt;th scope="col">번호&lt;/th>
+														&lt;th scope="col">제목&lt;/th>
+														&lt;th scope="col">작성자&lt;/th>
+														&lt;th scope="col">작성일&lt;/th>
+													&lt;/tr>
+												&lt;/thead>
+												&lt;tbody>
+													&lt;tr>
+														&lt;td>1&lt;/td>
+														&lt;td class="align-l">리튬이온 배터리 안전사용에 대하여 알려 드립니다.&lt;/td>
+														&lt;td>관리자&lt;/td>
+														&lt;td>2014-08-19&lt;/td>
+													&lt;/tr>
+													&lt;tr>
+														&lt;td>2&lt;/td>
+														&lt;td class="align-l">인텔社 CPU 펌웨어 업데이트에 대해 안내드립니다.&lt;/td>
+														&lt;td>관리자&lt;/td>
+														&lt;td>2014-08-19&lt;/td>
+													&lt;/tr>
+													&lt;tr>
+														&lt;td>3&lt;/td>
+														&lt;td class="align-l">휴대폰 유무선 충전 관련 안전 주의 사항&lt;/td>
+														&lt;td>관리자&lt;/td>
+														&lt;td>2017-05-04&lt;/td>
+													&lt;/tr>
+													&lt;tr>
+														&lt;td>4&lt;/td>
+														&lt;td class="align-l">고객지원 시스템 점검 안내 (3/4)&lt;/td>
+														&lt;td>관리자&lt;/td>
+														&lt;td>2018-02-28&lt;/td>
+													&lt;/tr>
+													&lt;tr>
+														&lt;td>5&lt;/td>
+														&lt;td class="align-l">삼성 스마트 카메라 Kakao Story 및 Sky Drive 서비스 종료&lt;/td>
+														&lt;td>관리자&lt;/td>
+														&lt;td>2014-11-06&lt;/td>
+													&lt;/tr>
+												&lt;/tbody>
+											&lt;/table>
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* List Type */
+									.tbl-list {border-top:2px solid #444; border-bottom:1px solid #444;}
+									.tbl-list th, .tbl-list td {padding:5px 10px; text-align:left; line-height:18px; text-align:center;}
+									.tbl-list th {height:40px; border-bottom:1px solid #444; font-family:'NSB';}
+									.tbl-list td {height:40px; border-top:1px solid #ddd;}
+									.tbl-list thead + tbody tr:first-child td {border-top:0;}
+									.tbl-list .fixed-data td {background-color:#fafafa;}
+								</pre>
+							</div>
+						</div>
+
+						<h3 class="g-h3">View</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<div class="tbl-wrap">
+									<div class="tbl tbl-view">
+										<table>
+											<caption>
+												<strong>게시판 상세</strong>
+												<p>이 표는 제목, 작성자, 작성일로 구성되었습니다.</p>
+											</caption>
+											<colgroup>
+												<col style="width:16%;">
+												<col style="width:34%;">
+												<col style="width:16%;">
+												<col style="width:34%;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">제목</th>
+													<td colspan="3">리튬이온 배터리 안전사용에 대하여 알려 드립니다.</td>
+												</tr>
+												<tr>
+													<th scope="row">작성자</th>
+													<td>관리자</td>
+													<th scope="row">작성일</th>
+													<td>2014-08-19</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="tbl-wrap">
+										&lt;div class="tbl tbl-view">
+											&lt;table>
+												&lt;caption>
+													&lt;strong>게시판 상세&lt;/strong>
+													&lt;p>이 표는 제목, 작성자, 작성일로 구성되었습니다.&lt;/p>
+												&lt;/caption>
+												&lt;colgroup>
+													&lt;col style="width:16%;">
+													&lt;col style="width:34%;">
+													&lt;col style="width:16%;">
+													&lt;col style="width:34%;">
+												&lt;/colgroup>
+												&lt;tbody>
+													&lt;tr>
+														&lt;th scope="row">제목&lt;/th>
+														&lt;td colspan="3">리튬이온 배터리 안전사용에 대하여 알려 드립니다.&lt;/td>
+													&lt;/tr>
+													&lt;tr>
+														&lt;th scope="row">작성자&lt;/th>
+														&lt;td>관리자&lt;/td>
+														&lt;th scope="row">작성일&lt;/th>
+														&lt;td>2014-08-19&lt;/td>
+													&lt;/tr>
+												&lt;/tbody>
+											&lt;/table>
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* View Type */
+									.tbl-view {border-top:2px solid #444; border-bottom:1px solid #444;}
+									.tbl-view th, .tbl-view td {padding:10px 20px; text-align:left; line-height:18px; border-top:1px solid #ddd;}
+									.tbl-view tr:first-child th,.tbl-view tr:first-child td {border-top:0;}
+									.tbl-view th {background-color:#f0f0f0;}
+									.tbl-view td {color:#444;}
+								</pre>
+							</div>
+						</div>
+
+						<h3 class="g-h3">Pager</h3>
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<div class="tbl-wrap">
+									<div class="tbl tbl-pager">
+										<table>
+											<caption>
+												<strong>페이지 넘기기</strong>
+												<p>이 표는 다음, 이전으로 구성되었습니다.</p>
+											</caption>
+											<colgroup>
+												<col style="width:16%;">
+												<col style="width:auto">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">이 전</th>
+													<td>휴대폰 유무선 충전 관련 안전 주의 사항</td>
+												</tr>
+												<tr>
+													<th scope="row">다 음</th>
+													<td>삼성 스마트 카메라 Kakao Story 및 Sky Drive 서비스 종료</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									&lt;div class="tbl-wrap">
+										&lt;div class="tbl tbl-pager">
+											&lt;table>
+												&lt;caption>
+													&lt;strong>페이지 넘기기&lt;/strong>
+													&lt;p>이 표는 다음, 이전으로 구성되었습니다.&lt;/p>
+												&lt;/caption>
+												&lt;colgroup>
+													&lt;col style="width:16%;">
+													&lt;col style="width:auto">
+												&lt;/colgroup>
+												&lt;tbody>
+													&lt;tr>
+														&lt;th scope="row">이 전&lt;/th>
+														&lt;td>휴대폰 유무선 충전 관련 안전 주의 사항&lt;/td>
+													&lt;/tr>
+													&lt;tr>
+														&lt;th scope="row">다 음&lt;/th>
+														&lt;td>삼성 스마트 카메라 Kakao Story 및 Sky Drive 서비스 종료&lt;/td>
+													&lt;/tr>
+												&lt;/tbody>
+											&lt;/table>
+										&lt;/div>
+									&lt;/div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* Pager Type */
+									.tbl-pager {border-top:2px solid #444; border-bottom:1px solid #444;}
+									.tbl-pager th, .tbl-pager td {padding:10px 20px; text-align:left; line-height:18px; border-top:1px solid #ddd;}
+									.tbl-pager tr:first-child th,.tbl-pager tr:first-child td {border-top:0;}
+									.tbl-pager td {color:#444;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+
+				<!-- Section -->
+				<section class="g-section g-in-sec">
+					<div class="g-section-header">
+						<h2 class="g-h2">Base Align</h2>
+					</div>
+					<div class="g-section-body">
+						<div class="g-example-wrap">
+							<div class="g-example-header">
+								<strong class="g-example-tit is-before"></strong>
+								<div class="g-example-nav">
+									<span class="g-example-txt"></span>
+									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn">CSS</a>
+								</div>
+							</div>
+							<div class="g-example-body">
+								<!-- 마크업뷰영역 -->
+								<h4 class="g-h4 marginT-0">Lefted</h4>
+								<div class="tbl-wrap">
+									<div class="tbl tbl-type1 tbl-lefted">
+										<table>
+											<caption></caption>
+											<colgroup>
+												<col style="width:25%;">
+												<col style="width:25%;">
+												<col style="width:25%;">
+												<col style="width:25%;">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">1234567890</th>
+													<td>1234567890</td>
+													<td>1234567890</td>
+													<td>1234567890</td>
+												</tr>
+												<tr>
+													<th scope="row">1234567890</th>
+													<td>1234567890</td>
+													<td>1234567890</td>
+													<td>1234567890</td>
+												</tr>
+												<tr>
+													<th scope="row">1234567890</th>
+													<td>1234567890</td>
+													<td>1234567890</td>
+													<td>1234567890</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<h4 class="g-h4">Centered</h4>
+								<div class="tbl-wrap">
+									<div class="tbl tbl-type1 tbl-centered">
+										<table>
+											<caption></caption>
+											<colgroup>
+												<col style="width:25%;">
+												<col style="width:25%;">
+												<col style="width:25%;">
+												<col style="width:25%;">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">1234567890</th>
+													<th scope="col">1234567890</th>
+													<th scope="col">1234567890</th>
+													<th scope="col">1234567890</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">1234567890</th>
+													<td>1234567890</td>
+													<td>1234567890</td>
+													<td>1234567890</td>
+												</tr>
+												<tr>
+													<th scope="row">1234567890</th>
+													<td>1234567890</td>
+													<td>1234567890</td>
+													<td>1234567890</td>
+												</tr>
+												<tr>
+													<th scope="row">1234567890</th>
+													<td>1234567890</td>
+													<td>1234567890</td>
+													<td>1234567890</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+								<h4 class="g-h4">Righted</h4>
+								<div class="tbl-wrap">
+									<div class="tbl tbl-type1 tbl-righted">
+										<table>
+											<caption></caption>
+											<colgroup>
+												<col style="width:25%;">
+												<col style="width:25%;">
+												<col style="width:25%;">
+												<col style="width:25%;">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">1234567890</th>
+													<th scope="col">1234567890</th>
+													<th scope="col">1234567890</th>
+													<th scope="col">1234567890</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1234567890</td>
+													<td>1234567890</td>
+													<td>1234567890</td>
+													<td>1234567890</td>
+												</tr>
+												<tr>
+													<td>1234567890</td>
+													<td>1234567890</td>
+													<td>1234567890</td>
+													<td>1234567890</td>
+												</tr>
+												<tr>
+													<td>1234567890</td>
+													<td>1234567890</td>
+													<td>1234567890</td>
+													<td>1234567890</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- //마크업뷰영역 -->
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:html">
+									<!-- 좌측정렬 기준 -->
+									<div class="tbl tbl-이름 tbl-lefted">
+										<table></table>
+									</div>
+
+									<!-- 센터정렬 기준 -->
+									<div class="tbl tbl-이름 tbl-centered">
+										<table></table>
+									</div>
+
+									<!-- 우측정렬 기준 -->
+									<div class="tbl tbl-이름 tbl-righted">
+										<table></table>
+									</div>
+								</pre>
+							</div>
+							<div class="g-example-footer">
+								<pre class="brush:css">
+									/* 정렬기준 */
+									.tbl-centered > table > tbody > tr > th,
+									.tbl-centered > table > tbody > tr > td {text-align:center;}
+									.tbl-lefted > table > tbody > tr > th,
+									.tbl-lefted > table > tbody > tr > td {text-align:left;}
+									.tbl-righted > table > tbody > tr > th,
+									.tbl-righted > table > tbody > tr > td {text-align:right;}
+								</pre>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- //Section -->
+			</div>
+		</article>
+		<!-- //Content -->
+
+		<script>include.quick.init()</script>
+	</div>
+	<script>include.footer()</script>
+</div>
+</body>
+</html>
