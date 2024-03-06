@@ -30,7 +30,7 @@
 								<strong class="g-example-tit">Markup Codeview</strong>
 								<div class="g-example-nav">
 									<span class="g-example-txt"></span>
-									<a href="javascript:;" class="g-example-btn">HTML</a>
+									<a href="javascript:;" class="g-example-btn is-active">HTML</a>
 									<a href="javascript:;" class="g-example-btn">CSS</a>
 									<a href="javascript:;" class="g-example-btn">SCRIPT</a>
 								</div>
@@ -38,102 +38,27 @@
 							<div class="g-example-body">
 								<div class="g-example-preview">
 									<!-- 단일요소 폴더링 -->
-									<div class="box box-type1">
-										<div class="box-header">
-											Example <button type="button" class="folder-toggle centered-r" aria-controls="folder1" aria-expanded="false" data-role="fold" data-target="folder1"><span><i class="arw arw-toggle">Example</i></span></button>
+									<div class="box box-basic">
+										<div class="box-head">
+											Example
 										</div>
-										<div id="folder1" class="box-body folder-content" data-name="folder1" hidden>
-											<div class="blind-area" tabindex="0" role="text" aria-label="Example Folder Panel"></div>
-											folder-target
+										<div class="box-body">
+											<div id="folder1" class="fold-cont fold-focus" style="display: none;">folder-target<br>folder-target<br>folder-target</div>
+											<button type="button" class="fold-toggle" data-role="fold" aria-controls="folder1" aria-expanded="false">
+												<span><i class="arw arw-toggle1 dark">Example</i></span>
+											</button>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="g-example-footer">
-								<pre class="brush:html">
-									&lt;!-- 단일요소 폴더링 -->
-									&lt;div class="box box-type1">
-										&lt;div class="box-header">
-											Example &lt;button type="button" class="folder-toggle centered-r" aria-controls="folder1" aria-expanded="false" data-role="fold" data-target="folder1">&lt;span>&lt;i class="arw arw-toggle">Example&lt;/i>&lt;/span>&lt;/button>
-										&lt;/div>
-										&lt;div id="folder1" class="box-body" data-name="folder1" hidden>
-											&lt;div class="blind-area" tabindex="0" role="text" aria-label="Example Folder Panel">&lt;/div>
-											&lt;span class="folder-focus">folder-target&lt;/span>
-										&lt;/div>
-									&lt;/div>
-								</pre>
+							<div class="g-example-footer is-active">
+								<div><div id="highlighter_310923" class="syntaxhighlighter  html"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html comments">&lt;!-- 단일요소 폴더링 --&gt;</code></div><div class="line number2 index1 alt1"><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">id</code><code class="html plain">=</code><code class="html string">"folder1"</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"fold-cont fold-focus"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html plain">&lt;</code><code class="html keyword">button</code> <code class="html color1">type</code><code class="html plain">=</code><code class="html string">"button"</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"fold-toggle"</code> <code class="html color1">data-role</code><code class="html plain">=</code><code class="html string">"fold"</code> <code class="html color1">aria-controls</code><code class="html plain">=</code><code class="html string">"folder1"</code> <code class="html color1">aria-expanded</code><code class="html plain">=</code><code class="html string">"false"</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">button</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
 							</div>
 							<div class="g-example-footer">
-								<pre class="brush:css">
-									/* ------------------------------------------------------------------------------------------
-										## Folder
-									------------------------------------------------------------------------------------------ */
-									.folder-toggle {width:40px; height:40px; right:0; z-index:1;}
-									.folder-toggle .arw-toggle {position:absolute; left:50%; top:50%; transform:translate(-50%, -50%) rotate(0deg); -webkit-transform:translate(-50%, -50%) rotate(0deg); transition:all 0.3s;}
-									.folder-toggle.is-active .arw-toggle {transform:translate(-50%, -50%) rotate(180deg); -webkit-transform:translate(-50%, -50%) rotate(180deg);}
-
-								</pre>
+								<div><div id="highlighter_866000" class="syntaxhighlighter  css"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="css comments">/* ------------------------------------------------------------------------------------------</code></div><div class="line number2 index1 alt1"><code class="css spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="css comments">## Folder</code></div><div class="line number3 index2 alt2"><code class="css comments">------------------------------------------------------------------------------------------ */</code></div><div class="line number4 index3 alt1"><code class="css plain">.folder-toggle {</code><code class="css keyword">width</code><code class="css plain">:</code><code class="css value">40px</code><code class="css plain">; </code><code class="css keyword">height</code><code class="css plain">:</code><code class="css value">40px</code><code class="css plain">; </code><code class="css keyword">right</code><code class="css plain">:</code><code class="css value">0</code><code class="css plain">; </code><code class="css keyword">z-index</code><code class="css plain">:</code><code class="css value">1</code><code class="css plain">;}</code></div><div class="line number5 index4 alt2"><code class="css plain">.folder-toggle .arw-toggle {</code><code class="css keyword">position</code><code class="css plain">:</code><code class="css value">absolute</code><code class="css plain">; </code><code class="css keyword">left</code><code class="css plain">:</code><code class="css value">50%</code><code class="css plain">; </code><code class="css keyword">top</code><code class="css plain">:</code><code class="css value">50%</code><code class="css plain">; transform:translate(</code><code class="css value">-50%</code><code class="css plain">, </code><code class="css value">-50%</code><code class="css plain">) rotate(</code><code class="css value">0</code><code class="css plain">deg); -webkit-transform:translate(</code><code class="css value">-50%</code><code class="css plain">, </code><code class="css value">-50%</code><code class="css plain">) rotate(</code><code class="css value">0</code><code class="css plain">deg); transition:</code><code class="css value">all</code> <code class="css value">0.3</code><code class="css plain">s;}</code></div><div class="line number6 index5 alt1"><code class="css plain">.folder-toggle.is-active .arw-toggle {transform:translate(</code><code class="css value">-50%</code><code class="css plain">, </code><code class="css value">-50%</code><code class="css plain">) rotate(</code><code class="css value">180</code><code class="css plain">deg); -webkit-transform:translate(</code><code class="css value">-50%</code><code class="css plain">, </code><code class="css value">-50%</code><code class="css plain">) rotate(</code><code class="css value">180</code><code class="css plain">deg);}</code></div></div></td></tr></tbody></table></div></div>
 							</div>
 							<div class="g-example-footer">
-								<pre class="brush:js">
-									var ui = {
-										init : function(){
-											if ($('[data-role=fold]').length)	{this.folder.init();}			// Folder (접기)
-										},
-
-										/*
-											기능정의 : 폴더토글
-											연결방식 : data-target="" / data-name=""
-											참고메뉴 : 대메뉴 > 중메뉴 > 소메뉴 > 화면명
-											참고경로 : /html/menu1/page.html
-											(공통여부와 관계없이 확인이 가능한 대표화면 적용)
-										*/
-										folder : {
-											eleButton : '.folder-toggle',
-											eleModule : '.folder-content',
-											eleFocus  : '.folder-focus',
-											clsActive : 'is-active',
-											init : function(){
-												this.reset();
-												this.event($(this.eleButton));
-											},
-											reset : function(){
-												var _this = this;
-												$(this.eleButton+'[data-role=fold]').each(function(){
-													var name = $(this).attr('data-target');
-													$('[data-target='+name+']').attr({'data-state':'closed', 'aria-expanded':'false'});
-													$('[data-name='+name+']').attr({'hidden':'hidden'});
-												})
-											},
-											event : function($this){
-												var _this = this;
-												$this.filter('[data-role=fold]').not('.is-clicked').on('click', function(){
-													var target = $(this).attr('data-target');
-													var state = $(this).attr('data-state');
-													if (state == 'closed'){_this.open(target)}
-													else if (state == 'opened'){_this.close(target)}
-													return false;
-												}).addClass('is-clicked');
-											},
-											open : function(name){
-												var _this = this;
-												$('[data-target='+name+']').attr({'data-state':'null', 'aria-expanded':'true'}).addClass(_this.clsActive);
-												$('[data-name='+name+']').addClass(_this.clsActive).slideDown(300, function(){
-													$('[data-name='+name+']').removeAttr('hidden').eq(0).find(_this.eleFocus).attr('tabindex','0').focus();
-													$('[data-target='+name+']').attr('data-state', 'opened');
-												});
-											},
-											close : function(name){
-												var _this = this;
-												$('[data-target='+name+']').attr({'data-state':'null', 'aria-expanded':'false'}).removeClass(_this.clsActive);
-												$('[data-name='+name+']').removeClass(_this.clsActive).slideUp(300, function(){
-													$('[data-name='+name+']').attr('hidden', 'hidden');
-													$('[data-target='+name+']').attr('data-state', 'closed');
-												});
-											}
-										},
-									}
-								</pre>
+								<div><div id="highlighter_833487" class="syntaxhighlighter  js"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">ui = {</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">init : </code><code class="js keyword">function</code><code class="js plain">(){</code></div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">if</code> <code class="js plain">($(</code><code class="js string">'[data-role=fold]'</code><code class="js plain">).length)&nbsp;&nbsp; {</code><code class="js keyword">this</code><code class="js plain">.foldToggle.init();}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="js comments">// Folder (접기)</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number5 index4 alt2">&nbsp;</div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">/*</code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">기능정의: #Folder</code></div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">참고메뉴: 대메뉴 &gt; 중메뉴 &gt; 소메뉴 &gt; 화면명</code></div><div class="line number9 index8 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">참고경로: /html/menu1/page.html</code></div><div class="line number10 index9 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">(공통여부와 관계없이 확인이 가능한 대표화면 적용)</code></div><div class="line number11 index10 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">*/</code></div><div class="line number12 index11 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">foldToggle : {</code></div><div class="line number13 index12 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">eleModule: </code><code class="js string">'.fold'</code><code class="js plain">,</code></div><div class="line number14 index13 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">eleButton: </code><code class="js string">'.fold-toggle'</code><code class="js plain">,</code></div><div class="line number15 index14 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">eleContent: </code><code class="js string">'.fold-cont'</code><code class="js plain">,</code></div><div class="line number16 index15 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">eleFocus: </code><code class="js string">'.fold-focus'</code><code class="js plain">,</code></div><div class="line number17 index16 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">speed: 300,</code></div><div class="line number18 index17 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">init : </code><code class="js keyword">function</code><code class="js plain">(){</code></div><div class="line number19 index18 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">var</code> <code class="js plain">_this = </code><code class="js keyword">this</code><code class="js plain">;</code></div><div class="line number20 index19 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">this</code><code class="js plain">.event();</code></div><div class="line number21 index20 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$(</code><code class="js keyword">this</code><code class="js plain">.eleContent).each(</code><code class="js keyword">function</code><code class="js plain">(){ _this.reset($(</code><code class="js keyword">this</code><code class="js plain">).attr(</code><code class="js string">'id'</code><code class="js plain">)) });</code></div><div class="line number22 index21 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number23 index22 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">reset : </code><code class="js keyword">function</code><code class="js plain">(id){</code></div><div class="line number24 index23 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">var</code> <code class="js plain">$button = $(</code><code class="js string">'[aria-controls='</code><code class="js plain">+id+</code><code class="js string">']'</code><code class="js plain">);</code></div><div class="line number25 index24 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">if</code> <code class="js plain">($(</code><code class="js string">'#'</code><code class="js plain">+id).is(</code><code class="js string">':visible'</code><code class="js plain">) == </code><code class="js keyword">true</code><code class="js plain">){ $button.attr({</code><code class="js string">'aria-expanded'</code><code class="js plain">:</code><code class="js string">'true'</code><code class="js plain">}) }</code></div><div class="line number26 index25 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">else</code> <code class="js plain">{ $button.attr({</code><code class="js string">'aria-expanded'</code><code class="js plain">:</code><code class="js string">'false'</code><code class="js plain">}) }</code></div><div class="line number27 index26 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number28 index27 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">event : </code><code class="js keyword">function</code><code class="js plain">(){</code></div><div class="line number29 index28 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">var</code> <code class="js plain">_this = </code><code class="js keyword">this</code><code class="js plain">;</code></div><div class="line number30 index29 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$(</code><code class="js keyword">this</code><code class="js plain">.eleButton).not(</code><code class="js string">'.is-clicked'</code><code class="js plain">).on(</code><code class="js string">'click'</code><code class="js plain">, </code><code class="js keyword">function</code><code class="js plain">(){</code></div><div class="line number31 index30 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">_this.action($(</code><code class="js keyword">this</code><code class="js plain">).attr(</code><code class="js string">'aria-controls'</code><code class="js plain">));</code></div><div class="line number32 index31 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}).addClass(</code><code class="js string">'is-clicked'</code><code class="js plain">);</code></div><div class="line number33 index32 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number34 index33 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">action : </code><code class="js keyword">function</code><code class="js plain">(id){</code></div><div class="line number35 index34 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$(</code><code class="js string">'#'</code><code class="js plain">+ id).stop().slideToggle(</code><code class="js keyword">this</code><code class="js plain">.speed, </code><code class="js keyword">function</code><code class="js plain">(){ _this.reset(id) });</code></div><div class="line number36 index35 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number37 index36 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number38 index37 alt1"><code class="js plain">}</code></div></div></td></tr></tbody></table></div></div>
 							</div>
 						</div>
 					</div>
@@ -160,122 +85,32 @@
 								<!-- 마크업뷰영역 -->
 								<div class="g-example-preview">
 									<!-- 더보기 폴더링 -->
-									<div class="box box-type1">
-										<div class="box-header">
+									<div class="box box-basic">
+										<div class="box-head">
 											Example
 										</div>
 										<div class="box-body">
-											<div id="folder2" class="folder-content">
-												<div class="folder-inner">
-													<dl>
-														<dt>folder-title</dt>
-														<dd>folder-define</dd>
-														<dt data-name="folder2" hidden><span class="folder-focus">folder-title</span></dt>
-														<dd data-name="folder2" hidden>folder-define</dd>
-														<dt data-name="folder2" hidden>folder-title</dt>
-														<dd data-name="folder2" hidden>folder-define</dd>
-													</dl>
-												</div>
+											<div id="folder2" class="fold-cont">
+												<dl>
+													<dt>folder-title</dt>
+													<dd>folder-define</dd>
+													<dt class="fold-hide" hidden=""><span class="fold-focus">folder-title</span></dt>
+													<dd class="fold-hide" hidden="">folder-define</dd>
+													<dt class="fold-hide" hidden="">folder-title</dt>
+													<dd class="fold-hide" hidden="">folder-define</dd>
+												</dl>
 											</div>
-											<button type="button" class="folder-toggle centered-rb" aria-controls="folder2" aria-expanded="false" data-role="more" data-target="folder2"><span><i class="arw arw-toggle">Example</i></span></button>
+											<button type="button" class="fold-toggle" data-role="more" aria-controls="folder2" aria-expanded="false"><span><i class="arw arw-toggle1 dark">Example</i></span></button>
 										</div>
 									</div>
 								</div>
 								<!-- //마크업뷰영역 -->
 							</div>
 							<div class="g-example-footer">
-								<pre class="brush:html">
-									&lt;!-- 더보기 폴더링 -->
-									&lt;div class="box box-type1">
-										&lt;div class="box-header">
-											Example
-										&lt;/div>
-										&lt;div class="box-body">
-											&lt;div id="folder2" class="folder-content">
-												&lt;div class="folder-inner">
-													&lt;dl>
-														&lt;dt>folder-title&lt;/dt>
-														&lt;dd>folder-define&lt;/dd>
-														&lt;dt data-name="folder2" hidden>&lt;span class="folder-focus">folder-title&lt;/span>&lt;/dt>
-														&lt;dd data-name="folder2" hidden>folder-define&lt;/dd>
-														&lt;dt data-name="folder2" hidden>folder-title&lt;/dt>
-														&lt;dd data-name="folder2" hidden>folder-define&lt;/dd>
-													&lt;/dl>
-												&lt;/div>
-											&lt;/div>
-											&lt;button type="button" class="folder-toggle centered-rb" aria-controls="folder2" aria-expanded="false" data-role="more" data-target="folder2">&lt;span>&lt;i class="arw arw-toggle">Example&lt;/i>&lt;/span>&lt;/button>
-										&lt;/div>
-									&lt;/div>
-								</pre>
+								<div><div id="highlighter_389707" class="syntaxhighlighter  html"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html comments">&lt;!-- 더보기 폴더링 --&gt;</code></div><div class="line number2 index1 alt1"><code class="html plain">&lt;</code><code class="html keyword">div</code> <code class="html color1">id</code><code class="html plain">=</code><code class="html string">"folder2"</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"fold-cont"</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">dl</code><code class="html plain">&gt;</code></div><div class="line number4 index3 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">dt</code><code class="html plain">&gt;folder-title&lt;/</code><code class="html keyword">dt</code><code class="html plain">&gt;</code></div><div class="line number5 index4 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">dd</code><code class="html plain">&gt;folder-define&lt;/</code><code class="html keyword">dd</code><code class="html plain">&gt;</code></div><div class="line number6 index5 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">dt</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"fold-hide"</code><code class="html plain">&gt;folder-title&lt;/</code><code class="html keyword">span</code><code class="html plain">&gt;&lt;/</code><code class="html keyword">dt</code><code class="html plain">&gt;</code></div><div class="line number7 index6 alt2"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;</code><code class="html keyword">dd</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"fold-hide"</code><code class="html plain">&gt;folder-define&lt;/</code><code class="html keyword">dd</code><code class="html plain">&gt;</code></div><div class="line number8 index7 alt1"><code class="html spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="html plain">&lt;/</code><code class="html keyword">dl</code><code class="html plain">&gt;</code></div><div class="line number9 index8 alt2"><code class="html plain">&lt;/</code><code class="html keyword">div</code><code class="html plain">&gt;</code></div><div class="line number10 index9 alt1"><code class="html plain">&lt;</code><code class="html keyword">button</code> <code class="html color1">type</code><code class="html plain">=</code><code class="html string">"button"</code> <code class="html color1">class</code><code class="html plain">=</code><code class="html string">"fold-toggle"</code> <code class="html color1">data-role</code><code class="html plain">=</code><code class="html string">"more"</code> <code class="html color1">aria-controls</code><code class="html plain">=</code><code class="html string">"folder2"</code> <code class="html color1">aria-expanded</code><code class="html plain">=</code><code class="html string">"false"</code><code class="html plain">&gt;Example&lt;/</code><code class="html keyword">button</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
 							</div>
 							<div class="g-example-footer">
-								<pre class="brush:js">
-									var ui = {
-										init : function(){
-											if ($('[data-role=more]').length)	{this.folderMore.init();}		// Folder (더보기)
-										},
-
-										/*
-											기능정의 : 더보기 폴더토글
-											연결방식 : data-target="" / data-name=""
-											참고메뉴 : 대메뉴 > 중메뉴 > 소메뉴 > 화면명
-											참고경로 : /html/menu1/page.html
-											(공통여부와 관계없이 확인이 가능한 대표화면 적용)
-										*/
-										folderMore : {
-											eleButton : '.folder-toggle',
-											eleModule : '.folder-content',
-											eleInner  : '.folder-inner',
-											eleFocus  : '.folder-focus',
-											clsActive : 'is-active',
-											init : function(){
-												this.reset();
-												this.event($(this.eleButton));
-											},
-											reset : function(){
-												var _this = this;
-												$(this.eleButton).each(function(){
-													var name = $(this).attr('data-target');
-													$('[data-target='+name+']').attr({'data-state':'closed', 'aria-expanded':'false'});
-													$('[data-name='+name+']').attr({'hidden':'hidden'});
-												})
-											},
-											event : function($this){
-												var _this = this;
-												$this.filter('[data-role=more]').not('.is-clicked').on('click', function(){
-													var target = $(this).attr('data-target');
-													var state = $(this).attr('data-state');
-													if (state == 'closed'){_this.open(target)}
-													else if (state == 'opened'){_this.close(target)}
-													return false;
-												}).addClass('is-clicked');
-											},
-											open : function(name){
-												var _this = this;
-												var $module = $('[data-name='+name+']').closest(_this.eleModule);
-												var $inner = $('[data-name='+name+']').closest(_this.eleInner);
-												$module.css({height:$inner.height(), overflow:'hidden'}).attr('data-height', $inner.height()).addClass(_this.clsActive);
-												$('[data-target='+name+']').addClass(_this.clsActive).attr({'data-state':'null'});
-												$('[data-name='+name+']').removeAttr('hidden');
-												TweenMax.to($module, 0.3, {height:$inner.height(), ease:Power2.easeOut, onComplete:function(){
-													$('[data-name='+name+']').eq(0).find(_this.eleFocus).attr('tabindex','0').focus();
-													$('[data-target='+name+']').attr({'data-state':'opened', 'aria-expanded':'true'});
-												}});
-											},
-											close : function(name){
-												var _this = this;
-												var $module = $('[data-name='+name+']').closest(_this.eleModule);
-												var $inner = $('[data-name='+name+']').closest(_this.eleInner);
-												$module.css({height:$module.height(), overflow:'hidden'}).removeClass(_this.clsActive);
-												$('[data-target='+name+']').attr({'data-state':'null'}).removeClass(_this.clsActive);
-												TweenMax.to($module, 0.3, {height:parseInt($module.attr('data-height')), ease:Power2.easeOut, onComplete:function(){
-													$('[data-name='+name+']').attr('hidden', 'hidden');
-													$('[data-target='+name+']').attr({'data-state':'closed', 'aria-expanded':'false'});
-												}});
-											}
-										},
-									}
-								</pre>
+								<div><div id="highlighter_928797" class="syntaxhighlighter  js"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div><div class="line number40 index39 alt1">40</div><div class="line number41 index40 alt2">41</div><div class="line number42 index41 alt1">42</div><div class="line number43 index42 alt2">43</div><div class="line number44 index43 alt1">44</div><div class="line number45 index44 alt2">45</div><div class="line number46 index45 alt1">46</div><div class="line number47 index46 alt2">47</div><div class="line number48 index47 alt1">48</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="js keyword">var</code> <code class="js plain">ui = {</code></div><div class="line number2 index1 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">init : </code><code class="js keyword">function</code><code class="js plain">(){</code></div><div class="line number3 index2 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">if</code> <code class="js plain">($(</code><code class="js string">'[data-role=more]'</code><code class="js plain">).length)&nbsp;&nbsp; {</code><code class="js keyword">this</code><code class="js plain">.moreToggle.init();}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="js comments">// Folder (더보기)</code></div><div class="line number4 index3 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number5 index4 alt2">&nbsp;</div><div class="line number6 index5 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">/*</code></div><div class="line number7 index6 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">기능정의 : 더보기 폴더토글</code></div><div class="line number8 index7 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">연결방식 : data-target="" / data-name=""</code></div><div class="line number9 index8 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">참고메뉴 : 대메뉴 &gt; 중메뉴 &gt; 소메뉴 &gt; 화면명</code></div><div class="line number10 index9 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">참고경로 : /html/menu1/page.html</code></div><div class="line number11 index10 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">(공통여부와 관계없이 확인이 가능한 대표화면 적용)</code></div><div class="line number12 index11 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js comments">*/</code></div><div class="line number13 index12 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">moreToggle : {</code></div><div class="line number14 index13 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">eleButton:&nbsp; </code><code class="js string">'.fold-toggle[data-role=more]'</code><code class="js plain">,</code></div><div class="line number15 index14 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">eleContent: </code><code class="js string">'.fold-cont'</code><code class="js plain">,</code></div><div class="line number16 index15 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">eleHide:&nbsp;&nbsp;&nbsp; </code><code class="js string">'.fold-hide'</code><code class="js plain">,</code></div><div class="line number17 index16 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">eleFocus:&nbsp;&nbsp; </code><code class="js string">'.fold-focus'</code><code class="js plain">,</code></div><div class="line number18 index17 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">speed: 250,</code></div><div class="line number19 index18 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">init: </code><code class="js keyword">function</code><code class="js plain">(){</code></div><div class="line number20 index19 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">var</code> <code class="js plain">_this = </code><code class="js keyword">this</code><code class="js plain">;</code></div><div class="line number21 index20 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">this</code><code class="js plain">.event();</code></div><div class="line number22 index21 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$(</code><code class="js keyword">this</code><code class="js plain">.eleContent).each(</code><code class="js keyword">function</code><code class="js plain">(){ _this.reset($(</code><code class="js keyword">this</code><code class="js plain">).attr(</code><code class="js string">'id'</code><code class="js plain">)) });</code></div><div class="line number23 index22 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number24 index23 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">reset: </code><code class="js keyword">function</code><code class="js plain">(id, obj){</code></div><div class="line number25 index24 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">var</code> <code class="js plain">$button = $(</code><code class="js string">'[aria-controls='</code><code class="js plain">+id+</code><code class="js string">']'</code><code class="js plain">);</code></div><div class="line number26 index25 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">var</code> <code class="js plain">$eleHide = $(</code><code class="js string">'#'</code><code class="js plain">+id).find(</code><code class="js keyword">this</code><code class="js plain">.eleHide);</code></div><div class="line number27 index26 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">if</code> <code class="js plain">($eleHide.is(</code><code class="js string">':visible'</code><code class="js plain">) == </code><code class="js keyword">true</code><code class="js plain">){</code></div><div class="line number28 index27 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$button.attr({</code><code class="js string">'aria-expanded'</code><code class="js plain">:</code><code class="js string">'true'</code><code class="js plain">});</code></div><div class="line number29 index28 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$eleHide.removeAttr(</code><code class="js string">'hidden'</code><code class="js plain">);</code></div><div class="line number30 index29 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">if</code> <code class="js plain">(</code><code class="js keyword">typeof</code><code class="js plain">(obj) == </code><code class="js string">'object'</code><code class="js plain">){ obj.attr({</code><code class="js string">'role'</code><code class="js plain">:</code><code class="js string">'text'</code><code class="js plain">, </code><code class="js string">'tabindex'</code><code class="js plain">:</code><code class="js string">'0'</code><code class="js plain">}).focus(); }</code></div><div class="line number31 index30 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">} </code><code class="js keyword">else</code> <code class="js plain">{</code></div><div class="line number32 index31 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$button.attr({</code><code class="js string">'aria-expanded'</code><code class="js plain">:</code><code class="js string">'false'</code><code class="js plain">});</code></div><div class="line number33 index32 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$eleHide.attr(</code><code class="js string">'hidden'</code><code class="js plain">);</code></div><div class="line number34 index33 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number35 index34 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number36 index35 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">event: </code><code class="js keyword">function</code><code class="js plain">(){</code></div><div class="line number37 index36 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">var</code> <code class="js plain">_this = </code><code class="js keyword">this</code><code class="js plain">;</code></div><div class="line number38 index37 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$(</code><code class="js keyword">this</code><code class="js plain">.eleButton).not(</code><code class="js string">'.is-clicked'</code><code class="js plain">).on(</code><code class="js string">'click'</code><code class="js plain">, </code><code class="js keyword">function</code><code class="js plain">(){</code></div><div class="line number39 index38 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">_this.action($(</code><code class="js keyword">this</code><code class="js plain">).attr(</code><code class="js string">'aria-controls'</code><code class="js plain">));</code></div><div class="line number40 index39 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">})</code></div><div class="line number41 index40 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number42 index41 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">action: </code><code class="js keyword">function</code><code class="js plain">(id){</code></div><div class="line number43 index42 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">$(</code><code class="js string">'#'</code><code class="js plain">+id).find(</code><code class="js keyword">this</code><code class="js plain">.eleHide).toggle();</code></div><div class="line number44 index43 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js keyword">this</code><code class="js plain">.reset(id, $(</code><code class="js string">'#'</code><code class="js plain">+id).find(</code><code class="js keyword">this</code><code class="js plain">.eleFocus));</code></div><div class="line number45 index44 alt2"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">}</code></div><div class="line number46 index45 alt1"><code class="js spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="js plain">},</code></div><div class="line number47 index46 alt2"><code class="js plain">}</code></div></div></td></tr></tbody></table></div></div>
 							</div>
 						</div>
 					</div>
@@ -287,7 +122,6 @@
 								<strong class="g-example-tit is-before"></strong>
 								<div class="g-example-nav">
 									<span class="g-example-txt"></span>
-									<a href="javascript:;" class="g-example-btn">HTML</a>
 								</div>
 							</div>
 							<div class="g-example-body">
@@ -299,8 +133,8 @@
 										.dv-android .folder-focus:focus {outline:none;}
 									</style>
 									<div class="account-list-wrap">
-										<div id="folder3" class="folder-content">
-											<ul class="account-list folder-inner">
+										<div id="folder3" class="fold-cont">
+											<ul class="account-list">
 												<li class="account-item">
 													<div class="account-define">
 														<p aria-label="이름 : 홍길동">홍길동</p>
@@ -315,14 +149,14 @@
 														<p aria-label="계좌잔액 : 2,000,000원">2,000,000원</p>
 													</div>
 												</li>
-												<li class="account-item"  data-name="folder3" hidden style="margin-top:10px">
+												<li class="account-item fold-hide" hidden="" style="margin-top:10px">
 													<div class="account-define">
-														<p aria-label="이름 : 신사임당" class="folder-focus">신사임당</p><!-- 펼친 후 포커스 folder-focus -->
+														<p aria-label="이름 : 신사임당" class="fold-focus">신사임당</p><!-- 펼친 후 포커스 folder-focus -->
 														<p aria-label="계좌이름 : 예적금통장">예적금통장</p>
 														<p aria-label="계좌잔액 : 3,000,000원">3,000,000원</p>
 													</div>
 												</li>
-												<li class="account-item"  data-name="folder3" hidden style="margin-top:10px">
+												<li class="account-item fold-hide" hidden="" style="margin-top:10px">
 													<div class="account-define">
 														<p aria-label="이름 : 허준">허준</p>
 														<p aria-label="계좌이름 : 마이너스통장">마이너스통장</p>
@@ -330,47 +164,10 @@
 													</div>
 												</li>
 											</ul>
-											<button type="button" class="folder-toggle bg round centered-rb" aria-controls="folder3" aria-expanded="false" data-role="more" data-target="folder3"><span><i class="arw arw-toggle">Example</i></span></button>
+											<button type="button" class="fold-toggle bg" data-role="more" aria-controls="folder3" aria-expanded="false"><span><i class="arw arw-toggle1 dark">Example</i></span></button>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="g-example-footer">
-								<pre class="brush:html">
-									&lt;div id="folder3" class="account-list-wrap folder-content">
-										&lt;ul class="account-list folder-inner">
-											&lt;li class="account-item">
-												&lt;div class="account-define">
-													&lt;p aria-label="이름 : 홍길동">홍길동&lt;/p>
-													&lt;p aria-label="계좌이름 : 적금통장">적금통장&lt;/p>
-													&lt;p aria-label="계좌잔액 : 1,000,000원">1,000,000원&lt;/p>
-												&lt;/div>
-											&lt;/li>
-											&lt;li class="account-item" style="margin-top:10px">
-												&lt;div class="account-define">
-													&lt;p aria-label="이름 : 한석봉">한석봉&lt;/p>
-													&lt;p aria-label="계좌이름 : 예금통장">예금통장&lt;/p>
-													&lt;p aria-label="계좌잔액 : 2,000,000원">2,000,000원&lt;/p>
-												&lt;/div>
-											&lt;/li>
-											&lt;li class="account-item"  data-name="folder3" hidden style="margin-top:10px">
-												&lt;div class="account-define">
-													&lt;p aria-label="이름 : 신사임당" class="folder-focus">신사임당&lt;/p>&lt;!-- 펼친 후 포커스 folder-focus -->
-													&lt;p aria-label="계좌이름 : 예적금통장">예적금통장&lt;/p>
-													&lt;p aria-label="계좌잔액 : 3,000,000원">3,000,000원&lt;/p>
-												&lt;/div>
-											&lt;/li>
-											&lt;li class="account-item"  data-name="folder3" hidden style="margin-top:10px">
-												&lt;div class="account-define">
-													&lt;p aria-label="이름 : 허준">허준&lt;/p>
-													&lt;p aria-label="계좌이름 : 마이너스통장">마이너스통장&lt;/p>
-													&lt;p aria-label="계좌잔액 : -1,000,000원">-1,000,000원&lt;/p>
-												&lt;/div>
-											&lt;/li>
-										&lt;/ul>
-										&lt;button type="button" class="folder-toggle bg round centered-rb" aria-controls="folder3" aria-expanded="false" data-role="more" data-target="folder3">&lt;span>&lt;i class="arw arw-toggle">Example&lt;/i>&lt;/span>&lt;/button>
-									&lt;/div>
-								</pre>
 							</div>
 						</div>
 					</div>
@@ -382,86 +179,44 @@
 								<strong class="g-example-tit is-before"></strong>
 								<div class="g-example-nav">
 									<span class="g-example-txt"></span>
-									<a href="javascript:;" class="g-example-btn">HTML</a>
 								</div>
 							</div>
 							<div class="g-example-body">
 								<div class="g-example-preview">
-									<div id="folder4" class="folder-content">
-										<div class="folder-inner">
-											<div class="g-tbl-type1 tbl-lefted">
-												<table>
-													<colgroup>
-														<col style="width:150px;">
-														<col style="width:auto;">
-													</colgroup>
-													<tbody>
-														<tr>
-															<th scope="row">이름</th>
-															<td>홍길동</td>
-														</tr>
-														<tr>
-															<th scope="row">국적</th>
-															<td>조선시대</td>
-														</tr>
-														<tr data-name="folder4" hidden>
-															<th scope="row"><span class="folder-focus">생일</span></th><!-- 펼친 후 포커스 folder-focus -->
-															<td>2020-10-32</td>
-														</tr>
-														<tr data-name="folder4" hidden>
-															<th scope="row">혈액형</th>
-															<td>큰형</td>
-														</tr>
-														<tr data-name="folder4" hidden>
-															<th scope="row">취미</th>
-															<td>테니스</td>
-														</tr>
-													</tbody>
-												</table>
-											</div>
+									<div id="folder4" class="fold-cont">
+										<div class="g-tbl-type1 tbl-lefted">
+											<table>
+												<colgroup>
+													<col style="width:150px;">
+													<col style="width:auto;">
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="row">이름</th>
+														<td>홍길동</td>
+													</tr>
+													<tr>
+														<th scope="row">국적</th>
+														<td>조선시대</td>
+													</tr>
+													<tr class="fold-hide" hidden="">
+														<th scope="row"><span class="fold-focus">생일</span></th><!-- 펼친 후 포커스 folder-focus -->
+														<td>2020-10-32</td>
+													</tr>
+													<tr class="fold-hide" hidden="">
+														<th scope="row">혈액형</th>
+														<td>큰형</td>
+													</tr>
+													<tr class="fold-hide" hidden="">
+														<th scope="row">취미</th>
+														<td>테니스</td>
+													</tr>
+												</tbody>
+											</table>
 										</div>
-										<button type="button" class="folder-toggle bg round centered-rb" aria-controls="folder4" aria-expanded="false" data-role="more" data-target="folder4"><span><i class="arw arw-toggle">Example</i></span></button>
+										<button type="button" class="fold-toggle bg round" data-role="more" aria-controls="folder4" aria-expanded="false"><span><i class="arw arw-toggle1 dark">Example</i></span></button>
 									</div>
 								</div>
-							</div>
-							<div class="g-example-footer">
-								<pre class="brush:html">
-									&lt;div id="folder4" class="folder-content">
-										&lt;div class="folder-inner">
-											&lt;div class="g-tbl-type1 tbl-lefted">
-												&lt;table>
-													&lt;colgroup>
-														&lt;col style="width:200px;">
-														&lt;col style="width:auto;">
-													&lt;/colgroup>
-													&lt;tbody>
-														&lt;tr>
-															&lt;th scope="row">이름&lt;/th>
-															&lt;td>홍길동&lt;/td>
-														&lt;/tr>
-														&lt;tr>
-															&lt;th scope="row">국적&lt;/th>
-															&lt;td>조선시대&lt;/td>
-														&lt;/tr>
-														&lt;tr data-name="folder4" hidden>
-															&lt;th scope="row">생일&lt;/th>
-															&lt;td>2020-10-32&lt;/td>
-														&lt;/tr>
-														&lt;tr data-name="folder4" hidden>
-															&lt;th scope="row">&lt;span class="folder-focus">혈액형&lt;/span>&lt;/th>&lt;!-- 펼친 후 포커스 folder-focus -->
-															&lt;td>큰형&lt;/td>
-														&lt;/tr>
-														&lt;tr data-name="folder4" hidden>
-															&lt;th scope="row">취미&lt;/th>
-															&lt;td>테니스&lt;/td>
-														&lt;/tr>
-													&lt;/tbody>
-												&lt;/table>
-											&lt;/div>
-										&lt;/div>
-										&lt;button type="button" class="folder-toggle bg round centered-rb" aria-controls="folder4" aria-expanded="false" data-role="more" data-target="folder4">&lt;span>&lt;i class="arw arw-toggle">Example&lt;/i>&lt;/span>&lt;/button>
-									&lt;/div>
-								</pre>
 							</div>
 						</div>
 					</div>

@@ -5,13 +5,13 @@ var ui = {
 	init: function(){
 		console.log('ui.init()');
 
-		// if ($('.btn').length)				{this.waveEffect.init();}		// #Btn Effect
+		if ($('.btn').length)				{this.waveEffect.init();}		// #Btn Effect
 		if ($('.gnb-dropdown').length)		{this.gnb_dropdown.init();}		// #Gnb Dropdown
 		if ($('.gnb-fulldown').length)		{this.gnb_fulldown.init();}		// #Gnb Fulldown
 		if ($('.tab-nav').length)			{this.tab.init();}				// #Tab
 		if ($('.accordion').length)			{this.accordion.init();}		// #Accordion
 		if ($('[data-role=fold]').length)	{this.foldToggle.init();}		// #Folder (접기)
-		if ($('[data-role=more]').length)	{this.moreToggle.init();}		// #FolderMore (더보기)
+		if ($('[data-role=more]').length)	{this.moreToggle.init();}		// #FolderMore (더보기)		
 		if ($('.tooltip').length)			{this.tooltip.init();}			// #Tooltip
 		if ($('.drop').length)				{this.drop.init();}				// #Dropdown
 		if ($('.drop-select').length)		{this.dropSelect.init();}		// #Dropdown
@@ -25,29 +25,29 @@ var ui = {
 		if ($('.js-waypoint').length)		{this.waypoint.init();}			// Waypoint
 	},
 
-	// waveEffect : {
-	// 	init : function(){
-	// 		this.event();
-	// 	},
-	// 	event : function(){
-	// 		/* Add the class effect on button */
-	// 		$('.btn, .g-snb .g-depth2 .g-node2 > a').not('.not-effect').on('click', function(e) {
-	// 			var self = $(this),
-	// 				wave = '.effect-wave',
-	// 				/* Get the width of button (if different buttons types) */
-	// 				btnWidth = self.outerWidth(),
-	// 				x = e.offsetX,
-	// 				y = e.offsetY;
-	// 			self.prepend('<span class="effect-wave"></span>');
-	// 			console.log(e);
-	// 			$(wave)
-	// 			.css({'top': y, 'left': x})
-	// 			.animate({opacity: '0', width: btnWidth * 2.2, height: btnWidth * 2.2 }, 500, function() {
-	// 				self.find(wave).remove();
-	// 			})
-	// 		})
-	// 	}
-	// },
+	waveEffect : {
+		init : function(){
+			this.event();
+		},
+		event : function(){
+			/* Add the class effect on button */
+			$('.btn, .g-snb .g-depth2 .g-node2 > a').not('.not-effect').on('click', function(e) {
+				var self = $(this),
+					wave = '.effect-wave',
+					/* Get the width of button (if different buttons types) */
+					btnWidth = self.outerWidth(),
+					x = e.offsetX,
+					y = e.offsetY;
+				self.prepend('<span class="effect-wave"></span>');
+				console.log(e);
+				$(wave)
+				.css({'top': y, 'left': x})
+				.animate({opacity: '0', width: btnWidth * 2.2, height: btnWidth * 2.2 }, 500, function() {
+					self.find(wave).remove();
+				})
+			})
+		}
+	},
 
 	fileAttach: function(obj, e){
 		// 파일첨부 - 파일명적용
@@ -858,6 +858,10 @@ $(document).ready(function(){
 	});
 
 });
+
+
+
+
 
 // 날짜 입력시 자동 yyyy.mm.dd 형식으로 만들기
 function date_mask(objValue) {

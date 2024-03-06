@@ -173,7 +173,6 @@ var include = {
 			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_tab.html">Tab</a></li>');
 			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_accordion.html">Accordion</a></li>');
 			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_folder.html">Folder</a></li>');
-			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_collapse.html">Collapse</a></li>');
 			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_tooltip.html">Tooltip</a></li>');
 			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_dropdown.html">Dropdown</a></li>');
 			document.write('									<li class="g-node2"><a href="' + baseURL + 'modules_modal.html">Modal</a></li>');
