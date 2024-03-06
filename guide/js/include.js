@@ -1,5 +1,5 @@
 var gRootURL = {
-	root : '/',
+	root : '/std_guide/',
 }
 var gBaseURL = {
 	guide : gRootURL.root+'guide/',
