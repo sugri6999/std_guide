@@ -1,4 +1,4 @@
-var baseURL = '../js/';
+var baseURL = '/std_guide/js/';
 document.write('<script type="text/javascript" src="'+baseURL+'lib/jquery-3.3.1.min.js"></script>');
 document.write('<script type="text/javascript" src="'+baseURL+'lib/EasePack.js"></script>');
 document.write('<script type="text/javascript" src="'+baseURL+'lib/TweenMax.js"></script>');
