@@ -271,17 +271,15 @@ span.form-static {display:inline-block}
 button {overflow:hidden; padding:0px; border:0px; font-weight:normal; background-color:transparent; cursor:pointer}
 
 button::-moz-focus-inner {border:0px; padding:0px}
-.btn {position:relative; display:inline-block; vertical-align:middle; text-align:center; cursor:pointer}
-.btn>span {display:inline-block; height:100%}
+.btn {position:relative; display:flex; justify-content:center; align-items:center; cursor:pointer}
+.btn > span {display:inline-block}
 .btn:focus,
 .btn:hover {-webkit-transition-property:background-color, color, opacity; -o-transition-property:background-color, color, opacity; transition-property:background-color, color, opacity; -webkit-transition-duration:0.5s; -o-transition-duration:0.5s; transition-duration:0.5s; -webkit-transition-timing-function:ease-out; -o-transition-timing-function:ease-out; transition-timing-function:ease-out}
 .btn-ico {text-align:center; line-height:1; font-size:0}
 .btn-ico>span {display:inline-block; width:100%}
 
 /* Common - Layout */
-.btn-wrap::after {content:''; display:block; clear:both}
-.btn-wrap .btn-left {display:inline-block; float:left}
-.btn-wrap .btn-right {display:inline-block; float:right}
+.btn-wrap {display:flex; justify-content:center; gap:5px}
 .btn-block {width:100%}
 .btn-flexible {display:table; width:100%}
 .btn-flexible .item {display:table-cell; width:auto}
@@ -303,7 +301,7 @@ button::-moz-focus-inner {border:0px; padding:0px}
     btn-type3 :(모  듈) 검색, 파일첨부
     btn-type4 :(기  타)
 */
-.btn-type1 {min-height:34px; line-height:33px; padding:0 20px 1px; font-size:16px; background:#eee}
+.btn-type1 {min-height:34px; padding:0 20px; font-size:16px; background:#eee}
 .btn-type1.btn-primary {background:#0089b3; color:#fff}
 .btn-type1.btn-secondary {background:#777; color:#fff}
 .btn-type1[disabled] {background:#aaa; color:#fff}
