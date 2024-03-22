@@ -271,12 +271,10 @@ span.form-static {display:inline-block}
 button {overflow:hidden; padding:0px; border:0px; font-weight:normal; background-color:transparent; cursor:pointer}
 
 button::-moz-focus-inner {border:0px; padding:0px}
-.btn {position:relative; display:flex; justify-content:center; align-items:center; cursor:pointer}
-.btn > span {display:inline-block}
+.btn {position:relative; display:inline-flex; justify-content:center; align-items:center; cursor:pointer}
 .btn:focus,
 .btn:hover {-webkit-transition-property:background-color, color, opacity; -o-transition-property:background-color, color, opacity; transition-property:background-color, color, opacity; -webkit-transition-duration:0.5s; -o-transition-duration:0.5s; transition-duration:0.5s; -webkit-transition-timing-function:ease-out; -o-transition-timing-function:ease-out; transition-timing-function:ease-out}
 .btn-ico {text-align:center; line-height:1; font-size:0}
-.btn-ico>span {display:inline-block; width:100%}
 
 /* Common - Layout */
 .btn-wrap {display:flex; justify-content:center; gap:5px}
@@ -624,8 +622,8 @@ button::-moz-focus-inner {border:0px; padding:0px}
 .tbl-type1 table {margin:-1px 0}
 .tbl-type1 th,
 .tbl-type1 td {padding:6px 15px; text-align:left; border:1px solid #ddd}
-.tbl-type1 thead th {background-color:#e4e8f3; text-align:center; border-bottom-color:#444}
-.tbl-type1 tbody th {background-color:#e4e8f3}
+.tbl-type1 thead th {background-color:#f2f4fb; text-align:center; border-bottom-color:#444}
+.tbl-type1 tbody th {background-color:#f2f4fb}
 .tbl-type1 .th-depth2 {background-color:#f1f3f9}
 
 /* Form Type */

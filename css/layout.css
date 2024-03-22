@@ -18,6 +18,22 @@
 /*-------------------------------------------------------------------
     ## Content
 -------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+    ## Responsive
+-------------------------------------------------------------------*/
+@media all and (max-width:1050px) {
+	.tbl-responsible table td > * {margin:0 3px}
+
+	.tbl-responsible table th,
+	.tbl-responsible table td {min-height:30px; margin-bottom:-1px; display:flex; align-items:center}
+	.tbl-responsible table th {float:left; text-align:left; padding:6px 20px}
+	.tbl-responsible table td {flex-wrap:wrap; padding:6px 15px; border-left:0 none}
+	.tbl-responsible table th label.img {line-height:140px}
+
+	.tbl-responsible table colgroup {display:none}
+	.tbl-responsible table th {width:180px}
+}
+
 
 /*-------------------------------------------------------------------
     ## Footer
